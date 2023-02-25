@@ -1,16 +1,25 @@
 ---
 import heroImage from "../images/portalgrab.png";
+export interface Props {
+  title: string;
+  subtitle: string;
+  img: string;
+}
+
+const { title, subtitle, img } = Astro.props;
+
+const bgImgString = `url('${img}')`;
 ---
 
 <div class="hero w-full flex flex-col justify-center items-center">
-    <h1 class="text-white text-6xl capitalize m-5">mental block gaming</h1>
-    <p class="text-white text-2xl">Top notch minecraft maps</p>
+  <h1 class="text-white text-6xl capitalize m-5">{title}</h1>
+  <p class="text-white text-2xl">{subtitle}</p>
 </div>
 
-<style>
+<style define:vars={{ bgImgString }}>
   .hero {
-    height: calc(100svh - 96px) ;
-    background-image: url('../images/portalgrab.png');
+    height: calc(100svh - 96px);
+    background-image: var(--bgImgString);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

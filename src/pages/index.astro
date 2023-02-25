@@ -5,13 +5,18 @@ import Container from "../components/Container.astro";
 import ButtonRed from "../components/elements/ButtonRed.astro";
 import UnderRepair from "../components/elements/UnderRepair.astro";
 
+import HomeHeroImage from "../assets/images/roguequest/portalgrab.png";
 import Prismatic3Logo from "../assets/images/home/prismaticIIILogo.png";
 ---
 
 <Layout title="Welcome to Astro.">
   <main>
     <!-- <h1>Welcome to <span class="text-gradient">Astro</span></h1> -->
-    <Hero />
+    <Hero
+      title="Mental Block Gaming"
+      subtitle="Top notch minecraft maps"
+      img={HomeHeroImage}
+    />
     <Container>
       <h2 class="text-center">Minecraft Maps</h2>
       <div class="prismatic-animated-bg mb-6 shadow-lg">

@@ -1,11 +1,42 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Container from "../components/Container.astro";
+import Hero from "../components/Hero.astro";
 import UnderRepair from "../components/elements/UnderRepair.astro";
+
+import MBGLogo from "../assets/images/logo/logo.png";
+import AboutHeroImage from "../assets/images/about/hero.png";
 ---
 
 <Layout title="Welcome to Astro.">
   <main>
+    <Hero
+      title="About MBG"
+      subtitle="Meet the 'brains' behind Mental Block Gaming"
+      img={AboutHeroImage}
+    />
+    <section class="bg-red-600 py-10">
+      <Container>
+        <div class="flex gap-16">
+          <div class="w-1/4 bg-white p-2 inline-block shadow-xl -rotate-2">
+            <img src={MBGLogo} alt="Mental Block Gaming logo" class="w-full" />
+          </div>
+          <div class="w-3/4">
+            <h2 class="text-white">What is Mental Block Gaming?</h2>
+            <p class="text-white">
+              We are a group based in England that specialise in the creation of
+              Minecraft puzzle-adventure maps. Mental Block Gaming was founded
+              in June 2013 by Duskreaper and MaybeLaterx with the release of our
+              debut map There is no Learning Curve. PharmyB joined the team in
+              April 2014, working primarily on branding, marketing and graphic
+              design. Since then we have released 4 highly regarded maps and
+              have been featured by Youtubers such as Yogscast, CaptainSparklez,
+              SSundee and Logdotzip.
+            </p>
+          </div>
+        </div>
+      </Container>
+    </section>
     <Container>
       <h2>About</h2>
       <UnderRepair />
