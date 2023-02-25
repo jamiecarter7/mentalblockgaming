@@ -1,4 +1,5 @@
 ---
+import { Image } from "@astrojs/image/components";
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import Container from "../components/Container.astro";
@@ -20,7 +21,7 @@ import Prismatic3Logo from "../assets/images/home/prismaticIIILogo.png";
     <Container>
       <h2 class="text-center">Minecraft Maps</h2>
       <div class="prismatic-animated-bg mb-6 shadow-lg">
-        <img class="mx-auto" src={Prismatic3Logo} alt="Prismatic III logo" />
+        <Image class="mx-auto" src={Prismatic3Logo} alt="Prismatic III logo" />
       </div>
       <h3 class="text-center">COLOUR – SOLVE – COLLECT.</h3>
       <p>
@@ -29,7 +30,7 @@ import Prismatic3Logo from "../assets/images/home/prismaticIIILogo.png";
         pathways and creating new unforeseen routes. Collect the nine beacons
         scattered around the chamber in order to escape.
       </p>
-      <ButtonRed href="#" bodyText="more info" class="mx-auto">
+      <ButtonRed to="#" bodyText="more info" class="mx-auto">
         More Info
       </ButtonRed>
       <UnderRepair />

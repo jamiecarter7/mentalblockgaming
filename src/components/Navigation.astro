@@ -1,9 +1,10 @@
 ---
+import { Image } from "@astrojs/image/components";
 import logo from "../assets/images/logo/logo.png";
 import HomeIcon from "../assets/icons/home.svg";
 ---
 
-<div class="position fixed top-0 w-full text-neutral-500">
+<div class="position fixed top-0 z-10 w-full text-neutral-500">
   <p class="text-xs text-white text-center m-0 p-2 bg-red-700">
     This website is being repaired. Please check back over the next 48hours as
     we restore content
@@ -12,14 +13,18 @@ import HomeIcon from "../assets/icons/home.svg";
     class="flex justify-between items-center h-24 px-5 pr-10 bg-white bg-opacity-80 backdrop-blur-xl"
   >
     <a href="/" class="flex place-items-center gap-5">
-      <img src={logo} class="block aspect-square w-14 h-14" />
+      <Image
+        src={logo}
+        class="block aspect-square w-14 h-14"
+        alt="Mental Block Gmaing logo"
+      />
       <span class="text-xl text-neutral-700">Mental Block Gaming</span>
     </a>
     <div>
       <ul class="flex items-center gap-4 text-sm capitalize">
         <li class="flex items-center">
           <a class="inline-block px-2 py-1" href="/"
-            ><img class="w-5 h-5" src={HomeIcon} alt="" srcset="" /></a
+            ><Image class="w-5 h-5" src={HomeIcon} alt="Home" /></a
           >
         </li>
         <li><a class="p-2" href="/maps">maps</a></li>

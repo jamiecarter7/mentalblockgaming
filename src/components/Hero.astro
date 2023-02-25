@@ -1,14 +1,12 @@
 ---
-import heroImage from "../images/portalgrab.png";
 export interface Props {
   title: string;
   subtitle: string;
-  img: string;
+  img: ImageMetadata;
 }
 
 const { title, subtitle, img } = Astro.props;
-
-const bgImgString = `url('${img}')`;
+const bgImgString = `url('${img.src}')`;
 ---
 
 <div class="hero w-full flex flex-col justify-center items-center">

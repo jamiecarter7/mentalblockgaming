@@ -1,0 +1,31 @@
+---
+import Container from "../components/Container.astro";
+import ButtonRed from "../components/elements/ButtonRed.astro";
+import Layout from "../layouts/Layout.astro";
+
+const title = "We're having a mental block :P";
+---
+
+<Layout title={title}>
+  <main>
+    <Container>
+      <h1 class="mt-20 mb-6 text-3xl text-center">
+        We're having a 'mental block' with that page...
+      </h1>
+      <p class="mx-10 text-center">
+        We're currently recovering from a catastrophic website failure.
+      </p>
+      <p class="text-center">
+        We are tracking the broken webpages and are working to fix them.
+      </p>
+      <p class="text-center">
+        In the meantime here are some useful links to find what you are after
+      </p>
+      <div class="flex justify-center gap-6">
+        <ButtonRed to="/" bodyText="home" />
+        <ButtonRed to="/maps" bodyText="Map downloads" />
+      </div>
+    </Container>
+    <p></p>
+  </main>
+</Layout>
