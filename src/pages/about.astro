@@ -1,11 +1,18 @@
 ---
+import { Image } from "@astrojs/image/components";
 import Layout from "../layouts/Layout.astro";
 import Container from "../components/Container.astro";
 import Hero from "../components/Hero.astro";
 import UnderRepair from "../components/elements/UnderRepair.astro";
 
 import MBGLogo from "../assets/images/logo/logo.png";
+import TwitterIcon from "../assets/icons/twitter.svg";
+
 import AboutHeroImage from "../assets/images/about/hero.png";
+import DanielProfile from "../assets/images/about/dan.jpg";
+import JamesProfile from "../assets/images/about/james.jpg";
+import JamieProfile from "../assets/images/about/jamie.jpg";
+import HaroldProfile from "../assets/images/about/harold.png";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -17,29 +24,141 @@ import AboutHeroImage from "../assets/images/about/hero.png";
     />
     <section class="bg-red-600 py-10">
       <Container>
-        <div class="flex gap-16">
-          <div class="w-1/4 bg-white p-2 inline-block shadow-xl -rotate-2">
-            <img src={MBGLogo} alt="Mental Block Gaming logo" class="w-full" />
-          </div>
+        <div class="flex items-center gap-24">
+          <!-- <div> -->
+          <Image
+            src={MBGLogo}
+            alt="Mental Block Gaming logo"
+            class="w-1/4 bg-white p-2 inline-block shadow-xl -rotate-2"
+          />
+          <!-- </div> -->
           <div class="w-3/4">
             <h2 class="text-white">What is Mental Block Gaming?</h2>
             <p class="text-white">
               We are a group based in England that specialise in the creation of
-              Minecraft puzzle-adventure maps. Mental Block Gaming was founded
-              in June 2013 by Duskreaper and MaybeLaterx with the release of our
-              debut map There is no Learning Curve. PharmyB joined the team in
-              April 2014, working primarily on branding, marketing and graphic
-              design. Since then we have released 4 highly regarded maps and
-              have been featured by Youtubers such as Yogscast, CaptainSparklez,
-              SSundee and Logdotzip.
+              Minecraft puzzle-adventure maps.
+            </p>
+
+            <p class="text-white">
+              Mental Block Gaming was founded in June 2013 by Duskreaper and
+              MaybeLaterx with the release of our debut map There is no Learning
+              Curve. PharmyB joined the team in April 2014, working primarily on
+              branding, marketing and graphic design.
+            </p>
+            <p class="text-white">
+              then we have released 4 highly regarded maps and have been
+              featured by Youtubers such as Yogscast, CaptainSparklez, SSundee
+              and Logdotzip.
             </p>
           </div>
         </div>
       </Container>
     </section>
-    <Container>
-      <h2>About</h2>
-      <UnderRepair />
-    </Container>
+    <section>
+      <Container>
+        <h2 class="text-center">The team</h2>
+        <div
+          class="flex flex-col gap-10 justify-center items-center max-w-4xl mx-auto py-12"
+        >
+          <div class="flex items-center justify-start gap-16 p-4 -rotate-2">
+            <Image
+              class="w-1/3 border-r-8 border-b-8 border-red-500"
+              src={DanielProfile}
+              alt="daniel"
+            />
+            <div class="-translate-y-10 pt-10">
+              <h3 class="text-5xl mb-3">MaybeLaterx</h3>
+              <p class="text-2xl text-neutral-500">Daniel Carter</p>
+              <p class="max-w-sm">
+                French and German graduate and creative director of Mental Block
+                Gaming. Can certify that “noob” is the same in all three
+                languages.
+              </p>
+            </div>
+          </div>
+          <div class="w-full">
+            <div
+              class="mb-5 h-1.5 -translate-x-5 bg-neutral-200 w-1/4 self-start -rotate-2"
+            >
+            </div>
+            <div
+              class="h-1.5 translate-x-10 bg-neutral-200 w-1/3 self-start -rotate-2"
+            >
+            </div>
+          </div>
+          <div
+            class="flex flex-row-reverse items-center justify-start gap-16 p-4 rotate-2"
+          >
+            <Image
+              class="w-1/3 border-r-8 border-t-8 border-red-500"
+              src={JamesProfile}
+              alt="daniel"
+            />
+            <div class="-translate-y-10 pt-10">
+              <h3 class="text-5xl mt-10 mb-3">Duskreaper</h3>
+              <p class="text-2xl text-neutral-500">James Everitt</p>
+              <p class="max-w-sm">
+                Chemist by profession. Teacher by vocation. Gamer by obsession.
+                Designer by passion.
+              </p>
+            </div>
+          </div>
+          <div class="w-full flex flex-col">
+            <div
+              class="mb-5 h-1.5 -translate-x-5 bg-neutral-200 w-1/4 self-center rotate-2"
+            >
+            </div>
+            <div
+              class="h-1.5 -translate-x-1/2 bg-neutral-200 w-1/3 self-end rotate-2"
+            >
+            </div>
+          </div>
+          <div class="flex items-center justify-start gap-16 p-4 -rotate-2">
+            <Image
+              class="w-1/3 border-l-8 border-b-8 border-red-500"
+              src={JamieProfile}
+              alt="daniel"
+            />
+            <div class="-translate-y-10 pt-10">
+              <h3 class="text-5xl mb-3">PharmyB</h3>
+              <p class="text-2xl text-neutral-500">Jamie Carter</p>
+              <p class="max-w-sm">
+                Pharmacist, product designer and frontend developer. Passionate
+                about designing nice things.
+              </p>
+            </div>
+          </div>
+          <div class="w-full flex justify-center">
+            <div class="mb-5 h-6 w-6 translate-x-12 bg-neutral-200 -rotate-2">
+            </div>
+            <div
+              class="h-20 w-20 translate-x-16 -translate-y-4 bg-neutral-200 -rotate-2"
+            >
+            </div>
+          </div>
+
+          <div
+            class="flex flex-row-reverse items-center justify-start gap-16 p-4 rotate-2"
+          >
+            <Image
+              class="w-1/3 border-r-8 border-t-8 border-red-500"
+              src={HaroldProfile}
+              alt="daniel"
+            />
+            <div class="-translate-y-10 pt-10">
+              <h3 class="text-5xl mt-10 mb-3">Harold</h3>
+              <p class="text-2xl text-neutral-500">As himself</p>
+              <p class="max-w-sm">
+                Hard-working DJ with a strong personality. Recent hit,
+                “Chemistry“, on iTunes. Likes cats.
+              </p>
+            </div>
+          </div>
+        </div>
+      </Container>
+    </section>
   </main>
+  <Container>
+    <UnderRepair />
+  </Container>
 </Layout>
