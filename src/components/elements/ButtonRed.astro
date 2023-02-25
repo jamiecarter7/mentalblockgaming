@@ -1,0 +1,19 @@
+---
+export interface Props {
+  href: string;
+  bodyText: string;
+  class?: string;
+}
+
+const { href, bodyText, class: className } = Astro.props;
+---
+
+<a class={className} href={href}>
+  {bodyText}
+</a>
+
+<style>
+  a {
+    @apply border-[2px] rounded-[3px] text-lg border-red-600 text-red-600 my-2 px-4 py-2.5 capitalize inline-block;
+  }
+</style>

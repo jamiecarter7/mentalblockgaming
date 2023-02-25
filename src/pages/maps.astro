@@ -1,0 +1,29 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Container from "../components/Container.astro";
+import ButtonRed from "../components/elements/ButtonRed.astro";
+import UnderRepair from "../components/elements/UnderRepair.astro";
+---
+
+<Layout title="Welcome to Astro.">
+  <main>
+    <Container>
+      <h1>Download links</h1>
+
+      <h2>Prismatic III</h2>
+      <p>Prismatic III</p>
+      <div class="flex gap-4">
+        <ButtonRed
+          bodyText="Download Map"
+          href="http://www.mediafire.com/file/sh8ziae3zxsqhhc/Prismatic+III+v1.0.1.zip"
+        />
+        <ButtonRed
+          bodyText="Download Resourse Pack"
+          href="http://www.mediafire.com/file/6768k2sr1royo1j/Prismatic+III+RP+v1.0.1.zip"
+        />
+      </div>
+      <br />
+      <UnderRepair />
+    </Container>
+  </main>
+</Layout>
