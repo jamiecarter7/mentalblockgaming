@@ -1,0 +1,18 @@
+# Redirects from what the browser requests to what we serve
+
+<!-- /home              /
+/blog/my-post.php  /blog/my-post
+/news              /blog
+/cuties            https://www.petsofnetlify.com -->
+
+# There is no learning curve
+
+downloads/there-is-no-learning-curve/download-tinlc /thereisnolearningcurve/download
+downloads/there-is-no-learning-curve /thereisnolearningcurve
+
+# There is no learning curve 2
+
+<!-- # Prismatic 3
+
+/prismatic-iii/download-prismatic-iii/ /prismatic3/download
+/prismatic-iii /prismatic3 -->
