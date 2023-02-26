@@ -1,14 +1,64 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Container from "../components/Container.astro";
+import Hero from "../components/Hero.astro";
 import UnderRepair from "../components/elements/UnderRepair.astro";
+
+import ChemistryHero from "../assets/images/chemistry/hero.png";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Chemistry Soundtrack - Mental Block Gaming">
   <main>
+    <Hero
+      img={ChemistryHero}
+      title="Chemistry"
+      subtitle="DJ Harold's chart smashing hit"
+    />
     <Container>
       <h2>Chemistry Soundtrack</h2>
-      <UnderRepair />
+      <iframe
+        style="border-radius:12px"
+        src="https://open.spotify.com/embed/album/6E6Gk7yt5KMQz6mptTiuMk?utm_source=generator&theme=0"
+        width="100%"
+        height="352"
+        frameBorder="0"
+        allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"></iframe>
+      <iframe
+        allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+        frameborder="0"
+        height="450"
+        style="width:100%;max-width:660px;overflow:hidden;background:transparent;"
+        sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+        src="https://embed.music.apple.com/us/album/chemistry-single/1040912358"
+      ></iframe>
     </Container>
+    <section class="text-center">
+      <Container>
+        <h2>Chemistry Lyrics</h2>
+        <p class="pt-10">"You’re the acid to my alkali</p>
+        <p>I love you more than I love pumpkin pie</p>
+        <p>You and me</p>
+        <p>We’ve got chemistry</p>
+        <br />
+        <p class="pt-10">My data would suggest</p>
+        <p>That opposites attract</p>
+        <p>I can feel a bond</p>
+        <p>Yeah baby we react, oh, oh, oh, oh</p>
+        <p></p>
+
+        <br />
+        <p class="pt-10">Yeah I’ve given up on all my research</p>
+        <p>You are what I’ve been looking for</p>
+        <p>You and I have got chemistry</p>
+        <p>You’re all I want and more</p>
+
+        <p class="pt-10">Chemistry, chemistry</p>
+        <p>Not physics but chemistry</p>
+        <p>Chemistry, meant to be</p>
+        <p>Oh, oh, oh, oh, oh, oh, oh"</p>
+      </Container>
+    </section>
   </main>
 </Layout>
