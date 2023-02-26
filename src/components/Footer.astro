@@ -1,6 +1,8 @@
 ---
 import Container from "./Container.astro";
 import UnderRepair from "./elements/UnderRepair.astro";
+
+const date = new Date();
 ---
 
 <footer class="bg-[#222] text-sm">
@@ -36,10 +38,14 @@ import UnderRepair from "./elements/UnderRepair.astro";
           </a>
         </li>
       </ul>
-      <p id="footer-info">
-        Designed with love | Powered by <a href="https://astro.build">AstroJS</a
-        >
-      </p>
+      <div class="flex justify-between">
+        <p>
+          Designed with love | Powered by <a href="https://astro.build"
+            >AstroJS</a
+          >
+        </p>
+        <p>Updated {date.toDateString()}</p>
+      </div>
     </Container>
   </div>
 </footer>
