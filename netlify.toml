@@ -8,12 +8,12 @@
 
 # Prismatic
 
-# [[redirects]]
-#   from = "/downloads/prismatic/download-prismatic"
-#   to = "/prismatic/download"
-#   status = 301
-#   force = true
-#   query = { path = ":path" }
+[[redirects]]
+  from = "/downloads/prismatic/download-prismatic"
+  to = "/prismatic/download"
+  status = 301
+  force = true
+  query = { path = ":path" }
 
 # [[redirects]]
 #   from = "/downloads/prismatic"
