@@ -1,8 +1,16 @@
 ---
+import Container from "../components/Container.astro";
 import UnderRepair from "../components/elements/UnderRepair.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<div>
-  <h1>Blog</h1>
-  <UnderRepair />
-</div>
+<Layout title="Blog - Mental Block Gaming">
+  <main>
+    <Container>
+      <div>
+        <h1 class="text-4xl mb-10">Blog</h1>
+        <UnderRepair />
+      </div>
+    </Container>
+  </main>
+</Layout>

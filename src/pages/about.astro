@@ -3,6 +3,7 @@ import { Image } from "@astrojs/image/components";
 import Layout from "../layouts/Layout.astro";
 import Container from "../components/Container.astro";
 import Hero from "../components/Hero.astro";
+import AboutMapDownloads from "../components/elements/AboutMapDownloads.astro";
 import UnderRepair from "../components/elements/UnderRepair.astro";
 
 import MBGLogo from "../assets/images/logo/logo.png";
@@ -13,27 +14,38 @@ import DanielProfile from "../assets/images/about/dan.jpg";
 import JamesProfile from "../assets/images/about/james.jpg";
 import JamieProfile from "../assets/images/about/jamie.jpg";
 import HaroldProfile from "../assets/images/about/harold.png";
+
+import TINLC2 from "../assets/images/thereisnolearningcurve2/small.jpg";
+import TINLC from "../assets/images/thereisnolearningcurve/small.jpg";
+import Prismatic3 from "../assets/images/prismatic3/splash.png";
+import Prismatic from "../assets/images/prismatic/splash.png";
+import WorkshopWars from "../assets/images/workshopwars/splash.png";
+import RogueQuest from "../assets/images/roguequest/splash.jpg";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="About - Mental Block Gaming">
   <main>
     <Hero
       title="About MBG"
       subtitle="Meet the 'brains' behind Mental Block Gaming"
       img={AboutHeroImage}
     />
-    <section class="bg-red-600 py-10">
+    <section class="bg-red-600 py-10 lg:py-5">
       <Container>
-        <div class="flex items-center gap-24">
+        <div
+          class="flex flex-col lg:flex-row items-center gap-16 lg:gap-24 lg:mx-20 xl:mx-auto max-w-4xl"
+        >
           <!-- <div> -->
           <Image
             src={MBGLogo}
             alt="Mental Block Gaming logo"
-            class="w-1/4 bg-white p-2 inline-block shadow-xl -rotate-2"
+            class="lg:w-2/5 xl:w-1/4 bg-white p-2 inline-block shadow-xl -rotate-2"
           />
           <!-- </div> -->
-          <div class="w-3/4">
-            <h2 class="text-white">What is Mental Block Gaming?</h2>
+          <div class="w-5/6 md:w-4/6 lg:w-3/5 xl:w-3/4">
+            <h2 class="text-white text-center lg:text-left">
+              What is Mental Block Gaming?
+            </h2>
             <p class="text-white">
               We are a group based in England that specialise in the creation of
               Minecraft puzzle-adventure maps.
@@ -54,7 +66,71 @@ import HaroldProfile from "../assets/images/about/harold.png";
         </div>
       </Container>
     </section>
-    <section>
+    <section class="py-20">
+      <Container>
+        <h2 class="text-center mb-16">Our Achievements</h2>
+        <div class="grid grid-cols-2 gap-16">
+          <div class="flex items-start justify-end">
+            <div
+              class="group w-2/3 p-16 bg-neutral-200 text-center shadow-lg hover:shadow-2xl hover:scale-[103%] hover:rotate-1 hover:-translate-y-1 hover:bg-red-500 duration-150"
+            >
+              <p
+                class="text-8xl text-neutral-600 font-medium group-hover:text-white"
+              >
+                7
+              </p>
+              <p class="text-2xl mb-0 group-hover:text-white">
+                Fully Featured Minecraft Maps
+              </p>
+            </div>
+          </div>
+          <div class="flex items-end">
+            <div
+              class="group mt-24 w-3/4 p-16 bg-neutral-200 text-center shadow hover:shadow-2xl hover:scale-[103%] hover:rotate-1 hover:-translate-y-1 hover:bg-red-500 duration-150"
+            >
+              <p
+                class="text-7xl text-neutral-600 font-medium group-hover:text-white"
+              >
+                250k+
+              </p>
+              <p class="text-2xl mb-0 group-hover:text-white">Map downloads</p>
+            </div>
+          </div>
+          <div>
+            <div class="">
+              <div
+                class="group ml-auto w-full p-16 bg-neutral-200 text-center shadow-md hover:shadow-2xl hover:scale-[103%] hover:rotate-2 hover:-translate-y-1 hover:bg-red-500 duration-150"
+              >
+                <p
+                  class="text-8xl text-neutral-700 font-medium group-hover:text-white"
+                >
+                  1m+
+                </p>
+                <p class="text-2xl mb-0 group-hover:text-white">
+                  Impressions via Youtubers
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-16">
+            <div
+              class="group w-2/3 p-16 bg-neutral-200 text-center shadow-xl hover:shadow-2xl hover:scale-[103%] hover:-rotate-2 hover:-translate-y-1 hover:bg-red-500 duration-150"
+            >
+              <p
+                class="text-8xl text-neutral-700 font-medium group-hover:text-white"
+              >
+                8
+              </p>
+              <p class="text-2xl mb-0 group-hover:text-white">
+                Major Youtuber Features
+              </p>
+            </div>
+          </div>
+        </div>
+      </Container>
+    </section>
+    <!-- Team -->
+    <section class="bg-white">
       <Container>
         <h2 class="text-center">The team</h2>
         <div
@@ -157,8 +233,74 @@ import HaroldProfile from "../assets/images/about/harold.png";
         </div>
       </Container>
     </section>
+    <!-- Maps -->
+    <section class="overflow-hidden">
+      <Container>
+        <h2 class="text-center mb-16">Our Maps</h2>
+        <div
+          class="flex md:grid grid-cols-2 lg:flex flex-col gap-12 lg:gap-20 xl:gap-8"
+        >
+          <div>
+            <AboutMapDownloads
+              img={TINLC2}
+              title="There is no learning curve 2"
+              downloadCount={84828}
+              bodyText="Harold is back in this 3 player cooperative map and better than ever with another 8 puzzles. Before your team can enter the chambers of the original There is no Learning Curve, you must first prove your worth in Harold’s Candidature Aptitude Tests."
+              to="/"
+            />
+          </div>
+          <div class="hidden xl:block h-8"></div>
+          <AboutMapDownloads
+            img={TINLC}
+            title="There is no learning curve"
+            downloadCount={130496}
+            bodyText="A 3 player cooperative puzzle map. Decipher your way through more than 10 unique and stimulating chambers with more than 4 hours of gameplay."
+            to="/"
+          />
+          <div class="hidden xl:flex gap-3 h-8 rotate-3 translate-y-4">
+            <div class="h-6 w-6 translate-x-6 translate-y-6 bg-neutral-300">
+            </div>
+            <div class="h-8 w-8 translate-x-6 bg-neutral-300"></div>
+          </div>
+          <AboutMapDownloads
+            img={Prismatic}
+            title="Prismatic"
+            downloadCount={10379}
+            bodyText="A short single player adventure that will have you seeing rooms through a different light as you colour your way through the complex."
+            to="/"
+          />
+          <div class="hidden xl:block h-8"></div>
+          <AboutMapDownloads
+            img={WorkshopWars}
+            title="Workshow wars: Christmas edition"
+            downloadCount={1054}
+            bodyText="Christmas is just around the corner, and Santa still has hundreds of letters flying in! Split into two teams to see which bunch of elves can craft the most quickly/quickest in this wacky competitive multiplayer Minecraft minigame!"
+            to="/"
+          />
+
+          <div class="hidden xl:flex h-8 flex-col items-end gap-2">
+            <div class="h-1.5 translate-x-1/2 bg-neutral-200 w-1/4"></div>
+            <div class="h-1.5 translate-x-1/4 bg-neutral-200 w-1/3"></div>
+          </div>
+          <AboutMapDownloads
+            img={RogueQuest}
+            title="Rougequest: Chronos and the lantern of souls"
+            downloadCount={9401}
+            bodyText="Chaos is spreading from realm to realm, can you save Yakra from this evil? RogueQuest features rogue-like style game play, randomly generated dungeons, 4 unique characters each with a unique playstyle and storyline and can be played alone or with friends."
+            to="/"
+          />
+          <div class="hidden xl:block h-8"></div>
+
+          <AboutMapDownloads
+            img={Prismatic3}
+            title="Prismatic III: The dye doors"
+            downloadCount={13713}
+            bodyText="In this instalment of Prismatic, you must mix together the three primary colours to shade the complex in your favour; unlocking doors, opening up pathways and creating new unforeseen routes. Collect the nine beacons scattered around the chamber in order to escape."
+            to="/"
+          />
+          <div class="hidden xl:block h-8"></div>
+        </div>
+      </Container>
+    </section>
   </main>
-  <Container>
-    <UnderRepair />
-  </Container>
 </Layout>
