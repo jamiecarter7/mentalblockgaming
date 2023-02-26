@@ -5,8 +5,17 @@ export interface Props {
   title: string;
 }
 import { SimpleAnalytics } from "astro-analytics";
+import { log } from "astro/dist/core/logger/core";
 
-const { title } = Astro.props;
+let { title } = Astro.props;
+if (title.includes("Mental Block Gaming")) {
+  console.log("Fix title for page: '" + title + "'");
+}
+if (title !== "Home") {
+  title = title + " - Mental Block Gaming";
+} else {
+  title = "Mental Block Gaming";
+}
 ---
 
 <!DOCTYPE html>

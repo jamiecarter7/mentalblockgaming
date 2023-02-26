@@ -1,5 +1,6 @@
 ---
 import { Image } from "@astrojs/image/components";
+
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import Container from "../components/Container.astro";
@@ -10,7 +11,7 @@ import HomeHeroImage from "../assets/images/roguequest/portalgrab.png";
 import Prismatic3Logo from "../assets/images/home/prismaticIIILogo.png";
 ---
 
-<Layout title="Mental Block Gaming">
+<Layout title="Home">
   <main>
     <!-- <h1>Welcome to <span class="text-gradient">Astro</span></h1> -->
     <Hero
@@ -30,7 +31,7 @@ import Prismatic3Logo from "../assets/images/home/prismaticIIILogo.png";
         pathways and creating new unforeseen routes. Collect the nine beacons
         scattered around the chamber in order to escape.
       </p>
-      <ButtonRed to="#" bodyText="more info" class="mx-auto">
+      <ButtonRed to="/prismatic-iii" bodyText="more info" class="mx-auto">
         More Info
       </ButtonRed>
       <UnderRepair />
