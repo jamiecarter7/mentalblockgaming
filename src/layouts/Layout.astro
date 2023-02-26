@@ -25,7 +25,7 @@ const { title } = Astro.props;
     <slot />
     <Footer />
   </body>
-  <SimpleAnalytics />
+  <SimpleAnalytics client:load />
 </html>
 <style is:global>
   :root {
