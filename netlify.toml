@@ -9,15 +9,15 @@
 # Prismatic 
 
 [[redirects]]
-from = "/downloads/prismatic/download-prismatic"
-to = "/prismatic/download"
-status = 301
-force = true
-query = { path = ":path" }
+  from = "/downloads/prismatic/download-prismatic"
+  to = "/prismatic/download"
+  status = 301
+  force = true
+  query = { path = ":path" }
 
 [[redirects]]
-from = "/downloads/prismatic"
-to = "/prismatic"
-status = 301
-force = true
-query = { path = ":path" }
+  from = "/downloads/prismatic"
+  to = "/prismatic"
+  status = 301
+  force = true
+  query = { path = ":path" }
