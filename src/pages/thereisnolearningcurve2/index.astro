@@ -1,0 +1,17 @@
+---
+import Container from "../../components/Container.astro";
+import ButtonRed from "../../components/elements/ButtonRed.astro";
+import UnderRepair from "../../components/elements/UnderRepair.astro";
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="There is no learning curve 2">
+  <section>
+    <Container>
+      <h1 class="text-4xl mb-8">There is no learning curve 2</h1>
+      <UnderRepair />
+      <p class="mt-10">Head to the maps page to download this map</p>
+      <ButtonRed to="/maps" bodyText="Downloads Page" />
+    </Container>
+  </section>
+</Layout>
