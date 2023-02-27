@@ -3,12 +3,18 @@ export interface Props {
   to: string;
   bodyText: string;
   class?: string;
+  fill?: boolean;
 }
 
-const { to, bodyText, class: className } = Astro.props as Props;
+const { to, bodyText, class: className, fill } = Astro.props;
+
+let additionalClass = "";
+if (fill) {
+  additionalClass = "fill";
+}
 ---
 
-<a class={className} href={to}>
+<a class={(className, additionalClass)} href={to}>
   {bodyText}
 </a>
 
@@ -18,6 +24,10 @@ const { to, bodyText, class: className } = Astro.props as Props;
   }
 
   a:hover {
+    @apply bg-red-600 text-white;
+  }
+
+  a.fill {
     @apply bg-red-600 text-white;
   }
 </style>
