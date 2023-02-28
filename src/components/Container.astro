@@ -1,5 +1,14 @@
-<div class="w-full p-10">
-  <div class="max-w-6xl w-full mx-auto my-12">
+---
+export interface Props {
+  outerClass?: string;
+  innerClass?: string;
+}
+
+const { innerClass, outerClass } = Astro.props;
+---
+
+<div class={"w-full p-10" + " " + outerClass}>
+  <div class={"max-w-6xl w-full mx-auto my-12" + " " + innerClass}>
     <slot />
   </div>
 </div>

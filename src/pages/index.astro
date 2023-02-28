@@ -13,10 +13,14 @@ import HomeHeroImage from "../assets/images/roguequest/portalgrab.png";
 import Prismatic3Logo from "../assets/images/home/prismaticIIILogo.png";
 import RogueQuest from "../assets/images/roguequest/splash.jpg";
 import Prismatic from "../assets/images/prismatic/splash.png";
-import TINLC2 from "../assets/images/thereisnolearningcurve2/homesplash.jpg";
+import TINLC2 from "../assets/images/thereisnolearningcurve2/splash.jpg";
 import TINLC from "../assets/images/thereisnolearningcurve/splash.jpg";
 
 import ExploreImage from "../assets/images/home/explore.jpg";
+import RoguequestLogo from "../assets/images/roguequest/logo.svg";
+import RoguequestBg from "../assets/images/roguequest/portal.png";
+import RoguequestBgVideo from "../assets/images/roguequest/portalloop.mp4";
+
 const bgImageExploreMaps = `background-image: url('${ExploreImage.src}');`;
 ---
 
@@ -135,8 +139,35 @@ const bgImageExploreMaps = `background-image: url('${ExploreImage.src}');`;
             </div>
           </div>
         </div>
-        <UnderRepair />
-        <!--  
+      </Container>
+    </section>
+    <section class="relative bg-[#260a38]">
+      <video
+        class="absolute w-screen h-screen object-cover"
+        autoplay
+        loop
+        muted
+        poster={RoguequestBg.src}
+      >
+        <source src={RoguequestBgVideo} type="video/mp4" />
+      </video>
+
+      <div
+        class="relative z-10 h-screen flex flex-col justify-center items-center p-10"
+      >
+        <Image src={RoguequestLogo} alt="RogueQuest logo" />
+        <p class="text-purple-600 chronos-shadow text-5xl font-roguequest">
+          Chronos and the lantern of souls
+        </p>
+        <ButtonRed
+          to="/maps/roguequest"
+          bodyText="Adventure awaits..."
+          color="purple"
+        />
+      </div>
+    </section>
+    <UnderRepair />
+    <!--  
         MBG Video Player
     RogueQuest Download Now Featured Minecraft Maps A showcase of some of the
     best Minecraft maps from the Minecraft community! Oscilight: The Light
@@ -200,8 +231,6 @@ const bgImageExploreMaps = `background-image: url('${ExploreImage.src}');`;
     Later Games Check out our new video game studio, Maybe Later Games. Maybe
     Later Games Logo Home About Our Maps Featured Maps Servers Web Games
     Chemistry Blog Forums Donate -->
-      </Container>
-    </section>
   </main>
 </Layout>
 
@@ -244,6 +273,10 @@ const bgImageExploreMaps = `background-image: url('${ExploreImage.src}');`;
     100% {
       background-position: 0% 50%;
     }
+  }
+
+  .chronos-shadow {
+    text-shadow: #4221ff 0 1px 0, #3a0675 0 3px 0;
   }
 
   /* // original styles */

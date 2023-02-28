@@ -1,33 +1,71 @@
 ---
+import { log } from "astro/dist/core/logger/core";
+
 export interface Props {
   to: string;
   bodyText: string;
   class?: string;
   fill?: boolean;
+  color?: string;
 }
 
-const { to, bodyText, class: className, fill } = Astro.props;
+const { to, bodyText, class: className, fill, color } = Astro.props;
 
 let additionalClass = "";
 if (fill) {
   additionalClass = "fill";
 }
+
+let classColor = "red";
+if (color) {
+  classColor = color;
+}
 ---
 
-<a class={(className, additionalClass)} href={to}>
+<a class={className + " " + classColor + " " + additionalClass} href={to}>
   {bodyText}
 </a>
 
-<style>
+<style lang="scss">
   a {
-    @apply border-[2px] rounded-[3px] text-lg border-red-600 text-red-600 my-2 px-4 py-2.5 capitalize inline-block duration-150;
+    @apply border-[2px] rounded-[3px] text-lg  my-2 px-4 py-2.5 capitalize inline-block duration-150;
+
+    &.red {
+      @apply border-red-600 text-red-600;
+    }
+
+    &.purple {
+      @apply border-purple-600 text-purple-500;
+    }
   }
 
   a:hover {
-    @apply bg-red-600 text-white;
+    &.red {
+      @apply bg-red-600 text-white;
+    }
+
+    &.purple {
+      @apply bg-purple-600 text-white;
+    }
   }
 
   a.fill {
-    @apply bg-red-600 text-white;
+    &.red {
+      @apply bg-red-700 shadow-md border-red-700 ease-in-out duration-150 text-white;
+    }
+
+    &.purple {
+      @apply bg-purple-600 text-white;
+    }
+  }
+
+  a.fill:hover {
+    &.red {
+      @apply bg-red-600 scale-[1.1] shadow-md border-red-600 ease-in-out duration-150;
+    }
+
+    &.purple {
+      @apply bg-purple-600 scale-[1.1] shadow-md border-purple-600 ease-in-out duration-150;
+    }
   }
 </style>
