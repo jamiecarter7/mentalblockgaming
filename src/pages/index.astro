@@ -63,10 +63,31 @@ const bgImageExploreMaps = `background-image: url('${ExploreImage.src}');`;
         <div class="grid grid-cols-2 gap-16">
           <div>
             <h3>RogueQuest: Chronos & the Lantern of Souls</h3>
-            <Image
+            <div class="relative">
+              <video
+                class="absolute object-cover"
+                autoplay
+                loop
+                muted
+                poster={RoguequestBg.src}
+              >
+                <source src={RoguequestBgVideo} type="video/mp4" />
+              </video>
+
+              <div
+                class="relative aspect-video z-10 flex flex-col justify-center items-center"
+              >
+                <Image
+                  class="w-3/5"
+                  src={RoguequestLogo}
+                  alt="RogueQuest logo"
+                />
+              </div>
+            </div>
+            <!-- <Image
               src={RogueQuest}
               alt="RogueQuest: Chronos & the Lantern of Souls Prismatic"
-            />
+            /> -->
             <p class="mt-8">
               Chaos is spreading from realm to realm, can you save Yakra from
               this evil? RogueQuest features rogue-like style game play,
