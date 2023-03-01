@@ -1,0 +1,73 @@
+Known Issues With RogueQuest v1.2
+by MaybeLaterx | 6 September 2016 | Maps | 9 comments
+
+This up-to-date list of bugs in RogueQuest v1.2 will give you quick and easy instructions for bypassing areas that are currently unbeatable due to small errors. Feel free to favourite this page and check back before playing!
+
+Issue: The sign in Lycia states the version of the game is v1.0. If you have been directed to this page, you are actually on v1.2.
+
+Solution: N/a
+
+Issue: Custom music volume is too loud.
+
+Solution: The custom music slider will currently not turn down the volume effectively, unless it is set to 0 in which case it will no longer play background music. The best way to manage custom music currently is through the master volume slider until a fix is found. Setting the music slider to about 1%-5% reduces the volume somewhat.
+
+If you encounter any issues not listed here, please contact us using the details at the top of the page or leave a comment below, and we will investigate the matter and let you know about a fix as soon as possible. Thanks for helping us make RogueQuest even better!
+
+9 Comments
+
+Odin on 18 September 2016 at 9:56 am
+We progress to the map with desert theme and there is no portal particle when we are in a shop. On top of that, we decided to suicide in the shop and it causes a death loop where we are shown all the boos room and a message ” This error was caused by Progress exceeding 17 ” while we cannot re spawn.
+
+Reply
+
+Odin on 24 September 2016 at 3:31 am
+I think I got the reason. We should have waited for a bit, but can you make the portal comes up quicker or tell us we need to wait? Also got another bug. We are stuck in the black room from the start for around 5 min. It should not take that long.
+
+Reply
+
+MaybeLaterx on 24 September 2016 at 11:23 am
+If you are playing on the same save file, the Progress bug may have corrupted the map causing it to no longer load properly. I do believe you weren’t waiting long enough for the Kactera map to spawn, and just needed to be patient. You can speed up level generation on the back of the sign in Lycia (behind where the link to this page is given) – by setting it to fast, it will load 2x as quickly, as long as your computer is good enough to handle the RAM requirements.
+
+Reply
+
+Pikatr011 on 29 September 2016 at 7:06 am
+This has to be the best map I played but one problem. Not sure if it’s my computer or something but there is major tick lag with the monsters and you have to hold the use button on the potions extra long to get it to kick in and that’s annoying in boss fights.
+
+Reply
+
+MaybeLaterx on 29 September 2016 at 1:11 pm
+Glad you’re enjoying it! :)
+
+I think the reason the computer lags during the boss fight is because it is still trying to process the music, since the boss tracks are quite long. I’ve noticed the strange way the zombies move and potions work when the game seems to be under a lot of stress, but this usually settles down after playing the game for a while.
+
+To pre-load boss music, try the following commands:
+/playsound kryataur record @a
+/playsound gorgantua record @a
+/playsound lioras record @a
+/playsound core record @a
+
+You can stop the music playing by then typing /stopsound @a.
+
+If this doesn’t help, then sadly it must be linked to the boss’s redstone, in which case there isn’t much we can do about it.
+
+Reply
+
+pikatr011 on 30 September 2016 at 12:39 am
+thanks mate ill try that
+
+Reply
+
+Pikatr011 on 30 September 2016 at 8:20 am
+Tried out the commands and it reduced the lag greatly, but the places with the biggest lag is during the main rooms (the dungeons), would there be any chance if I could have the names of the sounds so see if that fixes it.
+
+Reply
+
+Josh on 4 December 2018 at 4:22 am
+So we get to handoffs playground with the 6 chambers only to find out were missing something by reading command blocks… were we suppose to get the lens of truth thing before then? Nothing said needed it. But we would never have known that it was needed either unless we read the command blocks
+
+Reply
+
+MaybeLaterx on 4 December 2018 at 4:09 pm
+How did you get through the shadow temple without the lens of truth?
+
+Reply
