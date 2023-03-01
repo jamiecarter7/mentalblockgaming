@@ -26,6 +26,19 @@ if (title !== "Home") {
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <script
+      is:inline
+      async
+      defer
+      src="https://scripts.simpleanalyticscdn.com/latest.js"
+    ></script>
+    <noscript
+      ><img
+        src="https://queue.simpleanalyticscdn.com/noscript.gif"
+        alt=""
+        referrerpolicy="no-referrer-when-downgrade"
+      /></noscript
+    >
     <!-- Fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/prb8pdz.css" />
   </head>
@@ -34,7 +47,7 @@ if (title !== "Home") {
     <slot />
     <Footer />
   </body>
-  <SimpleAnalytics />
+  <!-- <SimpleAnalytics /> -->
 </html>
 <style is:global>
   :root {

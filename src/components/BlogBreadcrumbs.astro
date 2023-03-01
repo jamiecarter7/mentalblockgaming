@@ -1,15 +1,11 @@
 ---
-export interface Props {
-  category: string;
-}
-
-const { category } = Astro.props;
+const { frontmatter } = Astro.props;
 ---
 
 <div class="flex gap-3 capitalize">
   <a href="/blog">blog</a>
   <span> /</span>
-  <a href={"/blog/" + category}>{category}</a>
+  <a href={"/blog/" + frontmatter.category}>{frontmatter.category}</a>
 </div>
 
 <style>

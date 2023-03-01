@@ -1,0 +1,21 @@
+---
+import BlogBreadcrumbs from "./BlogBreadcrumbs.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<div class="bg-red-600 p-2 rounded-sm text-white mb-10 text-center">
+  We are working to fix missing images in the coming 48hours
+</div>
+<BlogBreadcrumbs frontmatter={frontmatter} />
+<div class="mt-6 flex flex-col gap-5">
+  <h1>{frontmatter.title}</h1>
+  <p>Written by {frontmatter.author}</p>
+  <slot />
+</div>
+
+<style>
+  h1 {
+    @apply text-4xl text-neutral-800;
+  }
+</style>

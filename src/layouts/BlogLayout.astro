@@ -1,0 +1,35 @@
+---
+import BlogPost from "../components/BlogPost.astro";
+import Container from "../components/Container.astro";
+import Layout from "./Layout.astro";
+export interface Props {
+  title?: string;
+}
+
+const { frontmatter, title } = Astro.props;
+
+let titleText = "";
+if (title === undefined) {
+  titleText = frontmatter.title;
+} else {
+  titleText = title;
+}
+---
+
+<Layout title={titleText}>
+  <div class="flex max-w-7xl mx-auto">
+    <main>
+      <section>
+        <Container>
+          <!-- <BlogAdvert /> -->
+          <BlogPost frontmatter={frontmatter}>
+            <slot />
+          </BlogPost>
+        </Container>
+      </section>
+    </main>
+    <aside class="w-1/3"></aside>
+  </div>
+
+  <style></style>
+</Layout>
