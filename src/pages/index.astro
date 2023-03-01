@@ -22,6 +22,9 @@ import RoguequestBg from "../assets/images/roguequest/portal.png";
 import RoguequestBgVideo from "../assets/images/roguequest/portalloop.mp4";
 
 const bgImageExploreMaps = `background-image: url('${ExploreImage.src}');`;
+
+import Oscilight from "../assets/images/oscilight/splash.jpg";
+import PresentFactory from "../assets/images/presentfactory/splash.jpg";
 ---
 
 <Layout title="Home">
@@ -187,12 +190,49 @@ const bgImageExploreMaps = `background-image: url('${ExploreImage.src}');`;
         />
       </div>
     </section>
+    <section>
+      <Container>
+        <h2 class="text-center">Featured Minecraft Maps</h2>
+        <p class="mb-20 text-center">
+          A showcase of some of the best Minecraft maps from the Minecraft
+          community!
+        </p>
+        <div class="grid grid-cols-2 gap-16">
+          <div>
+            <h3>Oscilight: The Light Shadow</h3>
+            <Image src={Oscilight} alt="Oscilight: The light shadow" />
+            <p class="mt-8">
+              Follow the philosophical narrative in this single-player puzzle
+              map as you use a variety of lights, each with their own
+              behaviours, to navigate each chamber and reach the end.
+            </p>
+            <p>By Dwittyy</p>
+            <ButtonRed color="orange" bodyText="Learn more" to="/oscilight" />
+          </div>
+          <div>
+            <h3>The Present Factory</h3>
+            <Image src={PresentFactory} alt="The Present Factory" />
+            <p class="mt-8">
+              In The Present Factory, it’s your job to construct a production
+              line to a set specification using a variety of blocks with their
+              own set mechanics. Twist, turn, push, pull, stack and compare in
+              this ingenious sandbox puzzle game!
+            </p>
+            <p>By QwertyuiopThePie</p>
+            <ButtonRed
+              color="orange"
+              bodyText="Learn more"
+              to="/presentfactory"
+            />
+          </div>
+        </div>
+      </Container>
+    </section>
     <UnderRepair />
     <!--  
         MBG Video Player
-    RogueQuest Download Now Featured Minecraft Maps A showcase of some of the
-    best Minecraft maps from the Minecraft community! Oscilight: The Light
-    Shadow Oscilight: The Light Shadow - By Dwittyy Follow the philosophical
+ Oscilight: The Light
+     - By Dwittyy Follow the philosophical
     narrative in this single-player puzzle map as you use a variety of lights,
     each with their own behaviours, to navigate each chamber and reach the end.
     By Dwittyy Download Map The Present Factory The Present Factory - By

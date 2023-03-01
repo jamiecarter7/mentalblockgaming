@@ -1,9 +1,9 @@
 # Redirects from what the browser requests to what we serve
 
-<!-- /home              /
-/blog/my-post.php  /blog/my-post
-/news              /blog
-/cuties            https://www.petsofnetlify.com -->
+# <!-- /home              /
+# /blog/my-post.php  /blog/my-post
+# /news              /blog
+# /cuties            https://www.petsofnetlify.com -->
 
 # Prismatic
 
@@ -32,8 +32,18 @@
 
 # Workshop wars: Christmas edition
 
-/downloads/workshop-wars-christmas-edition/download-workshop-wars-christmas-edition/ /maps/workshopwarschristmasedition/download
+/downloads/workshop-wars-christmas-edition/download-workshop-wars-christmas-edition /maps/workshopwarschristmasedition/download
 /downloads/workshop-wars-christmas-edition /maps/workshopwarschristmasedition
+
+# Oscilight: The light shadow
+
+/featured-maps/oscilight-the-light-shadow/download-oscilight-the-light-shadow /maps/oscilight/download
+/featured-maps/oscilight-the-light-shadow /maps/oscilight
+
+# The present factoyr
+
+/featured-maps/the-present-factory/download-the-present-factory /maps/presentfactory/download
+/featured-maps/the-present-factory /maps/presentfactory
 
 # Downloads
 
