@@ -39,41 +39,52 @@ if (color) {
     }
 
     &.orange {
-      @apply border-orange-600 text-orange-500;
+      @apply border-orange-400 text-orange-400;
+    }
+    &.amber {
+      @apply border-amber-500 text-amber-500;
     }
   }
 
   a:hover {
+    // @apply -translate-y-1 shadow-md;
+    @apply text-white;
     &.red {
-      @apply bg-red-600 text-white;
+      @apply bg-red-600;
     }
 
     &.purple {
-      @apply bg-purple-600 text-white;
+      @apply bg-purple-600;
     }
 
-    &.purple {
-      @apply bg-orange-600 text-white;
+    &.orange {
+      @apply bg-orange-400 shadow-md;
+    }
+
+    &.amber {
+      @apply bg-amber-500;
     }
   }
 
   a.fill {
+    @apply ease-in-out duration-500 text-white;
     &.red {
-      @apply bg-red-700 shadow-md border-red-700 ease-in-out duration-150 text-white;
+      @apply bg-red-700 shadow-md border-red-700;
     }
 
     &.purple {
-      @apply bg-purple-600 text-white;
+      @apply bg-purple-600;
     }
   }
 
   a.fill:hover {
+    @apply -translate-y-0 scale-[1.1] shadow-md duration-150;
     &.red {
-      @apply bg-red-600 scale-[1.1] shadow-md border-red-600 ease-in-out duration-150;
+      @apply bg-red-600 border-red-600;
     }
 
     &.purple {
-      @apply bg-purple-600 scale-[1.1] shadow-md border-purple-600 ease-in-out duration-150;
+      @apply bg-purple-600 border-purple-600;
     }
   }
 </style>
