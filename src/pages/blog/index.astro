@@ -1,18 +1,24 @@
 ---
+import Container from "../../components/Container.astro";
 import Layout from "../../layouts/Layout.astro";
 const allPosts = await Astro.glob("../blog/*/*md");
 const pageTitle = "Blog";
 ---
 
 <Layout title={pageTitle}>
-  <p>This is where I will post about my journey learning Astro.</p>
-  <ul>
-    {
-      allPosts.map((post) => (
-        <li>
-          <a href={post.url}>{post.frontmatter.title}</a>
-        </li>
-      ))
-    }
-  </ul>
+  <section>
+    <Container>
+      <h1 class="text-4xl text-neutral-600 mb-6">Blog</h1>
+      <p>Read about what we learned making games..</p>
+      <ul>
+        {
+          allPosts.map((post) => (
+            <li class="bg-neutral-200 p-4 my-8 rounded-lg text-red-500">
+              <a href={post.url}>{post.frontmatter.title}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </Container>
+  </section>
 </Layout>
