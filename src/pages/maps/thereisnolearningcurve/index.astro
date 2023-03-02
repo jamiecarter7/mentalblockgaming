@@ -1,32 +1,40 @@
 ---
 import Container from "../../../components/Container.astro";
 import ButtonRed from "../../../components/elements/ButtonRed.astro";
+import DownloadCount from "../../../components/elements/DownloadCount.astro";
+import PartialRestore from "../../../components/elements/PartialRestore.astro";
 import UnderRepair from "../../../components/elements/UnderRepair.astro";
 import Layout from "../../../layouts/Layout.astro";
 ---
 
-<Layout title="There is no learningg curve">
+<Layout title="There is no learning curve">
   <section>
     <Container>
+      <PartialRestore />
       <h1 class="text-4xl mb-8">There is no learning curve</h1>
-      <p class="mt-10">Follow the link below to download this map</p>
-      <ButtonRed to="/maps" bodyText="Downloads Page" />
-      <UnderRepair />
-
-      This puzzle/adventure map is a three player cooperative experience like no
-      other. Decipher your way through more than 10 unique and stimulating
-      chambers with more than 4 hours of gameplay. Manipulate water, iron and
-      even time in order to progress under the supervision of your friendly
-      host, Harold. Now available in English, French, Dutch and Spanish! This
-      puzzle is designed for three players – not one, not two, not four, but
-      THREE players. You will need to rely on each other in order to progress
-      through the puzzles. Some form of communication is highly recommended
-      between the players, such as being in the same room or using Skype. There
-      are no mods required for this map; however, Command Blocks must be enabled
-      – to do so, open server.properties and insert the following line at the
-      bottom before booting the server:enable-command-block=true. This is our
-      first Minecraft map and we welcome any suggestions/ideas you may have to
-      improve it.
+      <p>
+        This puzzle/adventure map is a three player cooperative experience like
+        no other. Decipher your way through more than 10 unique and stimulating
+        chambers with more than 4 hours of gameplay. Manipulate water, iron and
+        even time in order to progress under the supervision of your friendly
+        host, Harold.<strong
+          >Now available in English, French, Dutch and Spanish!</strong
+        >
+      </p>
+      <p>
+        This puzzle is designed for three players – not one, not two, not four,
+        but THREE players. You will need to rely on each other in order to
+        progress through the puzzles. Some form of communication is highly
+        recommended between the players, such as being in the same room or using
+        Skype.
+      </p>
+      <p>
+        There are no mods required for this map; however, Command Blocks must be
+        enabled – to do so, open server.properties and insert the following line
+        at the bottom before booting the server:enable-command-block=true. This
+        is our first Minecraft map and we welcome any suggestions/ideas you may
+        have to improve it.
+      </p>
 
       <iframe
         width="1080"
@@ -36,16 +44,44 @@ import Layout from "../../../layouts/Layout.astro";
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
-      What Players are Saying “Amazing map” Wow! An amazing map. Challenging, but
-      not too much. Frustrating at times, but oh so worth it in the end. Thank you
-      for this amazing experience. Sequel pls. 11 / 10 juliand665 “Masterpiece!”
-      THIS WAS A MASTERPIECE! This was the most fun I’ve had in a adventure map in
-      a long time! I sure hope there will be a part 2 or another one. 10 / 10 Loppan997
-      “Wow” Wow this was such an awesome map! I loved playing it with my friends!
-      I absolutely LOVED the puzzles, every single one of them! Very good job, I’m
-      going to check out your other stuff! Keep it up! RitaKrueger Looking for a
-      team? Want to play our maps but don't have a group of 3? Team up on Parallel
-      and start playing! Find Teammates Download Map Download Downloads
+      <h2>What Players are Saying</h2>
+      <div>
+        <p>
+          “Amazing map” Wow! An amazing map. Challenging, but not too much.
+          Frustrating at times, but oh so worth it in the end. Thank you for
+          this amazing experience. Sequel pls.
+        </p>
+        <p>11 / 10</p>
+        <p>juliand665</p>
+      </div>
+      <div>
+        <p>
+          “Masterpiece!” THIS WAS A MASTERPIECE! This was the most fun I’ve had
+          in a adventure map in a long time! I sure hope there will be a part 2
+          or another one.
+        </p>
+        <p>10 / 10</p>
+        <p>Loppan997</p>
+      </div>
+      <div>
+        <p>
+          “Wow” Wow this was such an awesome map! I loved playing it with my
+          friends! I absolutely LOVED the puzzles, every single one of them!
+          Very good job, I’m going to check out your other stuff!
+        </p>
+        <p>Keep it up!</p>
+        <p>RitaKrueger</p>
+      </div>
+      <!-- Looking for a team? Want to play our maps but don't have a group of 3? Team -->
+      <!-- up on Parallel and start playing! Find Teammates  -->
+
+      <h2>Download map</h2>
+      <DownloadCount />
+      <p>130463 downloads</p>
+      <ButtonRed
+        to="/maps/thereisnolearningcurve/download"
+        bodyText="Download map"
+      />
     </Container>
   </section>
 </Layout>
