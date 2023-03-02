@@ -3,6 +3,7 @@ layout: "../../../layouts/BlogLayout.astro"
 title: "Working in a Game Development Team: The Pros and Cons"
 pubDate: 2014-11-14
 description: "This is the first post of my new Astro blog."
+exerpt: "So you have a great idea for a game. But before you tackle a project on your own, have you considered working on your project with a team?"
 author: "MaybeLaterx"
 image:
   url: "/blog/posts/playtesting-bible-a-guide-for-game-developers/enlightening-book.jpg"

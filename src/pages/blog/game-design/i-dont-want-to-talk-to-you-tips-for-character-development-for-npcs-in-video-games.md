@@ -1,6 +1,7 @@
 ---
 layout: "../../../layouts/BlogLayout.astro"
 title: "“I Don’t Want to Talk to You” – Tips for Character Development for NPCs in Video Games"
+exerpt: "The methods for character development listed in this post are excellent and empowering tools that can assist you in populating your world with truly compelling characters."
 pubDate: 2014-12-29
 description: "This is the first post of my new Astro blog."
 author: "MaybeLaterx"

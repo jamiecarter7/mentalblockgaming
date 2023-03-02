@@ -3,6 +3,7 @@ layout: "../../../layouts/BlogLayout.astro"
 title: "The Playtesting Bible: A Guide for Game Developers"
 pubDate: 2014-11-05
 description: "This is the first post of my new Astro blog."
+exerpt: "Playtesting is an incredibly common practice in the field of video game design. In this article I will look at why playtesters are important, how playtesting should be carried out and what makes a good playtester."
 author: "MaybeLaterx"
 image:
   url: "/blog/posts/playtesting-bible-a-guide-for-game-developers/enlightening-book.jpg"
@@ -22,7 +23,7 @@ Simply put: without playtesters, video games would be confusing, boring, and unb
 Playtesters sit through not only the disorientating parts of a game but also the boring parts. Sections of the game that are deemed uninteresting, overly punishing, or unrewarding are tweaked until a solution to these problems can be found. We’ve even seen players find completely unintentional alternate solutions to some of our puzzles! Finally, playtesters can also play with a game’s mechanics to ensure that it is balanced. By taking data from a large pool of playtests, a dominant strategy can be uncovered which can then be brought into line, allowing other strategies to emerge alongside it.
 
 ![Playtesting LoL](/blog/posts/playtesting-bible-a-guide-for-game-developers/playtesting-lol.jpg)
-*<span class="text-center block mt-3">The champions with the highest win rate in League of Legends today.</span>*
+_<span class="text-center block mt-3">The champions with the highest win rate in League of Legends today.</span>_
 
 It is worth mentioning that the most important part of playtesting is timeliness. Late playtesting data is as good as no playtesting data, because it means that the appropriate changes can’t be made to the game before release. The most common type of late playtesting comes in the form of reviews. Critics will say what is good and bad about your game, but by this point it is normally too late to act on the advice given. Organise your playtests early to ensure that your development team has enough time to analyse the data taken from tests and use it to improve gameplay.
 
@@ -31,15 +32,15 @@ On this note, I will stress that it is never too early to start playtesting. As 
 Take, for example, The Sims. Will Wright originally envisaged The Sims as an architecture simulator, where the core gameplay revolved around building houses. The actual sims were simply there to assess your building when construction was complete. However, Maxis observed that players were really longing to see people living inside their newly-furnished homes, and thus The Sims became what it is today, the best-selling PC game in history.
 
 ![The Sims](/blog/posts/playtesting-bible-a-guide-for-game-developers/the-sims.jpg)
-*<span class="text-center block mt-3">The Sims (2000) changed from an architecture simulator to a life simulator during development.</span>*
-
+_<span class="text-center block mt-3">The Sims (2000) changed from an architecture simulator to a life simulator during development.</span>_
 
 It might frighten you as a developer to put your work out there, subject to scrutiny when in such a primitive state, but you needn’t be worried. It might not be finished, but this allows your team to see which areas of the game resonate best with the players. Your design team can then expand on these areas and develop them into core gameplay features. A playtest won’t give you all the answers, but it will certainly point you in the right direction, and it’s much easier to change direction after five paces than after five miles.
 
 ![no image](/blog/posts/noimage.png)
-*<span class="text-center block mt-3">Playtests allow you to catch problems early, saving time and money in the long-run.</span>*
+_<span class="text-center block mt-3">Playtests allow you to catch problems early, saving time and money in the long-run.</span>_
 
 ## How should playtesting be carried out?
+
 So now that we’ve established why we need playtesters, let’s move on to how to carry out playtesting sessions. As previously stated, playtesting won’t give you all the answers, but depending on how much data you can extract from a test, some sessions will be much more useful than others. Before you arrange any other aspect of playtesting, you should ask yourself what specific element of your game you want to test.
 
 You might want to test the physics engine to see if your player can comfortably navigate difficult sections of parkour, or perhaps you need to check if a certain card feels overpowered in a trading card game, or you might see which character is the most appealing.
@@ -51,7 +52,7 @@ If you are the one who is going to be coordinating and running playtests, make s
 Bear in mind that this does not mean that you need to know how to fix every gameplay element immediately, but you need to make sure that the test can keep running in case something goes wrong. If you don’t know the answer to that puzzle on level one, any playtesters stuck on that section will not be able to progress past the beginning of the entire game. By the same token, you need to recognise if the game is working in ways other than intended that to a playtester would look completely normal and appropriate. If alien blood is meant to be green but is appearing red, or if no blood is showing at all, then you need to recognise that, as your playtesters won’t.
 
 ![Indiana Jones](/blog/posts/playtesting-bible-a-guide-for-game-developers/indiana-jones.jpg)
-*<span class="text-center block mt-3">The very first level of Indiana Jones and the Infernal Machine, requiring you to pull this square out of the wall.</span>*
+_<span class="text-center block mt-3">The very first level of Indiana Jones and the Infernal Machine, requiring you to pull this square out of the wall.</span>_
 
 Although it sounds obvious, it is important to have reliable playtesters who actually turn up to playtests. If you have an hour slot booked for a player who doesn’t show up, waiting around wastes everybody’s time. It is just as important that your playtesters let you know if they can’t attend for some reason. Try to get the playtest to start as punctually as possible, because you may have other tests scheduled for the rest of the day and you don’t want them to run into each other.
 
@@ -64,7 +65,7 @@ They might be less inclined to react negatively to a part of the game that they 
 <!-- https://web.archive.org/web/20210414015611im_/http://i2.wp.com/community.eidosmontreal.com/data/extensions_data/square_articles/3/c/e/6/d/3324//large_image.jpg?resize=800%2C301 -->
 
 ![react differently](/blog/posts/noimage.png)
-*<span class="text-center block mt-3">Players may react differently if they are constantly aware that they are being observed</span>*
+_<span class="text-center block mt-3">Players may react differently if they are constantly aware that they are being observed</span>_
 
 Although you might want to explain your game in great detail before the playtester even gets the controller in his hands, resist the urge. See how well your game explains itself. Of course, if you are testing a very early prototype of your game some things will naturally have to be explained, but if they have any questions try to guide them instead of answering them out right.
 
@@ -85,7 +86,7 @@ The infamous barrel in Carnival Night Zone from Sonic the Hedgehog 3 (1994) was 
 It can be eye-opening to have several playtesters seated near one another during the tests. If a player has a question, they might find it more comfortable to simply ask the person right next to them. Just as important as the question is the answer given: has the other player successfully understood the game? “Which car is the best?” “The go-kart goes the fastest.” The go-kart may well have the highest acceleration, but that doesn’t necessarily mean it has the highest max speed. Despite this, it was perceived as the fastest car, which can influence your player’s choices. Pay close attention to players sat next to one another to see what aspects of your game they discuss.
 
 ![no image](/blog/posts/noimage.png)
-*<span class="text-center block mt-3">Mental Block Gaming’s Templars of Hyrule (2014) is a three-player game. Listening to what the playtesters were saying to one another provided a lot of feedback</span>*
+_<span class="text-center block mt-3">Mental Block Gaming’s Templars of Hyrule (2014) is a three-player game. Listening to what the playtesters were saying to one another provided a lot of feedback</span>_
 
 In addition to what they are saying, there are other ways to gauge a playtester’s thoughts. In an ideal world, you should set up a camera to record three things in a playtest: the tester’s face, their hands, and their monitor. The face can reveal a great deal of information about your game. It shows concentration, enjoyment, frustration, boredom, relief, and intensity. Laughing, smiling, frowning, sighing, gasping, even a little “Hmm…” can grant insight into what the player is thinking and feeling.
 
@@ -102,9 +103,10 @@ It is not uncommon to receive several suggestions for improvement from your test
 After players have given their general feedback on the positives and negatives along with their suggestions, it is good practice to get some discrete and empirical data on the playtest. Give your players a feedback form where they rate sections of a game on a scale of 1-5. Make sure to give each number a caption to help guide their usage, such as “Excellent” or “Poor”. An odd number of markers in your scale (1-5, 1-7, 0-10) is better than an even number (0-5, 1-10) because they give the user a definitive “middle point”. By collecting data in this way, you can then identify trends over the long-term to see if the changes being implemented are improving the gameplay experience or worsening it.
 
 ![no image](/blog/posts/playtesting-bible-a-guide-for-game-developers/feedback-form.png)
-*<span class="text-center block mt-3">The Templars of Hyrule (2014) feedback form</span>*
+_<span class="text-center block mt-3">The Templars of Hyrule (2014) feedback form</span>_
 
 <!-- caption -->
+
 Remember, you don’t need to explain yourself to your playtesters. You don’t need to talk about upcoming changes, things that you already recognise as problems, or problems that you found were only an issue for this one player. Simply acknowledge the points that they make and thank them for their time.
 
 ## Who should your playtesters be?
@@ -113,9 +115,8 @@ Let it be said that some people will make better playtesters for your game than 
 
 That said, having a variety of playtesters for your game is certainly not a drawback, and can often provide useful insights into how you should market your game. Sometimes players that you didn’t expect to enjoy the game are the ones who enjoy it the most. If we look at My Little Pony, for example, the franchise’s target market is girls; however, an unanticipated Brony culture developed from the animated television series since the content unexpectedly appealed to the demographic of adult males.
 
-
 ![no image](/blog/posts/noimage.png)
-*<span class="text-center block mt-3">The animated television series My Little Pony: Friendship is Magic (2010)</span>*
+_<span class="text-center block mt-3">The animated television series My Little Pony: Friendship is Magic (2010)</span>_
 
 <!-- caption -->
 
@@ -125,9 +126,8 @@ A playtester doesn’t necessarily have to be someone who is good at games. Ther
 
 Playtesters who are less experienced will have to be able to learn the game without too much frustration in order to enjoy the experience, so if any instructions are not clearly stated they will likely falter when attempting to perform those actions. By carefully observing players who are unfamiliar in a gaming environment, you can ensure that casual players and children will be able to understand and access your game.
 
-
 ![no image](/blog/posts/noimage.png)
-*<span class="text-center block mt-3">The WASD keys are often used to move, although the arrow keys might seem more obvious</span>*
+_<span class="text-center block mt-3">The WASD keys are often used to move, although the arrow keys might seem more obvious</span>_
 
 <!-- https://web.archive.org/web/20210414015611im_/http://i0.wp.com/www.qwer.io/wp-content/uploads/2014/03/white-WASD.jpg?resize=260%2C259 -->
 
@@ -139,8 +139,8 @@ On the other hand, if older players find a children’s game silly or easy, that
 
 <iframe  width="560" height="315" src="https://www.youtube-nocookie.com/embed/Knab9oQIMOQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-
 It is paramount to the health and safety of your playtesters that you check if they have any conditions that would affect their ability to play your game. Ensure that your testers are well aware of all dangers involved in your game, and alert them of any sensitive material they may encounter whilst playing. You should let your playtesters know if your game contains any of the following:
+
 - Flashing images
 - Jump scares
 - Blood and gore
@@ -155,7 +155,7 @@ Over the course of your playtests, you will have loyal testers that become ‘ve
 We tested the dungeon before this feature had been added, so when a returning group of playtesters tried the map for a second time they already knew the layout of the dungeon despite having reduced vision in the second playtest. This is true for even the most basic of things: pressing three buttons at once is a very common feature in our three-player maps, but it sometimes takes players a few minutes to realise that they need to press these buttons simultaneously. After a few dungeons, players become accustomed to the playstyle of your game, which means that they will henceforth be unable to test the effectiveness of the on-boarding process for your game.
 
 ![templars](/blog/posts/playtesting-bible-a-guide-for-game-developers/templars.jpg)
-*<span class="text-center block mt-3">The lit version of the Bottom of the Well from Templars of Hyrule (2014)</span>*
+_<span class="text-center block mt-3">The lit version of the Bottom of the Well from Templars of Hyrule (2014)</span>_
 
 <!-- caption -->
 
