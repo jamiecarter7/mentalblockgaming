@@ -1,67 +1,130 @@
 ---
+import { Image } from "@astrojs/image/components";
+
 import Container from "./Container.astro";
 import UnderRepair from "./elements/UnderRepair.astro";
+import MaybeLaterGamesLogo from "../assets/images/maybelatergames/mlglogo.png";
+
+const allPosts = await Astro.glob("../pages/blog/*/*md");
+const latestPosts = allPosts.sort((a, b) => a.date - b.date);
+latestPosts.length = 3;
 
 const date = new Date();
 ---
 
 <footer class="bg-[#222] text-sm">
   <Container>
-    <p>Maybe Later Games</p>
-    <p>
-      Check out our new video game studio, <a
-        href="https://maybelatergames.co.uk">Maybe Later Games.</a
+    <div class="md:grid md:grid-cols-3 lg:grid-cols-4 gap-16">
+      <div
+        class="lg:col-span-2 m-auto mb-16 md:m-0 md:flex md:flex-col md:justify-center max-w-[50%] md:max-w-none lg:max-w-xs"
       >
-    </p>
+        <!-- <h4>Maybe Later Games</h4> -->
+        <Image src={MaybeLaterGamesLogo} alt="MaybeLaterGames logo" />
+        <p class="mt-2 mb-0 px-2 max-w-xs text-center md:text-left">
+          Check out our new video game studio, <a
+            href="https://maybelatergames.co.uk"
+            class="text-red-500">Maybe Later Games</a
+          >.
+        </p>
+      </div>
+      <div>
+        <h4>Blog</h4>
+        <ul class="links">
+          {
+            latestPosts.map((post) => (
+              <li>
+                <a class="block text-red-500" href={post.url}>
+                  {post.frontmatter.title}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+        <!-- <h4 class="mt-8">Anne Achronist</h4> -->
+      </div>
+      <div class="mt-8 md:mt-0">
+        <h4>Our Maps</h4>
+        <ul class="links">
+          <li>
+            <a href="/maps/prismatic">Prismatic</a>
+          </li>
+          <li>
+            <a href="/maps/prismatic3">Prismatic III</a>
+          </li>
+          <li>
+            <a href="/maps/roguequest">RogueQuest</a>
+          </li>
+          <li>
+            <a href="/maps/thereisnolearningcurve">There is no learning curve</a
+            >
+          </li>
+          <li>
+            <a href="/maps/thereisnolearningcurve2"
+              >There is no learning curve 2</a
+            >
+          </li>
+          <li>
+            <a href="/maps/workshopwarschristmasedition">Workshop wars</a>
+          </li>
+        </ul>
+        <h4 class="mt-8">Featured Maps</h4>
+        <ul class="links">
+          <li>
+            <a href="/maps/oscilight">Oscilight: The Light Shadow</a>
+          </li>
+          <li>
+            <a href="/maps/presentfactory">The Present Factory</a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </Container>
-  <div class="bg-[#0f0f0f]">
-    <Container>
-      <ul class="et-social-icons">
-        <li class="et-social-icon et-social-facebook">
-          <a href="/about" class="icon">
-            <span>About</span>
-          </a>
-        </li>
-      </ul>
-    </Container>
-  </div>
 
-  <div class="bg-[#0f0f0f]">
-    <Container>
-      <ul class="et-social-icons">
-        <li class="et-social-icon et-social-facebook">
-          <a
-            href="https://web.archive.org/web/20210228000815/https://facebook.com/MentalBlockGaming"
-            class="icon"
-          >
-            <span>Discord</span>
-          </a>
-        </li>
-      </ul>
-      <div class="flex justify-between">
-        <p>
-          Designed with love | Powered by <a href="https://astro.build"
-            >AstroJS</a
+  <div class="bg-[#0f0f0f] px-10 py-6 sm:py-2">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex flex-col sm:flex-row gap-4 justify-between items-center">
+        <p class="m-0">
+          Designed with ♥️ | Powered by <a
+            class="text-red-500 opacity-75"
+            href="https://astro.build">AstroJS</a
           >
         </p>
-        <p>Updated {date.toDateString()}</p>
+        <div class="sm:flex m-auto sm:m-0 items-center">
+          <p class="m-0 text-xs text-neutral-600 text-center">
+            Updated {date.toDateString()}
+          </p>
+          <a
+            class="max-w-[140px] block mt-4 sm:inline sm:mt-0 sm:ml-4"
+            href="https://simpleanalytics.com/?utm_source=mentalblockgaming.com&utm_content=badge"
+            referrerpolicy="origin"
+            target="_blank"
+            ><picture
+              ><source
+                srcset="https://simpleanalyticsbadges.com/mentalblockgaming.com?mode=dark"
+                media="(prefers-color-scheme: dark)"
+              /><img
+                src="https://simpleanalyticsbadges.com/mentalblockgaming.com?mode=light"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+                crossorigin="anonymous"
+              /></picture
+            ></a
+          >
+        </div>
       </div>
-      <a
-        href="https://simpleanalytics.com/?utm_source=mentalblockgaming.com&utm_content=badge"
-        referrerpolicy="origin"
-        target="_blank"
-        ><picture
-          ><source
-            srcset="https://simpleanalyticsbadges.com/mentalblockgaming.com?mode=dark"
-            media="(prefers-color-scheme: dark)"
-          /><img
-            src="https://simpleanalyticsbadges.com/mentalblockgaming.com?mode=light"
-            loading="lazy"
-            referrerpolicy="no-referrer"
-            crossorigin="anonymous"
-          /></picture
-        ></a
-      >
-    </Container>
+    </div>
   </div>
+
+  <style>
+    footer {
+      @apply text-sm;
+    }
+    h4 {
+      @apply text-neutral-400 font-light pb-2 uppercase;
+    }
+
+    .links li a {
+      @apply block text-red-500  py-1.5;
+    }
+  </style>
 </footer>
