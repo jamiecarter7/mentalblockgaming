@@ -1,0 +1,41 @@
+---
+export interface Props {
+  version: string;
+  snapshot?: boolean;
+}
+
+const { version, snapshot } = Astro.props;
+---
+
+<p class="text-right mb-3 text-sm">
+  <a to="" class="text-neutral-400 underline underline-offset-4"
+    >How do I change my version?</a
+  >
+</p>
+
+<div class="bg-neutral-200 flex items-center rounded-xl overflow-hidden shadow">
+  <p class="bg-neutral-300 text-center w-1/4 m-0 p-6 py-4 pb-5">
+    {
+      !snapshot && (
+        <span class="leading-3 uppercase font-medium text-neutral-500 text-sm">
+          version
+        </span>
+      )
+    }
+    {
+      snapshot && (
+        <span class="leading-3 uppercase font-medium text-neutral-500 text-sm">
+          snapshot
+        </span>
+      )
+    }<br />
+    <span class="text-neutral-500 text-5xl font-bold">{version}</span>
+  </p>
+  <div class="h-full px-8 w-full text-center">
+    <p class="text-xl m-0 w-full">
+      Play this map using <span class="underline underline-offset-4"
+        >Minecraft v1.8</span
+      >
+    </p>
+  </div>
+</div>

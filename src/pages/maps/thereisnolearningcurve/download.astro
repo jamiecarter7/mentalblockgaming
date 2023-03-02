@@ -1,26 +1,43 @@
 ---
 import Container from "../../../components/Container.astro";
+import DownloadHero from "../../../components/DownloadHero.astro";
 import ButtonRed from "../../../components/elements/ButtonRed.astro";
-import UnderRepair from "../../../components/elements/UnderRepair.astro";
+import PartialRestore from "../../../components/elements/PartialRestore.astro";
+import HowToInstallAResoursePack from "../../../components/HowToInstallAResoursePack.astro";
+import MinecraftVersionWarning from "../../../components/MinecraftVersionWarning.astro";
 import Layout from "../../../layouts/Layout.astro";
 ---
 
 <Layout title="Download There is no learning curve">
   <section>
+    <DownloadHero map="There is no learning curve" />
     <Container>
-      <h1 class="text-4xl mb-8">Download There is no learning curve</h1>
-      <p class="mt-10">Follow the link below to download this map</p>
-      <ButtonRed to="/maps" bodyText="Downloads Page" />
-      <UnderRepair />
+      <PartialRestore />
+      <MinecraftVersionWarning version="1.8" />
+      <div class="w-1/3 my-10 p-8 bg-purple-200 rounded-2xl shadow-inner">
+        <p class="m-0 text-clip uppercase text-center text-lg font-bold">
+          <span class="block text-8xl font-semibold">3</span> player map
+        </p>
+      </div>
 
-      Download There is no Learning Curve 3 Player Cooperative Puzzle Map Note:
-      Please play on Minecraft v1.8 Resource Pack Download Download Install
-      Resource Pack Download the resource pack (Note: Do NOT unzip) Load
-      Minecraft Once in game, go to “Options”, then “Resource Packs” Click “Open
-      Resource Pack Folder” button Paste the .zip file of the resource pack into
-      this folder Close, and select the resource pack in Minecraft Install Map
-      Unzip map folder Insert unzipped map folder into your “.minecraft/saves/”
-      folder or into your server folder and run it Play Map Download
+      <HowToInstallAResoursePack />
+      <p>
+        3 Player Cooperative Puzzle Map Note: Resource Pack Download Download
+        Install Map Unzip map folder Insert unzipped map folder into your
+        “.minecraft/saves/” folder or into your server folder and run it Play
+        Map Download
+      </p>
+      <div class="flex gap-4">
+        <ButtonRed
+          to="http://adf.ly/6322968/tinlc-resource-pack"
+          bodyText="Download resource pack"
+        />
+        <ButtonRed
+          to="http://adf.ly/6322968/tinlc-map"
+          bodyText="Download map"
+        />
+      </div>
+      <p class="text-xs">*Links pass through adfly redirect</p>
     </Container>
   </section>
 </Layout>
