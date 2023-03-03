@@ -45,35 +45,44 @@ latestPosts.length = 3;
     />
     <section>
       <Container>
-        <h2 class="text-center">Minecraft Maps</h2>
-        <div class="prismatic-animated-bg mb-6 shadow-lg">
-          <Image
-            class="mx-auto"
-            src={Prismatic3Logo}
-            alt="Prismatic III logo"
-          />
-        </div>
-        <h3 class="text-center">COLOUR – SOLVE – COLLECT.</h3>
-        <p>
-          In this instalment of Prismatic, you must mix together the three
-          primary colours to shade the complex in your favour; unlocking doors,
-          opening up pathways and creating new unforeseen routes. Collect the
-          nine beacons scattered around the chamber in order to escape.
-        </p>
-        <div class="text-center">
-          <ButtonRed
-            to="/maps/prismatic3"
-            bodyText="Learn more"
-            class="mx-auto"
-          />
-        </div>
-      </Container>
-    </section>
-    <section>
-      <Container>
-        <div class="grid md:grid-cols-2 gap-16">
+        <article class="mb-16">
+          <h2 class="text-center">Minecraft Maps</h2>
+          <div class="prismatic-animated-bg mb-6 shadow-lg">
+            <a href="/maps/prismatic3">
+              <Image
+                class="mx-auto"
+                src={Prismatic3Logo}
+                alt="Prismatic III logo"
+              />
+            </a>
+          </div>
+          <h3 class="text-center text-4xl font-light mt-8">
+            <a href="/maps/prismatic3"> Prismatic III</a>
+          </h3>
+          <h3 class="text-center">COLOUR – SOLVE – COLLECT.</h3>
+          <p class="max-w-2xl text-center m-auto mb-5">
+            In this instalment of Prismatic, you must mix together the three
+            primary colours to shade the complex in your favour; unlocking
+            doors, opening up pathways and creating new unforeseen routes.
+            Collect the nine beacons scattered around the chamber in order to
+            escape.
+          </p>
+          <div class="text-center">
+            <ButtonRed
+              to="/maps/prismatic3"
+              bodyText="Learn more"
+              class="mx-auto"
+            />
+          </div>
+        </article>
+
+        <article class="grid md:grid-cols-2 gap-16">
           <div>
-            <h3>RogueQuest: Chronos & the Lantern of Souls</h3>
+            <h3>
+              <a href="/maps/roguequest">
+                RogueQuest: Chronos & the Lantern of Souls</a
+              >
+            </h3>
             <div class="relative">
               <video
                 class="absolute object-cover"
@@ -85,16 +94,17 @@ latestPosts.length = 3;
               >
                 <source src={RoguequestBgVideo} type="video/mp4" />
               </video>
-
-              <div
-                class="relative aspect-video z-10 flex flex-col justify-center items-center"
-              >
-                <Image
-                  class="w-3/5"
-                  src={RoguequestLogo}
-                  alt="RogueQuest logo"
-                />
-              </div>
+              <a href="/maps/roguequest">
+                <div
+                  class="relative aspect-video z-10 flex flex-col justify-center items-center"
+                >
+                  <Image
+                    class="w-3/5"
+                    src={RoguequestLogo}
+                    alt="RogueQuest logo"
+                  />
+                </div>
+              </a>
             </div>
             <!-- <Image
               src={RogueQuest}
@@ -110,8 +120,10 @@ latestPosts.length = 3;
             <ButtonRed to="/maps/roguequest" bodyText="Learn more" />
           </div>
           <div>
-            <h3>Prismatic</h3>
-            <Image src={Prismatic} alt="Prismatic" />
+            <h3><a href="/maps/prismatic"> Prismatic</a></h3>
+            <a href="/maps/prismatic">
+              <Image src={Prismatic} alt="Prismatic" />
+            </a>
             <p class="mt-8">
               Prismatic, a colour based puzzle map. A short single player
               adventure that will have you seeing rooms through a different
@@ -121,8 +133,14 @@ latestPosts.length = 3;
             <ButtonRed to="/maps/prismatic" bodyText="Learn more" />
           </div>
           <div>
-            <h3>There is no Learning Curve 2</h3>
-            <Image src={TINLC2} alt="There is no Learning Curve 2" />
+            <h3>
+              <a href="/maps/thereisnolearningcurve2"
+                >There is no Learning Curve 2</a
+              >
+            </h3>
+            <a href="/maps/thereisnolearningcurve2">
+              <Image src={TINLC2} alt="There is no Learning Curve 2" />
+            </a>
             <p class="mt-8">
               Harold is back and better than ever with another 8 puzzles that
               are guaranteed to push you to your intellectual limits. Before
@@ -156,8 +174,8 @@ latestPosts.length = 3;
               bodyText="Learn more"
             />
           </div>
-        </div>
-        <div
+        </article>
+        <article
           class="my-16 bg-center bg-neutral-200 bg-opacity-50"
           style={bgImageExploreMaps}
         >
@@ -177,7 +195,7 @@ latestPosts.length = 3;
               />
             </div>
           </div>
-        </div>
+        </article>
       </Container>
     </section>
     <section class="relative bg-[#260a38]">
@@ -195,12 +213,14 @@ latestPosts.length = 3;
       <div
         class="relative z-10 h-screen flex flex-col justify-center items-center p-10"
       >
-        <Image src={RoguequestLogo} alt="RogueQuest logo" />
-        <p
-          class="text-purple-600 chronos-shadow text-4xl sm:text-5xl md:text-6xl font-roguequest text-center"
-        >
-          Chronos and the lantern of souls
-        </p>
+        <a href="/maps/roguequest">
+          <Image src={RoguequestLogo} alt="RogueQuest logo" />
+          <p
+            class="text-purple-600 chronos-shadow text-4xl sm:text-5xl md:text-6xl font-roguequest text-center"
+          >
+            Chronos and the lantern of souls
+          </p>
+        </a>
         <ButtonRed
           to="/maps/roguequest"
           bodyText="Adventure awaits..."
@@ -216,9 +236,11 @@ latestPosts.length = 3;
           community!
         </p>
         <div class="grid md:grid-cols-2 gap-16">
-          <div>
-            <h3>Oscilight: The Light Shadow</h3>
-            <Image src={Oscilight} alt="Oscilight: The light shadow" />
+          <article>
+            <h3><a href="/maps/oscilight">Oscilight: The Light Shadow</a></h3>
+            <a href="/maps/oscilight">
+              <Image src={Oscilight} alt="Oscilight: The light shadow" />
+            </a>
             <p class="mt-8">
               Follow the philosophical narrative in this single-player puzzle
               map as you use a variety of lights, each with their own
@@ -226,10 +248,12 @@ latestPosts.length = 3;
             </p>
             <p>By Dwittyy</p>
             <ButtonRed color="orange" bodyText="Learn more" to="/oscilight" />
-          </div>
-          <div>
-            <h3>The Present Factory</h3>
-            <Image src={PresentFactory} alt="The Present Factory" />
+          </article>
+          <article>
+            <h3><a href="/maps/presentfactory">The Present Factory</a></h3>
+            <a href="/maps/presentfactory">
+              <Image src={PresentFactory} alt="The Present Factory" />
+            </a>
             <p class="mt-8">
               In The Present Factory, it’s your job to construct a production
               line to a set specification using a variety of blocks with their
@@ -242,7 +266,7 @@ latestPosts.length = 3;
               bodyText="Learn more"
               to="/presentfactory"
             />
-          </div>
+          </article>
         </div>
       </Container>
     </section>
@@ -254,7 +278,9 @@ latestPosts.length = 3;
         <div
           class="relative z-10 h-screen flex flex-col justify-center items-center p-10"
         >
-          <Image class="max-w-md" src={TINLC2Logo} alt="RogueQuest logo" />
+          <a href="/maps/thereisnolearningcurve2">
+            <Image class="max-w-md" src={TINLC2Logo} alt="RogueQuest logo" />
+          </a>
           <ButtonRed
             to="/maps/thereisnolearningcurve2"
             bodyText="Subject testing"
