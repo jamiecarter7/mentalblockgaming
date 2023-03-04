@@ -3,7 +3,9 @@ import Container from "../../../components/Container.astro";
 import DownloadHero from "../../../components/DownloadHero.astro";
 import ButtonRed from "../../../components/elements/ButtonRed.astro";
 import PartialRestore from "../../../components/elements/PartialRestore.astro";
-import HowToInstallAResoursePack from "../../../components/HowToInstallAResoursePack.astro";
+
+import InstallResoucePackInstructions from "../../../components/HowToInstallAResourcePack.astro";
+import MapWarningMessage from "../../../components/MapWarningMessage.astro";
 import MinecraftVersionWarning from "../../../components/MinecraftVersionWarning.astro";
 import Layout from "../../../layouts/Layout.astro";
 ---
@@ -11,23 +13,260 @@ import Layout from "../../../layouts/Layout.astro";
 <Layout title="Download There is no learning curve">
   <section>
     <DownloadHero map="There is no learning curve" />
+    <PartialRestore />
     <Container>
-      <PartialRestore />
-      <MinecraftVersionWarning version="1.8" />
-      <div class="w-1/3 my-10 p-8 bg-purple-200 rounded-2xl shadow-inner">
-        <p class="m-0 text-clip uppercase text-center text-lg font-bold">
-          <span class="block text-8xl font-semibold">3</span> player map
-        </p>
+      <h2 class="mb-0 mt-10">Instructions</h2>
+      <div class="flex gap-10">
+        <open class="w-2/3">
+          <MinecraftVersionWarning version="1.8" />
+          <!-- <MapWarningMessage text="Command Blocks must be enabled" /> -->
+
+          <InstallResoucePackInstructions />
+          <p>
+            3 Player Cooperative Puzzle Map Note: Resource Pack Download
+            Download Install Map Unzip map folder Insert unzipped map folder
+            into your “.minecraft/saves/” folder or into your server folder and
+            run it Play Map Download
+          </p>
+          <!-- <p>There are no mods required for this map.</p> -->
+          <h3 class="text-xl">Enabling 'Command Blocks'</h3>
+          <p>Command Blocks must be enabled for this map</p>
+          <p>Instructions:</p>
+          <ul>
+            <li>open server.properties</li>
+            <li>insert the following line (before booting up the server)</li>
+            <li><code>server:enable-command-block=true</code></li>
+          </ul>
+          <h2>Files</h2>
+          <div
+            class="mt-8 pt-2 bg-red-700 items-center rounded-sm overflow-hidden shadow-inner"
+          >
+            <div class="flex justify-between items-center">
+              <h3 class="text-3xl text-white p-5 px-10 mb-0 font-light">
+                Resource pack
+              </h3>
+              <p class="mb-0 mr-10 text-sm text-red-200/75">
+                <a
+                  href="https://www.mediafire.com/folder/xog4tar9jy0ux/Resource_Pack"
+                >
+                  View all files</a
+                >
+              </p>
+            </div>
+
+            <div
+              class="flex justify-between items-center w-full p-4 pb-8 px-10"
+            >
+              <div>
+                <p class="m-0 w-full text-white">
+                  There is no Learning Curve - Resource pack
+                </p>
+                <p class="m-0 mt-1 w-full text-red-200/75 text-sm">
+                  134,638 downloads
+                </p>
+              </div>
+              <a
+                class="block bg-gradient-to-b bg-red-600 hover:from-red-500 border-b border-red-900/50 uppercase text-white font-medium p-8 py-4 shadow-md hover:shadow-lg hover:scale-[1.02] duration-150 ease-in-out rounded-md"
+                href="https://www.mediafire.com/file/1hplps54c4apkv6/There_is_no_Learning_Curve_-_English.zip/file"
+                >download</a
+              >
+            </div>
+            <div class="bg-red-800 shadow-inner pb-4">
+              <h4 class="px-10 py-6 text-white text-xl font-light">
+                Community translations
+              </h4>
+              <div
+                class="flex justify-between items-center py-4 mx-10 border-t border-red-900"
+              >
+                <div>
+                  <p class="m-0 w-full text-white">
+                    There is no Learning Curve - Resource pack (Espanol)
+                  </p>
+                  <p class="m-0 mt-1 w-full text-red-200/75 text-sm">
+                    134,638 downloads
+                  </p>
+                </div>
+                <a
+                  class="block bg-gradient-to-b bg-red-600 hover:from-red-500 border-b border-red-900/50 uppercase text-white font-medium p-8 py-4 shadow-md hover:shadow-lg hover:scale-[1.02] duration-150 ease-in-out rounded-md"
+                  href="https://www.mediafire.com/file/ztt5j29jepc7ix9/There_is_no_Learning_Curve_-_Resource_pack_%2528Espanol%2529.zip/file"
+                  >download</a
+                >
+              </div>
+              <div
+                class="flex justify-between items-center p-4 px-0 mx-10 border-t border-red-900"
+              >
+                <div>
+                  <p class="m-0 w-full text-white">
+                    There is no Learning Curve - Resource pack (Francais)
+                  </p>
+                  <p class="m-0 mt-1 w-full text-red-200/75 text-sm">
+                    134,638 downloads
+                  </p>
+                </div>
+                <a
+                  class="block bg-gradient-to-b bg-red-600 hover:from-red-500 border-b border-red-900/50 uppercase text-white font-medium p-8 py-4 shadow-md hover:shadow-lg hover:scale-[1.02] duration-150 ease-in-out rounded-md"
+                  href="https://www.mediafire.com/file/509xbnjk1izokis/There_is_no_Learning_Curve_-_Resource_pack_%2528Francais%2529.zip/file"
+                  >download</a
+                >
+              </div>
+              <div
+                class="flex justify-between items-center p-4 px-0 mx-10 border-t border-red-900"
+              >
+                <div>
+                  <p class="m-0 w-full text-white">
+                    There is no Learning Curve - Resource pack (Nederlands)
+                  </p>
+                  <p class="m-0 mt-1 w-full text-red-200/75 text-sm">
+                    134,638 downloads
+                  </p>
+                </div>
+                <a
+                  class="block bg-gradient-to-b bg-red-600 hover:from-red-500 border-b border-red-900/50 uppercase text-white font-medium p-8 py-4 shadow-md hover:shadow-lg hover:scale-[1.02] duration-150 ease-in-out rounded-md"
+                  href="https://www.mediafire.com/file/6k3bddsb2foinok/There_is_no_Learning_Curve_-_Resource_pack_%2528Nederlands%2529.zip/file"
+                  >download</a
+                >
+              </div>
+            </div>
+          </div>
+          <p class="text-xs mt-3 text-right">Files hosted by Mediafire</p>
+
+          <div
+            class="mt-8 pt-2 bg-red-700 items-center rounded-sm overflow-hidden shadow-lg"
+          >
+            <div class="flex justify-between items-center">
+              <h3 class="text-3xl text-white p-5 px-10 mb-0 font-light">Map</h3>
+              <p class="mb-0 mr-10 text-sm text-red-200/75">
+                <a
+                  href="https://www.mediafire.com/folder/4rz9veqpisirb/Version_2.5"
+                >
+                  View all files</a
+                >
+              </p>
+            </div>
+
+            <div class="flex justify-between items-center py-4 pb-8 mx-10">
+              <div>
+                <p class="m-0 w-full text-white">
+                  There is no Learning Curve - Map
+                </p>
+                <p class="m-0 mt-1 w-full text-red-200/75 text-sm">
+                  170,897 downloads
+                </p>
+              </div>
+              <a
+                class="block bg-gradient-to-b bg-red-600 hover:from-red-500 border-b border-red-900/50 uppercase text-white font-medium p-8 py-4 shadow-md hover:shadow-lg hover:scale-[1.02] duration-150 ease-in-out rounded-md"
+                href="https://www.mediafire.com/file/pmre78jqvkn2gc1/There_is_No_Learning_Curve_-_Map_v2.5_%2528English%2529.zip/file"
+                >download</a
+              >
+            </div>
+            <div class="bg-red-800 shadow-inner pb-4">
+              <h4 class="px-10 py-6 text-white text-xl font-light">
+                Community translations
+              </h4>
+
+              <div
+                class="flex justify-between items-center p-4 px-0 mx-10 border-t border-red-900"
+              >
+                <div>
+                  <p class="m-0 w-full text-white">
+                    There is no Learning Curve - Map (Espanol)
+                  </p>
+                  <p class="m-0 mt-1 w-full text-red-200/75 text-sm">
+                    170,897 downloads
+                  </p>
+                </div>
+                <a
+                  class="block bg-gradient-to-b bg-red-600 hover:from-red-500 border-b border-red-900/50 uppercase text-white font-medium p-8 py-4 shadow-md hover:shadow-lg hover:scale-[1.02] duration-150 ease-in-out rounded-md"
+                  href="https://www.mediafire.com/file/71e2t8ffp5f2wxd/There_is_No_Learning_Curve_-_Map_v2.5_%2528Espanol%2529.zip/file"
+                  >download</a
+                >
+              </div>
+              <div
+                class="flex justify-between items-center p-4 px-0 mx-10 border-t border-red-900"
+              >
+                <div>
+                  <p class="m-0 w-full text-white">
+                    There is no Learning Curve - Map (Francais)
+                  </p>
+                  <p class="m-0 mt-1 w-full text-red-200/75 text-sm">
+                    170,897 downloads
+                  </p>
+                </div>
+                <a
+                  class="block bg-gradient-to-b bg-red-600 hover:from-red-500 border-b border-red-900/50 uppercase text-white font-medium p-8 py-4 shadow-md hover:shadow-lg hover:scale-[1.02] duration-150 ease-in-out rounded-md"
+                  href="https://www.mediafire.com/file/vbciu5j1f110ulm/There_is_No_Learning_Curve_-_Map_v2.5_%2528Francais%2529.zip/file"
+                  >download</a
+                >
+              </div>
+              <div
+                class="flex justify-between items-center p-4 px-0 mx-10 border-t border-red-900"
+              >
+                <div>
+                  <p class="m-0 w-full text-white">
+                    There is no Learning Curve - Map (Nederlands)
+                  </p>
+                  <p class="m-0 mt-1 w-full text-red-200/75 text-sm">
+                    170,897 downloads
+                  </p>
+                </div>
+                <a
+                  class="block bg-gradient-to-b bg-red-600 hover:from-red-500 border-b border-red-900/50 uppercase text-white font-medium p-8 py-4 shadow-md hover:shadow-lg hover:scale-[1.02] duration-150 ease-in-out rounded-md"
+                  href="https://www.mediafire.com/file/v4y5ug8v8xzck7w/There_is_No_Learning_Curve_-_Map_v2.5_%2528Nederlands%2529.zip/file"
+                  >download</a
+                >
+              </div>
+            </div>
+          </div>
+          <p class="text-xs mt-3 text-right">Files hosted by Mediafire</p>
+          <!-- <div class="mt-8 bg-red-700 items-center rounded-xl overflow-hidden">
+            <div class="flex justify-between items-center bg-red-600">
+              <h3 class="text-2xl text-white p-5 px-10 mb-0 shadow">
+                Resource pack
+              </h3>
+              <p class="text-white mb-0 mr-10">Hosted on Mediafire</p>
+            </div>
+            <div class="py-2">
+              <div class="flex justify-between items-center w-full p-3 px-10">
+                <div>
+                  <p class="m-0 w-full text-white">
+                    There is no learning curve v1.3
+                  </p>
+                  <p class="m-0 mt-1 w-full text-red-300/70 text-sm">
+                    134,638 downloads
+                  </p>
+                </div>
+                <a
+                  class="bg-gradient-to-b from-red-500 to-red-600 border-b-2 border-red-700 uppercase text-white font-medium p-8 py-4 shadow-md rounded-lg"
+                  href="">download</a
+                >
+              </div>
+            </div>
+          </div> -->
+        </open>
+        <aside class="w-1/3 pt-8">
+          <div class="bg-neutral-200 aspect-square mb-8"></div>
+          <!-- <div class="w-full my-8 p-8 bg-purple-200 rounded-2xl shadow-inner">
+            <p class="m-0 text-clip uppercase text-center text-lg font-bold">
+              <span class="block text-8xl font-semibold">3</span> player map
+            </p>
+          </div> -->
+          <h3 class="mb-2 text-xl text-neutral-500">Help</h3>
+          <div class="bg-opacity-75">
+            <a class="" href=""
+              ><p class="m-0 text-red-600 py-1">
+                How do I change minecraft version?
+              </p></a
+            >
+            <a href=""
+              ><p class="m-0 text-red-600 py-1">
+                How do I enable 'Command Blocks'?
+              </p></a
+            >
+          </div>
+        </aside>
       </div>
 
-      <HowToInstallAResoursePack />
-      <p>
-        3 Player Cooperative Puzzle Map Note: Resource Pack Download Download
-        Install Map Unzip map folder Insert unzipped map folder into your
-        “.minecraft/saves/” folder or into your server folder and run it Play
-        Map Download
-      </p>
-      <div class="flex gap-4">
+      <!-- <div class="flex gap-4">
         <ButtonRed
           to="http://adf.ly/6322968/tinlc-resource-pack"
           bodyText="Download resource pack"
@@ -36,8 +275,7 @@ import Layout from "../../../layouts/Layout.astro";
           to="http://adf.ly/6322968/tinlc-map"
           bodyText="Download map"
         />
-      </div>
-      <p class="text-xs">*Links pass through adfly redirect</p>
+      </div> -->
     </Container>
   </section>
 </Layout>
