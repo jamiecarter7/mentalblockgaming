@@ -1,17 +1,33 @@
 ---
+import { Image } from "@astrojs/image/components";
+
 export interface Props {
-  title: string;
-  subtitle: string;
+  title?: string;
+  subtitle?: string;
   img: ImageMetadata;
+  logoImg?: {
+    img: ImageMetadata;
+    alt: string;
+    maxWidthLogo?: string;
+  };
 }
 
-const { title, subtitle, img } = Astro.props;
+const { title, subtitle, img, logoImg } = Astro.props;
 const bgImgString = `url('${img.src}')`;
 ---
 
 <div class="hero w-full flex flex-col justify-center items-center">
-  <h1 class="text-white text-6xl capitalize m-5 text-center">{title}</h1>
-  <p class="text-white text-2xl text-center">{subtitle}</p>
+  {
+    title && (
+      <h1 class="text-white text-6xl capitalize m-5 text-center">{title}</h1>
+    )
+  }
+  {
+    logoImg && (
+      <Image src={logoImg.img} alt={logoImg.alt} class={logoImg.maxWidthLogo} />
+    )
+  }
+  {subtitle && <p class="text-white text-2xl text-center">{subtitle}</p>}
 </div>
 
 <style define:vars={{ bgImgString }}>

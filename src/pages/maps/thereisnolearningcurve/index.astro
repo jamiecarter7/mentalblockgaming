@@ -5,9 +5,22 @@ import DownloadCount from "../../../components/elements/DownloadCount.astro";
 import PartialRestore from "../../../components/elements/PartialRestore.astro";
 import UnderRepair from "../../../components/elements/UnderRepair.astro";
 import Layout from "../../../layouts/Layout.astro";
+
+import TINLCLogo from "../../../assets/images/thereisnolearningcurve/tinlclogo.png";
+import TINLCHero from "../../../assets/images/thereisnolearningcurve/tinlchero.jpg";
+import Hero from "../../../components/Hero.astro";
+const HeroLogoImg = {
+  img: TINLCLogo,
+  alt: "There is no learning curve logo",
+  maxWidthLogo: "max-w-xl",
+};
+
+import Comment1 from "../../../assets/images/testimonials/tinlc-juliand665.png";
+import Comment3 from "../../../assets/images/testimonials/titakrueger.webp";
 ---
 
 <Layout title="There is no learning curve">
+  <Hero img={TINLCHero} logoImg={HeroLogoImg} />
   <section>
     <Container>
       <PartialRestore />
@@ -28,53 +41,69 @@ import Layout from "../../../layouts/Layout.astro";
         recommended between the players, such as being in the same room or using
         Skype.
       </p>
-      <p>
-        There are no mods required for this map; however, Command Blocks must be
-        enabled – to do so, open server.properties and insert the following line
-        at the bottom before booting the server:enable-command-block=true. This
-        is our first Minecraft map and we welcome any suggestions/ideas you may
-        have to improve it.
-      </p>
-
-      <iframe
-        width="1080"
-        height="638"
-        src="https://www.youtube.com/embed/r-V2ngEWMic"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-      <h2>What Players are Saying</h2>
-      <div>
-        <p>
-          “Amazing map” Wow! An amazing map. Challenging, but not too much.
-          Frustrating at times, but oh so worth it in the end. Thank you for
-          this amazing experience. Sequel pls.
-        </p>
-        <p>11 / 10</p>
-        <p>juliand665</p>
+      <div class="embed-container my-16">
+        <iframe
+          src="https://www.youtube.com/embed/r-V2ngEWMic"
+          frameborder="0"
+          allowfullscreen></iframe>
       </div>
-      <div>
-        <p>
-          “Masterpiece!” THIS WAS A MASTERPIECE! This was the most fun I’ve had
-          in a adventure map in a long time! I sure hope there will be a part 2
-          or another one.
-        </p>
-        <p>10 / 10</p>
-        <p>Loppan997</p>
+    </Container>
+  </section>
+  <section class="bg-neutral-800">
+    <Container>
+      <h2 class="text-center text-neutral-200 mb-14">
+        What Players are Saying
+      </h2>
+      <div class="flex gap-16">
+        <div class="flex flex-col justify-between bg-white p-12">
+          <div>
+            <h3 class="text-center text-2xl">"Amazing map"</h3>
+            <p class="text-left">
+              “Amazing map” Wow! An amazing map. Challenging, but not too much.
+              Frustrating at times, but oh so worth it in the end. Thank you for
+              this amazing experience. Sequel pls.
+            </p>
+          </div>
+          <div>
+            <p class="text-center text-3xl">11 / 10</p>
+            <p class="mb-0 text-center text-xl">juliand665</p>
+          </div>
+        </div>
+        <div class="flex flex-col justify-between bg-white p-12">
+          <div>
+            <h3 class="text-center text-2xl">“Masterpiece"</h3>
+            <p class="text-left">
+              “Masterpiece!” THIS WAS A MASTERPIECE! This was the most fun I’ve
+              had in a adventure map in a long time! I sure hope there will be a
+              part 2 or another one.
+            </p>
+          </div>
+          <div>
+            <p class="text-center text-3xl">10 / 10</p>
+            <p class="mb-0 text-center text-xl">Loppan997</p>
+          </div>
+        </div>
+        <div class="flex flex-col justify-between bg-white p-12">
+          <div>
+            <h3 class="text-center text-2xl">"Wow"</h3>
+            <p class="text-left">
+              “Wow” Wow this was such an awesome map! I loved playing it with my
+              friends! I absolutely LOVED the puzzles, every single one of them!
+              Very good job, I’m going to check out your other stuff!
+            </p>
+          </div>
+          <div>
+            <p class="text-center text-3xl">Keep it up!</p>
+            <p class="mb-0 text-center text-xl">RitaKrueger</p>
+          </div>
+        </div>
+        <!-- Looking for a team? Want to play our maps but don't have a group of 3? Team -->
       </div>
-      <div>
-        <p>
-          “Wow” Wow this was such an awesome map! I loved playing it with my
-          friends! I absolutely LOVED the puzzles, every single one of them!
-          Very good job, I’m going to check out your other stuff!
-        </p>
-        <p>Keep it up!</p>
-        <p>RitaKrueger</p>
-      </div>
-      <!-- Looking for a team? Want to play our maps but don't have a group of 3? Team -->
       <!-- up on Parallel and start playing! Find Teammates  -->
-
+    </Container>
+  </section>
+  <section>
+    <Container>
       <h2>Download map</h2>
       <DownloadCount />
       <p>130463 downloads</p>
@@ -84,4 +113,31 @@ import Layout from "../../../layouts/Layout.astro";
       />
     </Container>
   </section>
+
+  <style>
+    h1,
+    h2,
+    h3,
+    h4,
+    p {
+      @apply max-w-3xl mx-auto;
+    }
+
+    .embed-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+    }
+    .embed-container iframe,
+    .embed-container object,
+    .embed-container embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
 </Layout>
