@@ -1,0 +1,21 @@
+---
+import { Image } from "@astrojs/image/components";
+import WarningIcon from "../assets/icons/warning.png";
+export interface Props {
+  text: string;
+  iconImg?: ImageMetadata;
+}
+
+const { text } = Astro.props;
+---
+
+<div class="mt-8 bg-orange-300 flex items-center rounded-xl overflow-hidden">
+  <div class="bg-orange-400 w-1/4 m-0 p-8 py-4 pb-5">
+    <Image src={WarningIcon} alt="Warning icon" class="max-w-[60px] mx-auto" />
+  </div>
+  <div class="h-full px-8 w-full text-center">
+    <p class="text-xl m-0 w-full text-amber-700">
+      {text}
+    </p>
+  </div>
+</div>
