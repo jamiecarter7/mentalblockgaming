@@ -1,17 +1,72 @@
 ---
+import { Image } from "@astrojs/image/components";
+import Layout from "../../layouts/Layout.astro";
+
 import Container from "../../components/Container.astro";
+import Hero from "../../components/Hero.astro";
 import ButtonRed from "../../components/elements/ButtonRed.astro";
 import UnderRepair from "../../components/elements/UnderRepair.astro";
-import Layout from "../../layouts/Layout.astro";
+
+import HeroImage from "../../assets/images/mapspage/hero.png";
+import TINLC from "../../assets/images/thereisnolearningcurve/splash.jpg";
+import PartialRestore from "../../components/elements/PartialRestore.astro";
 ---
 
 <Layout title="Maps">
   <section>
+    <Hero
+      title="Minecraft maps"
+      subtitle="Top-notch Minecraft maps - created for your enojoyment"
+      img={HeroImage}
+    />
+    <PartialRestore />
     <Container>
-      <h1 class="text-4xl mb-8">Our maps</h1>
-      <h1 class="text-5xl text-neutral-500">Download links</h1>
+      <h2 class="text-4xl mb-6 text-center">Minecraft maps</h2>
+      <h3 class="text-center text-xl text-neutral-500">
+        Mental Block Gaming prides itself on making only the best minecraft
+        maps.
+      </h3>
+      <p
+        class="relative -rotate-1 text-center mb-16 mt-16 max-w-2xl mx-auto bg-neutral-200 p-16 text-2xl rounded-sm shadow-m leading-10 italic"
+      >
+        <span
+          class="absolute top-10 left-6 text-[8em] text-neutral-400 text-normal font-serif"
+          >&#8220;</span
+        >
+        <span
+          class="absolute -bottom-12 right-8 text-[6em] text-neutral-400/60 text-normal font-serif"
+          >&#8221;</span
+        >
+        Hours of fun, comedy, fighting, team-work and brain-warping challenges await
+        you, your first challenge is choosing which to play first!
+      </p>
+      <div class="grid md:grid-cols-2 gap-16">
+        <article>
+          <h3>
+            <a href="/maps/thereisnolearningcurve">
+              There is no learning curve
+            </a>
+          </h3>
+          <a href="/maps/thereisnolearningcurve">
+            <Image src={TINLC} alt="There is no learning curve" />
+          </a>
+          <p class="mt-8">
+            This puzzle/adventure map is a three player cooperative experience
+            like no other. Decipher your way through more than 10 unique and
+            stimulating chambers with more than 4 hours of gameplay. Manipulate
+            water, iron and even time in order to progress under the supervision
+            of your friendly host, Harold.
+          </p>
+          <ButtonRed to="/maps/thereisnolearningcurve" bodyText="Learn more" />
+        </article>
+      </div>
 
-      <h2>Prismatic III</h2>
+      <h1 class="text-5xl text-neutral-500">Download links</h1>
+      <p class="text-2xl mt-4">
+        You can download the rest of our maps here while we fix things up!
+      </p>
+      <hr class="my-8" />
+      <h3 class="text-2xl">Prismatic III</h3>
       <p>Note: Please play on Minecraft v1.10.2</p>
       <div class="flex gap-4">
         <ButtonRed
@@ -24,7 +79,8 @@ import Layout from "../../layouts/Layout.astro";
         />
       </div>
 
-      <h2>RogueQuest: Chronos and the Lantern of Souls</h2>
+      <hr class="my-8" />
+      <h3 class="text-2xl">RogueQuest: Chronos and the Lantern of Souls</h3>
       <p>Note: Please play on Minecraft v1.10.2</p>
       <div class="flex gap-4">
         <ButtonRed
@@ -36,7 +92,8 @@ import Layout from "../../layouts/Layout.astro";
           to="http://adf.ly/6322968/roguequest-rp-v10"
         />
       </div>
-      <h2>Prismatic</h2>
+      <hr class="my-8" />
+      <h3 class="text-2xl">Prismatic</h3>
       <p>Note: Play on Minecraft version 1.9</p>
       <div class="flex gap-4">
         <ButtonRed
@@ -52,7 +109,8 @@ import Layout from "../../layouts/Layout.astro";
           to="http://adf.ly/6322968/prismatic-rp-colourblind-v101"
         />
       </div>
-      <h2>There is no learning curve</h2>
+      <hr class="my-8" />
+      <h3 class="text-2xl">There is no learning curve</h3>
       <p>Note: Please play on Minecraft v1.8</p>
       <div class="flex gap-4">
         <ButtonRed bodyText="Map details" to="/maps/thereisnolearningcurve" />
@@ -61,7 +119,8 @@ import Layout from "../../layouts/Layout.astro";
           to="/maps/thereisnolearningcurve/download"
         />
       </div>
-      <h2>There is no learning curve 2</h2>
+      <hr class="my-8" />
+      <h3 class="text-2xl">Prismatic III</h3>
       <p>Note: Please play on Minecraft v1.8</p>
       <div class="flex gap-4">
         <ButtonRed
@@ -85,7 +144,8 @@ import Layout from "../../layouts/Layout.astro";
           to="http://adf.ly/6322968/tinlc2-rp-su-v101"
         />
       </div>
-      <h2>Workshop Wars: Christmas Edition</h2>
+      <hr class="my-8" />
+      <h3 class="text-2xl">Workshop Wars: Christmas Edition</h3>
       <p>Play on Minecraft snapshot 15w47c</p>
       <div class="flex gap-4">
         <ButtonRed
@@ -131,9 +191,8 @@ import Layout from "../../layouts/Layout.astro";
       Download Now
     </Container>
   </section>
-</Layout>
 
-<!-- 
+  <!-- 
 <h2>Templars of Hyrule</h2>
 <p>Note: Play on minecraft v1.8</p>
 <div class="flex gap-4">
@@ -155,3 +214,4 @@ import Layout from "../../layouts/Layout.astro";
     to="http://adf.ly/6322968/toh-resource-pack-no-music"
   />
 </div> -->
+</Layout>
