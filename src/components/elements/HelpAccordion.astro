@@ -1,0 +1,94 @@
+---
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+const forValue = title.replaceAll(" ", "").toLowerCase();
+---
+
+<div class="tabs">
+  <div class="tab">
+    <input type="checkbox" id={forValue} />
+    <label class="tab-label" for={forValue}>{title}</label>
+    <div class="tab-content">
+      <div class="p-10 py-12">
+        <slot />
+      </div>
+    </div>
+  </div>
+</div>
+
+<style lang="scss">
+  input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+  // Layout
+  .row {
+    display: flex;
+    .col {
+      // flex: 1;
+      &:last-child {
+        margin-left: 1em;
+      }
+    }
+  }
+  /* Accordion styles */
+  .tabs {
+    @apply rounded-sm border-b-2 border-neutral-300;
+    overflow: hidden;
+
+    @apply mb-4;
+  }
+  .tab {
+    width: 100%;
+    overflow: hidden;
+    &-label {
+      @apply flex justify-between items-center bg-neutral-200 hover:bg-neutral-300/80 py-6 px-8 text-2xl text-neutral-700 checked:text-white font-light;
+      display: flex;
+      justify-content: space-between;
+
+      cursor: pointer;
+      /* Icon */
+      &::after {
+        content: "-";
+        // width: 1em;
+        // height: 1em;
+        text-align: center;
+        transition: all 0.35s;
+        @apply p-0 m-0;
+      }
+      //   &:hover::after {
+      //     content: "expand";
+      //     @apply text-sm;
+      //   }
+    }
+    &-content {
+      max-height: 0;
+      // padding: 0 1em;
+      background: white;
+      transition: all 0.35s;
+    }
+  }
+
+  // :checked
+  input:checked {
+    + .tab-label {
+      @apply bg-red-600 text-white;
+      &::after {
+        // transform: rotate(180deg);
+        content: "+";
+      }
+    }
+    ~ .tab-content {
+      max-height: 100vh;
+      // padding: 1em;
+    }
+  }
+
+  ol {
+    @apply my-2 text-lg;
+  }
+</style>

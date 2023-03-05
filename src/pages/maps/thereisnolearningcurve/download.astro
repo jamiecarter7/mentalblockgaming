@@ -1,11 +1,14 @@
 ---
+import { Image } from "@astrojs/image/components";
 import Container from "../../../components/Container.astro";
 import DownloadHero from "../../../components/DownloadHero.astro";
 import ButtonRed from "../../../components/elements/ButtonRed.astro";
 import PartialRestore from "../../../components/elements/PartialRestore.astro";
+import InstallationHelp from "../../../components/DownloadInstructions.astro";
 
-import InstallResoucePackInstructions from "../../../components/HowToInstallAResourcePack.astro";
 import MapWarningMessage from "../../../components/MapWarningMessage.astro";
+import WarningIcon from "../../../assets/icons/warning.png";
+
 import MinecraftVersionWarning from "../../../components/MinecraftVersionWarning.astro";
 import Layout from "../../../layouts/Layout.astro";
 ---
@@ -15,29 +18,63 @@ import Layout from "../../../layouts/Layout.astro";
     <DownloadHero map="There is no learning curve" />
     <PartialRestore />
     <Container>
-      <h2 class="mb-0 mt-10">Instructions</h2>
+      <h2 class="mb-0 mt-10">Requirements</h2>
       <div class="flex gap-10">
-        <open class="w-2/3">
+        <div class="w-2/3">
           <MinecraftVersionWarning version="1.8" />
           <!-- <MapWarningMessage text="Command Blocks must be enabled" /> -->
 
-          <InstallResoucePackInstructions />
-          <p>
-            3 Player Cooperative Puzzle Map Note: Resource Pack Download
-            Download Install Map Unzip map folder Insert unzipped map folder
-            into your “.minecraft/saves/” folder or into your server folder and
-            run it Play Map Download
-          </p>
-          <!-- <p>There are no mods required for this map.</p> -->
-          <h3 class="text-xl">Enabling 'Command Blocks'</h3>
-          <p>Command Blocks must be enabled for this map</p>
-          <p>Instructions:</p>
-          <ul>
-            <li>open server.properties</li>
-            <li>insert the following line (before booting up the server)</li>
-            <li><code>server:enable-command-block=true</code></li>
-          </ul>
-          <h2>Files</h2>
+          <div
+            class="mt-4 bg-neutral-200 flex items-center rounded-sm overflow-hidden"
+          >
+            <p class="bg-neutral-300 text-center w-1/3 m-0 p-6 py-4 pb-5">
+              <span class="text-neutral-500 text-5xl font-bold">3</span>
+              <br />
+              <span
+                class="leading-3 uppercase font-medium text-neutral-500 text-sm"
+              >
+                Players
+              </span>
+            </p>
+            <div class="h-full px-8 w-full text-center">
+              <p class="text-xl m-0 w-full">
+                This map requires <span class="underline underline-offset-4"
+                  >3 players</span
+                >
+              </p>
+            </div>
+          </div>
+          <div
+            class="mt-4 bg-neutral-200 flex items-center rounded-sm overflow-hidden"
+          >
+            <p class="bg-neutral-300 text-center w-1/3 m-0 p-6 py-4 pb-5">
+              <Image
+                src={WarningIcon}
+                alt="Warning icon"
+                class="w-20 mx-auto"
+              />
+            </p>
+            <div class="h-full px-8 w-full text-center">
+              <p class="text-xl m-0 w-full">
+                'Command Blocks'
+                <span class="underline underline-offset-4">enabled</span>
+              </p>
+            </div>
+          </div>
+          <!-- <div
+            class="mt-4 bg-yellow-300 flex items-center rounded-sm overflow-hidden"
+          >
+            <p class="bg-yellow-500 text-center w-1/3 m-0 p-3">
+              <Image src={WarningIcon} alt="Warning icon" class="w-8 mx-auto" />
+            </p>
+            <div class="h-full px-8 w-full text-center">
+              <p class="text-xl m-0 w-full text-yellow-600">
+                Enable 'Command Blocks'
+              </p>
+            </div>
+          </div> -->
+
+          <h2 class="mt-16">Files</h2>
           <div
             class="mt-8 pt-2 bg-red-700 items-center rounded-sm overflow-hidden shadow-inner"
           >
@@ -218,6 +255,9 @@ import Layout from "../../../layouts/Layout.astro";
             </div>
           </div>
           <p class="text-xs mt-3 text-right">Files hosted by Mediafire</p>
+
+          <h2>Setup guidance</h2>
+          <InstallationHelp />
           <!-- <div class="mt-8 bg-red-700 items-center rounded-xl overflow-hidden">
             <div class="flex justify-between items-center bg-red-600">
               <h3 class="text-2xl text-white p-5 px-10 mb-0 shadow">
@@ -242,14 +282,70 @@ import Layout from "../../../layouts/Layout.astro";
               </div>
             </div>
           </div> -->
-        </open>
+          <!-- <h2>Installation</h2>
+          <p>
+            This section will provide guidance to get you playing in no time
+          </p>
+          <p>Ready read instructions carefully.</p>
+
+          <h3>Overview</h3>
+          <ul class="bg-neutral-200 list-decimal pl-8 list-inside rounded-sm">
+            <ol class="list-item list-decimal bg-neutral-100/50 p-2 px-3">
+              Download files
+            </ol>
+            <ol
+              class="list-item list-decimal bg-neutral-100/50 p-2 px-3 border-t border-neutral-300/75"
+            >
+              Install map
+            </ol>
+            <ol
+              class="list-item list-decimal bg-neutral-100/50 p-2 px-3 border-t border-neutral-300/75"
+            >
+              Enable 'Command Blocks'
+            </ol>
+            <ol
+              class="list-item list-decimal bg-neutral-100/50 p-2 px-3 border-t border-neutral-300/75"
+            >
+              Load Minecraft
+            </ol>
+            <ol
+              class="list-item list-decimal bg-neutral-100/50 p-2 px-3 border-t border-neutral-300/75"
+            >
+              Select Minecraft version
+            </ol>
+            <ol
+              class="list-item list-decimal bg-neutral-100/50 p-2 px-3 border-t border-neutral-300/75"
+            >
+              Install resource pack
+            </ol>
+            <ol
+              class="list-item list-decimal bg-neutral-100/50 p-2 px-3 border-t border-neutral-300"
+            >
+              Play!
+            </ol>
+          </ul> -->
+        </div>
+        <!-- --------- -->
+        <!--  Sidebar  -->
+        <!-- --------- -->
         <aside class="w-1/3 pt-8">
-          <div class="bg-neutral-200 aspect-square mb-8"></div>
+          <div class="bg-neutral-200 aspect-square mb-8">
+            <!-- <ins
+              class="adsbygoogle"
+              style="display:block"
+              data-ad-client="ca-pub-5393590966220416"
+              data-ad-slot="3886960845"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+              <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+              </script> -->
+          </div>
           <!-- <div class="w-full my-8 p-8 bg-purple-200 rounded-2xl shadow-inner">
-            <p class="m-0 text-clip uppercase text-center text-lg font-bold">
-              <span class="block text-8xl font-semibold">3</span> player map
-            </p>
-          </div> -->
+              <p class="m-0 text-clip uppercase text-center text-lg font-bold">
+                <span class="block text-8xl font-semibold">3</span> player map
+              </p>
+            </div> -->
           <h3 class="mb-2 text-xl text-neutral-500">Help</h3>
           <div class="bg-opacity-75">
             <a class="" href=""
@@ -265,8 +361,11 @@ import Layout from "../../../layouts/Layout.astro";
           </div>
         </aside>
       </div>
+    </Container>
+  </section>
+</Layout>
 
-      <!-- <div class="flex gap-4">
+<!-- <div class="flex gap-4">
         <ButtonRed
           to="http://adf.ly/6322968/tinlc-resource-pack"
           bodyText="Download resource pack"
@@ -276,6 +375,3 @@ import Layout from "../../../layouts/Layout.astro";
           bodyText="Download map"
         />
       </div> -->
-    </Container>
-  </section>
-</Layout>
