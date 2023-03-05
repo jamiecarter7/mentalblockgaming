@@ -1,16 +1,184 @@
 ---
+import { Image } from "@astrojs/image/components";
 import Layout from "../layouts/Layout.astro";
 import Container from "../components/Container.astro";
-import UnderRepair from "../components/elements/UnderRepair.astro";
+import ButtonRed from "../components/elements/ButtonRed.astro";
+
+import JoelSplash from "../assets/images/story/joelsplash.png";
+const JoelBGImg = `background-image: url("${JoelSplash.src}");`;
+import MaddisonSplash from "../assets/images/story/maddisonsplash2.png";
+const MaddisonBGImg = `background-image: url("${MaddisonSplash.src}");`;
+import KyanaSplash from "../assets/images/story/kyanasplash1.png";
+const KyanaBGImg = `background-image: url("${KyanaSplash.src}");`;
+import TylerSplash from "../assets/images/story/tylersplash.png";
+const TylerBGImg = `background-image: url("${TylerSplash.src}");`;
+
+import RoguequestLogo from "../assets/images/roguequest/logo.svg";
+
+import RoguequestBg from "../assets/images/roguequest/portal.png";
+import RoguequestBgVideo from "../assets/images/roguequest/portalloop.mp4";
+import MaddisonBGVid from "../assets/videos/maddison/storytraileralt.mp4";
 ---
 
 <Layout title="RogueQuest Story">
   <main>
-    <section>
-      <Container>
-        <h1 class="text-3xl mb-8">RogueQuest Story</h1>
-        <UnderRepair />
+    <section class="relative bg-[#260a38]">
+      <video
+        class="absolute w-screen h-screen object-cover"
+        autoplay
+        loop
+        muted
+        playsinline
+        poster={RoguequestBg.src}
+      >
+        <source src={RoguequestBgVideo} type="video/mp4" />
+      </video>
+
+      <div
+        class="relative z-10 h-screen flex flex-col justify-center items-center p-10"
+      >
+        <p
+          class="text-purple-300 chronos-shadow text-4xl sm:text-5xl md:text-6xl font-roguequest text-center"
+        >
+          the twisting tale of
+        </p>
+        <Image src={RoguequestLogo} alt="RogueQuest logo" />
+        <p
+          class="text-purple-600 chronos-shadow text-4xl sm:text-5xl md:text-6xl font-roguequest text-center"
+        >
+          Chronos and the lantern of souls
+        </p>
+      </div>
+    </section>
+    <section class="bg-neutral-900">
+      <Container outerClass="max-w-5xl mx-auto">
+        <h1
+          class="text-7xl mb-16 bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-purple-800 to-[#24005f] text-center font-roguequest"
+        >
+          A twisting tale of darkness..
+        </h1>
+        <div class="grid grid-cols-2 gap-24 gap-y-48 mb-56">
+          <article>
+            <div
+              class="group relative h-[600px] flex flex-col justify-end bg-cover bg-center p-8 rounded-sm hover:scale-110 duration-500"
+              style={JoelBGImg}
+            >
+              <video
+                class="absolute h-full top-0 left-0 object-cover hidden group-hover:block opacity-0 group-hover:opacity-100 duration-1000"
+                autoplay
+                loop
+                muted
+                playsinline
+                poster={JoelSplash.src}
+              >
+                <source src={RoguequestBgVideo} type="video/mp4" />
+              </video>
+              <h2
+                class="absolute top-0 left-0 bg-purple-800 p-5 py-4 text-white inline-block translate-x-3 -translate-y-8 shadow-lg"
+              >
+                Joel
+              </h2>
+              <div
+                class="relative z-10 bg-purple-700 text-white p-4 text-center uppercase text-sm rounded-md shadow-md border-b-4 border-purple-900"
+              >
+                Coming soon
+              </div>
+            </div>
+          </article>
+          <article class="translate-y-32">
+            <div
+              class="group relative h-[600px] flex flex-col justify-end bg-cover bg-center rounded-sm hover:scale-110 duration-500"
+              style={MaddisonBGImg}
+            >
+              <video
+                class="absolute h-full top-0 left-0 object-cover hidden group-hover:block opacity-0 group-hover:opacity-100 duration-1000"
+                autoplay
+                loop
+                muted
+                playsinline
+                poster={MaddisonSplash.src}
+              >
+                <source src={MaddisonBGVid} type="video/mp4" />
+              </video>
+              <h2
+                class="absolute top-0 left-0 bg-purple-800 p-5 py-4 text-white inline-block -translate-x-3 shadow-lg"
+              >
+                Maddison
+              </h2>
+              <div
+                class="relative z-10 bg-gradient-to-t from-black/60 to-transparent p-8 pt-12"
+              >
+                <div
+                  class="bg-purple-700 text-white p-4 text-center uppercase text-sm rounded-md shadow-md border-b-4 border-purple-900"
+                >
+                  coming soon
+                </div>
+              </div>
+            </div>
+          </article>
+          <article>
+            <div
+              class="group relative h-[600px] flex flex-col justify-end bg-cover bg-center p-8 rounded-sm hover:scale-110 duration-500"
+              style={KyanaBGImg}
+            >
+              <video
+                class="absolute h-full top-0 left-0 object-cover hidden group-hover:block opacity-0 group-hover:opacity-100 duration-1000"
+                autoplay
+                loop
+                muted
+                playsinline
+                poster={KyanaSplash.src}
+              >
+                <source src={RoguequestBgVideo} type="video/mp4" />
+              </video>
+              <h2
+                class="absolute top-0 left-0 bg-purple-800 p-5 py-4 text-white inline-block -translate-x-2 -translate-y-6 shadow-lg"
+              >
+                Kyana
+              </h2>
+              <div
+                class="relative z-10 bg-purple-700 text-white p-4 text-center uppercase text-sm rounded-md shadow-md border-b-4 border-purple-900"
+              >
+                coming soon
+              </div>
+            </div>
+          </article>
+          <article class="translate-y-32">
+            <div
+              class="group relative h-[600px] flex flex-col justify-end bg-cover bg-center p-8 rounded-sm hover:scale-110 duration-500 bg-black"
+              style={TylerBGImg}
+            >
+              <video
+                class="absolute h-full top-0 left-0 object-cover hidden group-hover:block opacity-0 group-hover:opacity-100 duration-1000"
+                autoplay
+                loop
+                muted
+                playsinline
+                poster={TylerSplash.src}
+              >
+                <source src={RoguequestBgVideo} type="video/mp4" />
+              </video>
+              <h2
+                class="absolute top-0 left-0 bg-purple-800 p-5 py-4 text-white inline-block translate-x-10 -translate-y-6 shadow-lg"
+              >
+                Tyler
+              </h2>
+              <div
+                class="relative z-10 bg-purple-700 text-white p-4 text-center uppercase text-sm rounded-md shadow-md border-b-4 border-purple-900"
+              >
+                coming soon
+              </div>
+            </div>
+          </article>
+        </div>
+        <!-- <UnderRepair /> -->
       </Container>
     </section>
   </main>
 </Layout>
+
+<style>
+  .chronos-shadow {
+    text-shadow: #4221ff 0 1px 0, #3a0675 0 3px 0;
+  }
+</style>
