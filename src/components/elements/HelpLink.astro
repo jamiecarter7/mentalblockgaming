@@ -1,0 +1,26 @@
+---
+export interface Props {
+  title: string;
+  url: string;
+}
+
+const { title, url } = Astro.props;
+const urlNoHttp = url
+  .replace("https://", "")
+  .replace("http://", "")
+  .replace("www.", "");
+---
+
+<a
+  class="relative bg-neutral-300/50 hover:bg-neutral-300/75 p-5 px-6 block rounded-md border-b-2 border-neutral-300/75"
+  href={url}
+  target="_blank"
+>
+  <p class="text-lg text-neutral-600 mb-1">
+    {title}
+  </p>
+  <p class="text-xs text-neutral-500/75 mb-0">
+    {urlNoHttp}
+  </p>
+  <span class="absolute top-4 right-4">🔗</span>
+</a>

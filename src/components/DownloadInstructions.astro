@@ -1,5 +1,6 @@
 ---
 import HelpAccordion from "./elements/HelpAccordion.astro";
+import HelpLink from "./elements/HelpLink.astro";
 ---
 
 <HelpAccordion title="How do I install a map">
@@ -11,24 +12,14 @@ import HelpAccordion from "./elements/HelpAccordion.astro";
     </ol>
     <ol class="list-item list-decimal">This completes map installation</ol>
   </ul>
-  <div class="px-2">
-    <p class="mb-2 text-xs">Detailed instructions</p>
-    <a
-      class="relative bg-neutral-300/50 hover:bg-neutral-300/75 p-5 px-6 block rounded-md border-b-2 border-neutral-300/75"
-      href="https://www.makeuseof.com/how-to-download-install-minecraft-maps/"
-      target="_blank"
-    >
-      <p class="text-lg text-neutral-600 mb-1">
-        How to Download and Install Minecraft Maps
-      </p>
-      <p class="text-xs text-neutral-500/75 mb-0">
-        makeuseof.com/how-to-download-install-minecraft-maps
-      </p>
-      <span class="absolute top-4 right-4">🔗</span>
-    </a>
-  </div>
+  <!-- <div class="px-2"> -->
+  <p class="mb-2 text-xs">Detailed instructions</p>
+  <HelpLink
+    title="How to Download and Install Minecraft Maps"
+    url="https://www.makeuseof.com/how-to-download-install-minecraft-maps/"
+  />
+  <!-- </div> -->
 </HelpAccordion>
-
 <HelpAccordion title="How do I install a resource pack?">
   Content will be added shortly
 </HelpAccordion>
@@ -97,3 +88,9 @@ import HelpAccordion from "./elements/HelpAccordion.astro";
     </div>
   </div>
 </div> -->
+
+<style>
+  ol {
+    @apply my-2 text-lg;
+  }
+</style>

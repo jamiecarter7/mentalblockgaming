@@ -1,0 +1,18 @@
+---
+export interface Props {
+  title?: string;
+}
+
+const { title } = Astro.props;
+let titleString = "Community translations";
+if (title) {
+  titleString = title;
+}
+---
+
+<div class="bg-red-800 shadow-inner pb-4">
+  <h4 class="px-10 py-6 text-white text-xl font-light">
+    {titleString}
+  </h4>
+  <slot />
+</div>

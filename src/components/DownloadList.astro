@@ -1,0 +1,63 @@
+---
+import DownloadListFile from "../components/elements/downloadlist/DownloadListFile.astro";
+
+export interface Props {
+  downloadList: {
+    title: string;
+    alldownloads?: string;
+    file: File;
+    translations?: File[];
+  };
+}
+
+interface File {
+  name: string;
+  text: string;
+  url: string;
+}
+
+const { title, alldownloads, file, translations } = Astro.props.downloadList;
+
+function addBorderTop(index: number) {
+  if (index > 0) {
+    return true;
+  }
+  return false;
+}
+---
+
+<div
+  class="mt-8 pt-2 bg-red-700 items-center rounded-sm overflow-hidden shadow-lg"
+>
+  <div class="flex justify-between items-center">
+    <h3 class="text-3xl text-white p-5 px-10 mb-0 font-light">
+      {title}
+    </h3>
+    <p class="mb-0 mr-10 text-sm text-red-200/75">
+      {alldownloads && <a href={alldownloads}> View all files</a>}
+    </p>
+  </div>
+
+  <div class="mb-4">
+    <DownloadListFile name={file.name} text={file.text} url={file.url} />
+  </div>
+
+  {
+    translations && (
+      <div class="bg-red-800 shadow-inner pb-4">
+        <h4 class="px-10 py-6 text-white text-xl font-light">
+          Community translations
+        </h4>
+        {translations.map((translation, index) => (
+          <DownloadListFile
+            name={translation.name}
+            text={translation.text}
+            url={translation.url}
+            borderTop={addBorderTop(index)}
+          />
+        ))}
+      </div>
+    )
+  }
+</div>
+<p class="text-xs mt-3 text-right">Files hosted by Mediafire</p>
