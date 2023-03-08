@@ -1,15 +1,10 @@
 ---
-layout: "../../../layouts/BlogLayout.astro"
+date: 2015-01-05
 title: "How to Write a Custom ‘sounds.json’ File for Minecraft"
-pubDate: 2015-01-05
-description: "This is the first post of my new Astro blog."
+description: "Learnu how to write your own sounds.json file for use with custom sounds in resource packs."
 exerpt: "This tutorial will teach you how to write your own sounds.json file for use with custom sounds in resource packs."
 author: "MaybeLaterx"
-image:
-  url: "/blog/posts/playtesting-bible-a-guide-for-game-developers/enlightening-book.jpg"
-  alt: "The Astro logo with the word One."
-category: "sound"
-tags: ["sound", "resource-pack"]
+category: ["sound", "resource-pack"]
 ---
 
 Hello there fellow Minecrafters! This tutorial will teach you how to write your own sounds.json file for use with custom sounds in resource packs. For this tutorial, Notepad, a very simple word processing program, is recommended.

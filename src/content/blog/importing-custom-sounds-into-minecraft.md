@@ -1,15 +1,10 @@
 ---
-layout: "../../../layouts/BlogLayout.astro"
+date: 2014-12-12
 title: "Importing Custom Sounds into Minecraft"
-pubDate: 2014-12-12
-description: "This is the first post of my new Astro blog."
+description: "Ever wanted to replace the default door sound with a long creaking effect for your horror adventure map? Now you can, we will show you how!"
 exerpt: "Ever wanted to replace the default door sound with a long creaking effect for your horror adventure map? Or add fast-paced music to your parkour map? Or add a countdown sound effect for your multiplayer racing map? Well now you can! "
 author: "MaybeLaterx"
-image:
-  url: "/blog/posts/playtesting-bible-a-guide-for-game-developers/enlightening-book.jpg"
-  alt: "The Astro logo with the word One."
-category: "sound"
-tags: ["sound", "resource-pack"]
+category: ["sound", "resource-pack"]
 ---
 
 Ever wanted to replace the default door sound with a long creaking effect for your horror adventure map? Or add fast-paced music to your parkour map? Or add a countdown sound effect for your multiplayer racing map? Well now you can!
@@ -19,7 +14,7 @@ As of Minecraft 1.7, it is possible to add custom sounds to your game through th
 For this tutorial, we will require [Audacity](http://audacity.sourceforge.net/), an excellent audio editing program, and Mental Block Gaming’s own program, the [JSONator](/blog/posts/importingcustomsoundsintominecraft/The%20JSONator.zip), both of which are free and easy to use! Of course, we will also need some sound files to work with. We will be using [this example resource pack](/blog/posts/importingcustomsoundsintominecraft/Custom%20Sounds.zip) for demonstration purposes. (More information about the creation of the JSONator can be found [here](http://obj-motivation.livejournal.com/1521.html). If you’re having trouble running it, try installing Microsoft’s Visual F# 3.1.2 [here](https://www.microsoft.com/en-us/download/confirmation.aspx?id=44011).)
 
 ![Mutliple resource packs](/blog/posts/importingcustomsoundsintominecraft/multipleresourcepacks.png)
-_<span class="text-center block mt-3">When multiple resource packs are selected, the top resource packs take priority</span>_
+_When multiple resource packs are selected, the top resource packs take priority_
 
 If you want to simply replace the game files with sounds of your own, you can overwrite the files used in the resource pack with a sound file of your own with the same name and format. If your resource pack is equipped in game, it will play your sound instead of Minecraft’s default sound.
 
@@ -32,14 +27,14 @@ But what if we want to add a completely new sound, instead of simply replacing o
 <!-- <img style="max-width: 200px; display: inline;" src="/public/blog/posts/importingcustomsoundsintominecraft/json.png" alt="json example" /> -->
 
 ![json](/blog/posts/importingcustomsoundsintominecraft/json.png)
-_<span class="text-left block mt-3">What the sounds.json file looks like</span>_
+_What the sounds.json file looks like_
 
-For the next part of this process, we will need to use the [JSONator](/blog/posts/importingcustomsoundsintominecraft/The%20JSONator.zip). (Note: if you feel uncomfortable using the JSONator, you can write the code by hand using [this tutorial](http://mentalblockgaming.com/blog/sound/how-to-write-a-custom-sounds-json-file-for-minecraft/).) This custom-built program produces a special file called “sounds.json” that the game uses to read your custom sounds. This JSON file gives Minecraft a new command which can play your custom sound, and also tells it what keyword should be used to play this new sound. In other words, if you type “bigexplosion” into the game, it knows that you are talking about your bigexplosion.ogg file. With the JSONator v2, it is now possible to also associate each of your sound effects with a volume slider within Minecraft. In Mental Block Gaming’s maps, for example, all character voiceovers are controlled by the “players” volume slider. In order to associate your sounds with one of the eight volume sliders, simply create a folder called either “ambient”, “weather”, “player”, “neutral”, “hostile”, “block”, “record” or “music” within your Sound Effects folder. Note that any files not sorted into specific folders can only be controlled by the master volume slider. Simple!
+For the next part of this process, we will need to use the [JSONator](/blog/posts/importingcustomsoundsintominecraft/The%20JSONator.zip). (Note: if you feel uncomfortable using the JSONator, you can write the code by hand using [this tutorial](/blog/sound/how-to-write-a-custom-sounds-json-file-for-minecraft/).) This custom-built program produces a special file called “sounds.json” that the game uses to read your custom sounds. This JSON file gives Minecraft a new command which can play your custom sound, and also tells it what keyword should be used to play this new sound. In other words, if you type “bigexplosion” into the game, it knows that you are talking about your bigexplosion.ogg file. With the JSONator v2, it is now possible to also associate each of your sound effects with a volume slider within Minecraft. In Mental Block Gaming’s maps, for example, all character voiceovers are controlled by the “players” volume slider. In order to associate your sounds with one of the eight volume sliders, simply create a folder called either “ambient”, “weather”, “player”, “neutral”, “hostile”, “block”, “record” or “music” within your Sound Effects folder. Note that any files not sorted into specific folders can only be controlled by the master volume slider. Simple!
 
 What is not so simple is the layout of the JSON. JSONs can be written by hand, but they can be a little complicated to understand, and in a game as big as Templars of Hyrule which has over 619 custom sounds this process can quickly become a chore. To remedy this, we have produced a program which neatly creates a JSON file for you – the JSONator! Simply double click JSONator.exe to open the program, then input the location of the folder where all of your sound files are stored and it will create the JSON for you. (If you are unsure what the location of your sound effects folder is, right click on the folder and choose Properties to find out. My folder location is C:\Users\Daniel\Documents\Sound Effects.) Type the location of this folder into the JSONator. Press enter and the program should tell you that it has created a sounds.json file which is stored in the same folder as the JSONator. (Note that it does not save in the same location as your sound files.)
 
 ![jsonator](/blog/posts/importingcustomsoundsintominecraft/jsonatoroutput.png)
-_<span class="text-center block mt-3">Mental Block Gaming’s very own JSONator!</span>_
+_Mental Block Gaming’s very own JSONator!_
 
 Now that we have our .ogg sound files and our sounds.json file, we are ready to start compiling them into a resource pack! Take the Custom Sounds sample resource pack you downloaded earlier and unzip it. Navigate to Custom Sounds > assets > minecraft. This is the folder that the sounds.json file we just created needs to go into. Copy and paste your sounds.json file here. The sounds.json file in there is currently only set up to play countdown.ogg. Simply overwrite this sounds.json file with your own version. After you have done that, continue navigating to the sounds folder, then custom. Inside this custom folder you should place all of your .ogg sound files that you want to appear in the game.
 
@@ -49,11 +44,15 @@ In order to try out your new resource pack, we need to equip it. Open up Minecra
 
 The [playsound command](http://minecraft.gamepedia.com/Commands#playsound) is fairly straightforward to use. The syntax for the playsound command is as below:
 
-> /playsound <sound> <source> <player> [x] [y] [z] [volume] [pitch] [minimumVolume]
+```
+/playsound <sound> <source> <player> [x] [y] [z] [volume] [pitch] [minimumVolume]
+```
 
 An example of a playsound command would be as follows.
 
+```
 /playsound countdown block @a 123 26 75 2 0.5 0.1
+```
 
 This command will play the sound “countdown” to all players (@a) at the coordinates (123,26,75). Block means the volume slider of block will effect how loud this sound is. The volume is twice the usual volume, meaning it is audible from twice the normal distance. Its pitch is 0.5, which means that the sound is slowed down and the pitch is lowered. The minimum volume of the sound is 0.1, meaning that even if you aren’t in the audible range of the sound, it will still play at 10% volume. (Note that the only essential parts of the code are /playsound, the sound ID, and the person to whom the sound is played. If no coordinates are given, the sound will play from the command block’s coordinates.)
 
