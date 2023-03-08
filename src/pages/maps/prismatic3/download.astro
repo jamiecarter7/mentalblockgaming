@@ -3,12 +3,61 @@ import Container from "../../../components/Container.astro";
 import ButtonRed from "../../../components/elements/ButtonRed.astro";
 import UnderRepair from "../../../components/elements/UnderRepair.astro";
 import Layout from "../../../layouts/Layout.astro";
+import PartialRestore from "../../../components/elements/PartialRestore.astro";
+import DownloadHero from "../../../components/DownloadHero.astro";
+import MinecraftVersionWarning from "../../../components/MinecraftVersionWarning.astro";
+import InstallationHelp from "../../../components/DownloadInstructions.astro";
 ---
 
 <Layout title="Download Prismatic III">
   <section>
+    <DownloadHero map="Download Prismatic III" />
+    <PartialRestore />
+
     <Container>
-      <h1 class="text-4xl mb-8">Download Prismatic III</h1>
+      <h2 class="mb-0 mt-10">Requirements</h2>
+      <div class="flex gap-10">
+        <div class="w-2/3">
+          <MinecraftVersionWarning version="1.10.2" />
+          <h2 class="mt-16">Files</h2>
+          <p>coming shortly</p>
+          <h2>Setup guidance</h2>
+          <InstallationHelp />
+        </div>
+        <aside class="w-1/3 pt-8">
+          <div class="bg-neutral-200 aspect-square mb-8">
+            <!-- <ins
+              class="adsbygoogle"
+              style="display:block"
+              data-ad-client="ca-pub-5393590966220416"
+              data-ad-slot="3886960845"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+              <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+              </script> -->
+          </div>
+          <!-- <div class="w-full my-8 p-8 bg-purple-200 rounded-2xl shadow-inner">
+              <p class="m-0 text-clip uppercase text-center text-lg font-bold">
+                <span class="block text-8xl font-semibold">3</span> player map
+              </p>
+            </div> -->
+          <h3 class="mb-2 text-xl text-neutral-500">Help</h3>
+          <div class="bg-opacity-75">
+            <a class="" href=""
+              ><p class="m-0 text-red-600 py-1">
+                How do I change minecraft version?
+              </p></a
+            >
+            <a href=""
+              ><p class="m-0 text-red-600 py-1">
+                How do I enable 'Command Blocks'?
+              </p></a
+            >
+          </div>
+        </aside>
+
+        <!-- <h1 class="text-4xl mb-8">Download Prismatic III</h1>
       <p class="mt-10">Follow the link below to download this map</p>
       <ButtonRed to="/maps" bodyText="Downloads Page" />
       <UnderRepair />
@@ -20,6 +69,8 @@ import Layout from "../../../layouts/Layout.astro";
       in Minecraft Install Map Unzip map folder Insert unzipped map folder into your
       “.minecraft/saves/” folder or into your server folder and run it Play Map Download
       Download
+    </Container> -->
+      </div>
     </Container>
   </section>
 </Layout>
