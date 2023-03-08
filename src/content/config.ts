@@ -10,7 +10,7 @@ const blogCollection = defineCollection({
     author: z.enum(["Duskreaper", "MaybeLaterx", "PharmyB"]),
 
     category: z
-      .enum(["redstone", "game-dev", "game-design", "sound"])
+      .enum(["redstone", "game-dev", "game-design", "sound", "resource-pack"])
       // .transform((str) => str.replaceAll(" ", "-"))
       .array()
       .nonempty(),
