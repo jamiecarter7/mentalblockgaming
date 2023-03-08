@@ -60,7 +60,7 @@ latestPosts.length = 3;
             <a href="/maps/prismatic3"> Prismatic III</a>
           </h3>
           <h3 class="text-center text-xl">COLOUR – SOLVE – COLLECT.</h3>
-          <p class="max-w-2xl text-center m-auto mb-5">
+          <p class="max-w-3xl text-center m-auto mb-5">
             In this instalment of Prismatic, you must mix together the three
             primary colours to shade the complex in your favour; unlocking
             doors, opening up pathways and creating new unforeseen routes.
@@ -228,7 +228,7 @@ latestPosts.length = 3;
         />
       </div>
     </section>
-    <section>
+    <section class="featured">
       <Container>
         <h2 class="text-center">Featured Minecraft Maps</h2>
         <p class="mb-20 text-center">
@@ -326,16 +326,9 @@ latestPosts.length = 3;
   <style></style>
 
   <style is:global>
-    main {
-      margin: auto;
-      /* padding: 1.5rem; */
-      /* max-width: 60ch; */
+    .featured a {
+      @apply text-orange-600;
     }
-
-    h3 {
-      @apply text-2xl text-neutral-500 font-light;
-    }
-
     .prismatic-animated-bg {
       background: linear-gradient(
         269deg,

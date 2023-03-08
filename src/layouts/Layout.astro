@@ -26,6 +26,7 @@ if (title !== "Home") {
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <!-- simple analytics -->
     <script
       is:inline
       async
@@ -39,7 +40,12 @@ if (title !== "Home") {
         referrerpolicy="no-referrer-when-downgrade"
       /></noscript
     >
-
+    <!-- ads -->
+    <!-- <script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5393590966220416"
+    crossorigin="anonymous"
+  ></script> -->
     <!-- Fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/prb8pdz.css" />
   </head>
@@ -61,29 +67,41 @@ if (title !== "Home") {
     );
   }
   html {
-    font-family: system-ui, sans-serif;
+    font-family: new-hero, system-ui, sans-serif;
     background-color: #f6f6f6;
   }
-  code {
-    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-      DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+  main {
+    margin: auto;
   }
-
-  h1 {
-    font-family: aktiv-grotesk, sans-serif;
-    @apply font-light;
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-head;
   }
 
   h2 {
-    font-family: aktiv-grotesk, sans-serif;
+    /* font-family: aktiv-grotesk, sans-serif; */
     @apply text-3xl font-light text-neutral-500 mt-4 mb-8;
   }
 
   h3 {
-    @apply mb-5;
+    @apply mb-5 text-2xl text-neutral-500 font-light;
   }
 
   p {
-    @apply mb-5 text-neutral-500;
+    @apply my-3 text-neutral-600 leading-7;
+  }
+
+  a {
+    @apply text-red-600;
+  }
+
+  h3 {
+  }
+
+  code {
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+      DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
   }
 </style>

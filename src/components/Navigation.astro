@@ -4,7 +4,7 @@ import logo from "../assets/images/logo/logo.png";
 import HomeIcon from "../assets/icons/home.svg";
 ---
 
-<div class="position fixed top-0 z-50 w-full text-neutral-500">
+<nav class="position fixed top-0 z-50 w-full text-neutral-500">
   <p class="text-xs text-white text-center m-0 p-2 bg-red-700">
     This website is being repaired. Please find downloads in the maps page while
     we restore content
@@ -18,7 +18,7 @@ import HomeIcon from "../assets/icons/home.svg";
         class="block aspect-square w-14 h-14"
         alt="Mental Block Gmaing logo"
       />
-      <span class="text-xl text-neutral-700">Mental Block Gaming</span>
+      <span class="text-xl text-red-600 font-head">Mental Block Gaming</span>
     </a>
     <div>
       <ul class="flex items-center gap-4 text-sm capitalize">
@@ -35,4 +35,10 @@ import HomeIcon from "../assets/icons/home.svg";
       </ul>
     </div>
   </div>
-</div>
+</nav>
+
+<style>
+  nav a {
+    @apply text-neutral-500;
+  }
+</style>

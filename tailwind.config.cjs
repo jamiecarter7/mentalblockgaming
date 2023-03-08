@@ -5,7 +5,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Proxima Nova", ...defaultTheme.fontFamily.sans],
+        sans: ["new-hero", ...defaultTheme.fontFamily.sans],
+        head: ["rigid-square", ...defaultTheme.fontFamily.sans],
         roguequest: ["antiquarian-scribe", ...defaultTheme.fontFamily.sans],
       },
     },
