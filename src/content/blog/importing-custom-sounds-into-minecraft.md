@@ -26,8 +26,30 @@ But what if we want to add a completely new sound, instead of simply replacing o
 
 <!-- <img style="max-width: 200px; display: inline;" src="/public/blog/posts/importingcustomsoundsintominecraft/json.png" alt="json example" /> -->
 
-![json](/blog/posts/importingcustomsoundsintominecraft/json.png)
-_What the sounds.json file looks like_
+```json
+// What the sounds.json file looks like
+
+{
+  "pycella18": {
+    "sounds": ["custom/pycella18"]
+  },
+  "pycella19": {
+    "sounds": ["custom/pycella19"]
+  },
+  "raelyn02": {
+    "sounds": ["custom/raelyn02"]
+  },
+  "raelyn03": {
+    "sounds": ["custom/raelyn03"]
+  },
+  "raelyn04": {
+    "sounds": ["custom/raelyn04"]
+  },
+  "raelyn05": {
+    "sounds": ["custom/raelyn05"]
+  }
+}
+```
 
 For the next part of this process, we will need to use the [JSONator](/blog/posts/importingcustomsoundsintominecraft/The%20JSONator.zip). (Note: if you feel uncomfortable using the JSONator, you can write the code by hand using [this tutorial](/blog/sound/how-to-write-a-custom-sounds-json-file-for-minecraft/).) This custom-built program produces a special file called “sounds.json” that the game uses to read your custom sounds. This JSON file gives Minecraft a new command which can play your custom sound, and also tells it what keyword should be used to play this new sound. In other words, if you type “bigexplosion” into the game, it knows that you are talking about your bigexplosion.ogg file. With the JSONator v2, it is now possible to also associate each of your sound effects with a volume slider within Minecraft. In Mental Block Gaming’s maps, for example, all character voiceovers are controlled by the “players” volume slider. In order to associate your sounds with one of the eight volume sliders, simply create a folder called either “ambient”, “weather”, “player”, “neutral”, “hostile”, “block”, “record” or “music” within your Sound Effects folder. Note that any files not sorted into specific folders can only be controlled by the master volume slider. Simple!
 
