@@ -1,0 +1,164 @@
+---
+// import Image from "@astrojs/image/components/Image.astro";
+import { Image } from "@astrojs/image/components";
+import type { CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
+import BlogLayout from "../../../layouts/BlogLayout.astro";
+import { formatCategory } from "../../../utils/formatCategory";
+
+export async function getStaticPaths() {
+  const blogPosts = await getCollection("blog", ({ data }) => {
+    return data.date < new Date();
+  });
+  return blogPosts.map((post) => ({
+    params: {
+      category: post.data.category[0],
+      slug: post.slug,
+    },
+    props: { post },
+  }));
+}
+
+interface Props {
+  post: CollectionEntry<"blog">;
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+
+const monthNames = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
+const date = new Date(post.data.date);
+const dateStr =
+  date.getUTCDate() +
+  " " +
+  monthNames[date.getMonth()] +
+  " " +
+  date.getUTCFullYear();
+
+// SEO
+let seoTitleText = post.data.title;
+if (post.data.seoTitle) {
+  seoTitleText = post.data.seoTitle;
+}
+---
+
+<BlogLayout title={seoTitleText} description={post.data.description}>
+  <div class="blog py-16">
+    {
+      post.data.image && (
+        <img src={post.data.image.src} alt={post.data.image.alt} />
+      )
+    }
+    <div class="flex gap-8 meta">
+      <p>{post.data.author}</p>
+      <!-- <p class="text-neutral-300">/</p> -->
+      <p>{dateStr}</p>
+      <!-- <p class="text-neutral-300">/</p> -->
+      <p class="flex">
+        {
+          post.data.category.map((category, index) => (
+            <span>
+              {index > 0 && ","}
+              {formatCategory(category)}
+            </span>
+          ))
+        }
+      </p>
+    </div>
+    <h1>{post.data.title}</h1>
+    <Content />
+  </div>
+</BlogLayout>
+
+<style lang="scss" is:global>
+  .blog {
+    h1,
+    h2,
+    h3,
+    h4,
+    p {
+      @apply mx-12;
+    }
+    h1 {
+      @apply text-5xl mb-8 font-head text-neutral-800 leading-[1.2em];
+    }
+    h2,
+    h3 {
+      @apply text-neutral-700 font-semibold mt-24;
+    }
+    h2 {
+      @apply text-3xl;
+    }
+    h3 {
+      @apply text-xl;
+    }
+    p {
+      @apply text-xl my-12 font-light leading-10;
+    }
+    p:has(img),
+    .ember-container {
+      @apply mx-0 rounded-sm overflow-hidden shadow-md border-b-2 border-neutral-300 my-16;
+    }
+    img {
+      @apply w-full m-0 bg-neutral-50;
+    }
+    img + em {
+      @apply text-base block py-4 px-6 bg-neutral-200 text-center not-italic;
+    }
+
+    .meta {
+      @apply mx-12 my-8 text-lg font-head;
+    }
+
+    .meta p {
+      @apply m-0 text-lg text-neutral-400;
+    }
+
+    strong {
+      @apply font-semibold;
+    }
+
+    .warning {
+      @apply m-0 bg-red-600 text-white text-base p-2;
+    }
+
+    ul {
+      @apply mx-12 px-16;
+    }
+
+    ul li {
+      @apply list-item list-disc p-3 pl-2 my-0 text-xl text-gray-600 font-light;
+    }
+
+    pre {
+      @apply my-12 p-4;
+    }
+
+    table {
+      @apply w-full;
+      th,
+      td {
+        @apply p-4 border border-neutral-300;
+      }
+      th {
+        @apply bg-neutral-200/40;
+      }
+      tbody tr:hover {
+        @apply bg-neutral-200/75;
+      }
+    }
+  }
+</style>

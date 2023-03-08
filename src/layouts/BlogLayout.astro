@@ -1,35 +1,47 @@
 ---
+import { getCollection } from "astro:content";
 import BlogPost from "../components/BlogPost.astro";
 import Container from "../components/Container.astro";
+import { formatCategory } from "../utils/formatCategory";
 import Layout from "./Layout.astro";
 export interface Props {
-  title?: string;
+  title: string;
+  description: string;
+  categories: string[];
 }
 
-const { frontmatter, title } = Astro.props;
+const allPosts = await getCollection("blog");
+const allCategoriesArray: string[] = [];
+allPosts.forEach((post) => {
+  allCategoriesArray.push(post.data.category);
+});
+const allCatFlat = allCategoriesArray.flat();
 
-let titleText = "";
-if (title === undefined) {
-  titleText = frontmatter.title;
-} else {
-  titleText = title;
-}
+const { title, description } = Astro.props;
 ---
 
-<Layout title={titleText}>
-  <div class="flex max-w-7xl mx-auto">
-    <main>
+<Layout title={title} description={description}>
+  <div class="md:flex max-w-7xl mx-8 md:mx-auto gap-16">
+    <main class="md:w-2/3">
       <section>
-        <Container>
-          <!-- <BlogAdvert /> -->
-          <BlogPost frontmatter={frontmatter}>
-            <slot />
-          </BlogPost>
-        </Container>
+        <!-- <Container> -->
+        <!-- <BlogAdvert /> -->
+
+        <slot />
+        <!-- </Container> -->
       </section>
     </main>
-    <aside class="w-1/3"></aside>
+    <aside class="md: w-1/3 py-10">
+      <p class="font-head text-2xl mt-12">Categories</p>
+      {
+        allCatFlat.map((cat) => (
+          <a href="">
+            <p class="text-base">{formatCategory(cat)}</p>
+          </a>
+        ))
+      }
+    </aside>
   </div>
-
-  <style></style>
 </Layout>
+
+<style></style>

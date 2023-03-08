@@ -1,15 +1,11 @@
 ---
-layout: "../../../layouts/BlogLayout.astro"
+date: 2014-10-24
 title: "How to extract a stellar voice-acting performance from an average Joe"
-pubDate: 2014-10-24
-description: "This is the first post of my new Astro blog."
+seoTitle: "How to extract a stellar voice-acting performance anyone"
+description: "I share tips on how to get the most out of your voice actors, including those with no prior experience, to get 55 NPCs voiced without spending a penny."
 exerpt: "I share tips on how to get the most out of your voice actors, including those with no prior experience, to get all 55 NPCs voiced without spending a penny"
 author: "MaybeLaterx"
-image:
-  url: "/blog/posts/playtesting-bible-a-guide-for-game-developers/enlightening-book.jpg"
-  alt: "The Astro logo with the word One."
-category: "sound"
-tags: ["sound", "resource-pack"]
+category: ["sound"]
 ---
 
 For the production of ‘Templars of Hyrule’, over 500 lines of dialogue had to be recorded. Thanks to support from family and friends, we managed to get all 55 NPCs voiced without spending a penny. In this blog I will share tips on how to get the most out of your voice actors, including those with no prior experience.
@@ -24,9 +20,9 @@ It’s important to make sure that your actor is given context of the scripts th
 
 When you get to your recording studio, make sure your voice actor feels comfortable. Get them a glass of water before the recordings. They should always have something to drink, especially if you expect the recording session to be a long one. Along with physical comfort, you should ensure that they feel mentally prepared for the recordings. They may have the jitters. The fear often sets in once the voice actors get in front of the microphone. Some will get stage-fright worse than others. If they are finding it particularly difficult to get started, here are a few tips:
 
--When you start the recordings, don’t say something like “Go” or “Now”. This can put the actor under pressure. Instead start with something like “In your own time” or “Whenever you’re ready”. This gives them a few seconds to breathe, or re-read, or do whatever they need to prepare themselves and get themselves into the zone.
--Have them read the script through in their natural voice, simply saying out loud the words written on the page, then slowly add elements to the readings – an accent, a change in tone, a different emphasis. Record this and treat it as a real recording. If you don’t, you might just miss a perfect recording!
--If a character is talking to another character, don’t hesitate to take on the role of the other character if possible. Read the complementing lines back to your actor, or if the responses are rhetorical/imaginary then make up some lines to get an appropriate response from your actor.
+- When you start the recordings, don’t say something like “Go” or “Now”. This can put the actor under pressure. Instead start with something like “In your own time” or “Whenever you’re ready”. This gives them a few seconds to breathe, or re-read, or do whatever they need to prepare themselves and get themselves into the zone.
+- Have them read the script through in their natural voice, simply saying out loud the words written on the page, then slowly add elements to the readings – an accent, a change in tone, a different emphasis. Record this and treat it as a real recording. If you don’t, you might just miss a perfect recording!
+- If a character is talking to another character, don’t hesitate to take on the role of the other character if possible. Read the complementing lines back to your actor, or if the responses are rhetorical/imaginary then make up some lines to get an appropriate response from your actor.
 
 I’ve used these techniques with actors who have had great difficulty getting any recordings done. They are usually only used in extreme situations, and often actors ease into it after a few lines.
 

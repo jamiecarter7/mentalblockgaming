@@ -1,24 +1,56 @@
 ---
 import Container from "../../components/Container.astro";
-import Layout from "../../layouts/Layout.astro";
-const allPosts = await Astro.glob("../blog/*/*md");
+import BlogLayout from "../../layouts/BlogLayout.astro";
+import { formatCategory } from "../../utils/formatCategory";
 const pageTitle = "Blog";
+
+import { getCollection } from "astro:content";
+import Category from "./category/[category].astro";
+
+const blogPosts = await getCollection("blog", ({ data }) => {
+  return data.date < new Date();
+});
 ---
 
-<Layout title={pageTitle}>
+<BlogLayout title={pageTitle}>
   <section>
     <Container>
-      <h1 class="text-4xl text-neutral-600 mb-6">Blog</h1>
+      <h1 class="text-5xl text-neutral-600 mb-6">Blog</h1>
       <p>Read about what we learned making games..</p>
-      <ul>
-        {
-          allPosts.map((post) => (
-            <li class="bg-neutral-200 p-4 my-8 rounded-lg text-red-500">
-              <a href={post.url}>{post.frontmatter.title}</a>
-            </li>
-          ))
-        }
-      </ul>
+      {
+        blogPosts.map((post) => (
+          <article class="group my-16">
+            <a
+              class=" rounded-lg text-red-500"
+              href={`/blog/${post.data.category[0]}/${post.slug}`}
+            >
+              <h2 class="relative min-h-[60px] flex items-center mb-6 group-hover:text-white duration-200 ease-out">
+                <span class="absolute -z-10 top-0 -left-8 group-hover:-left-0 block w-2 group-hover:w-full duration-200 bg-red-600 h-full scale-y-125 group-hover:scale-x-105" />
+                {post.data.title}
+              </h2>
+              <p>{post.data.exerpt}</p>
+              <div class="flex justify-between">
+                <p class="text-neutral-400">
+                  {post.data.category.map((category) =>
+                    formatCategory(category)
+                  )}
+                </p>
+                <p class="text-red-600 text-right ">continue reading..</p>
+              </div>
+            </a>
+            <div class="w-1/5 h-1 mx-auto mt-12 bg-neutral-200" />
+          </article>
+        ))
+      }
     </Container>
   </section>
-</Layout>
+</BlogLayout>
+
+<style>
+  h2 {
+    @apply leading-10;
+  }
+  p {
+    @apply leading-9 font-light text-lg;
+  }
+</style>

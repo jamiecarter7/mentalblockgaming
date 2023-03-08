@@ -1,18 +1,14 @@
 ---
-layout: "../../../layouts/BlogLayout.astro"
 title: "Map Making in 1.9: Coloured Command Blocks!?"
-pubDate: 2015-11-08
-description: "This is the first post of my new Astro blog."
+date: 2015-11-08
+description: "The new commands blocks added in 1.9 offer new powerful features, let's explore what they do!"
 exerpt: "Contrary to not-so-popular belief, the new commands blocks added in 1.9 actually have new features other than adding some much needed colour to your redstone!"
 author: "Duskreaper"
+category: ["redstone"]
 image:
-  url: "/blog/posts/playtesting-bible-a-guide-for-game-developers/enlightening-book.jpg"
-  alt: "The Astro logo with the word One."
-category: "redstone"
-tags: ["redstone"]
+  src: "/blog/posts/mapmaking19colouredcommandblocks/hero.jpg"
+  alt: "Coloured command blocks"
 ---
-
-![Map making in 1.9: Coloured command blocks](/blog/posts/mapmaking19colouredcommandblocks/hero.jpg)
 
 <p class="text-center text-2xl">LET’S MAKE MY REDSTONE <span class="text-purple-500 bg-purple-100 font-medium py-1 px-px rounded-sm">PR</span><span class="text-teal-700 bg-teal-100 font-medium  py-1 px-px rounded-sm">ET</span><span class="text-orange-500 bg-amber-100 font-medium py-1 px-px rounded-sm">TY</span></p>
 
@@ -47,6 +43,7 @@ The first, on the left, toggles the type of the command block. This impacts the 
 The central grey button toggles if the command block is set to unconditional or conditional mode. This only changes the behaviour of the <span class="text-teal-700 bg-teal-100 font-medium py-1 px-1.5 rounded-sm">Chain</span> command blocks and does not affect the other two types
 
 ![modes2](/blog/posts/mapmaking19colouredcommandblocks/modes2.png)
+_Unconditional (left) and Conditional (right)_
 
 Unconditional <span class="text-teal-700 bg-teal-100 font-medium py-1 px-1.5 rounded-sm">Chain</span> Command blocks will activate their command, like normal, when the block behind them, indicated by the square shape on that side of the command block, runs its command. [NOTE: the block behind them must also be pointed into the chain command block.]
 

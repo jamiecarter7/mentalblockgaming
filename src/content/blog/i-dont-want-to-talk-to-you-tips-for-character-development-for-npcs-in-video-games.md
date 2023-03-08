@@ -1,15 +1,11 @@
 ---
-layout: "../../../layouts/BlogLayout.astro"
+date: 2014-12-29
 title: "“I Don’t Want to Talk to You” – Tips for Character Development for NPCs in Video Games"
+seoTitle: "“I Don’t Want to Talk to You” - Tips for NPC development"
+description: "Methods and tools for character development that can assist you in populating your game world with truly compelling characters."
 exerpt: "The methods for character development listed in this post are excellent and empowering tools that can assist you in populating your world with truly compelling characters."
-pubDate: 2014-12-29
-description: "This is the first post of my new Astro blog."
 author: "MaybeLaterx"
-image:
-  url: "/blog/posts/playtesting-bible-a-guide-for-game-developers/enlightening-book.jpg"
-  alt: "The Astro logo with the word One."
-category: "game design"
-tags: ["game design"]
+category: ["game-design"]
 ---
 
 Our world is filled with people of all walks of life. Why should your virtual world be any different? The methods for character development listed below are excellent and empowering tools that can assist you in populating your world with truly compelling characters.
@@ -22,11 +18,11 @@ Once you have a broad spectrum of personalities in your game, consider how they 
 
 When designing a character, I keep in mind two things: purpose and personality. NPCs should serve one useful functionality and leave one main impression on the player. The Happy Mask Salesman in Templars of Hyrule, for example, sells masks and is designed to make the player feel uncomfortable. His bipolar mood-swings make talking to him very uncomfortable, as one moment he’ll be quietly creepy and the next he’ll be yelling at the player. This ‘purpose and personality’ criterion gives you a direction to work towards and prevents you from making too many superfluous characters that are not integral to quests and the central plotline. One such character that never made it into Templars of Hyrule was a young jaded bad-ass Kokiri girl in the Lost Woods – there are no other similar characters in the game, so this design brief explores unoccupied creative space, but since she served no purpose she ended up being cut from the game.
 
-So you have a design brief for your character, but what if they feel too one-dimensional? The best way to add depth to your character is using a Character Pyramid. When developing a character, choose three conflicting traits that form the core of their personality. For example, let’s take some of Sonic the Hedgehog’s key traits:
+So you have a design brief for your character, but what if they feel too one-dimensional? The best way to add depth to your character is using a Character Pyramid. When developing a character, choose three conflicting traits that form the core of their personality. For example, let’s take some of [Sonic the Hedgehog’s key traits](http://en.wikipedia.org/wiki/Sonic_the_Hedgehog_%28character%29#Characteristics):
 
-Freedom fighter, standing for all that is good
-Easy-going, living as he pleases
-Short-tempered and impatient
+- Freedom fighter, standing for all that is good
+- Easy-going, living as he pleases
+- Short-tempered and impatient
 
 These contrasting and sometimes conflicting traits allow Sonic to be a more interesting character than if he were a “goody two-shoes” so to speak, a one-dimensional force of justice. Although he is a mostly benevolent character, Sonic still has some flaws. This is a good thing, since it gives his character depth and allows us to relate to him on a more human level. The same goes for villains! Of course antagonists should be antagonising, but that’s not to say they should be completely hell-bent on destruction and nothing else. Cia from Hyrule Warriors is one such example of a not-so-villainous villain: although not evil herself, the powerful sorceress is possessed by an evil force which pushes her into the role of the game’s primary antagonist. A villain who takes great pleasure in inflicting pain and misery on others for no particular reason makes for a good impetus for finishing the game, but also renders the character flat and uninteresting. Your antagonist needn’t be likeable, but they should be at least remotely relatable.
 
@@ -40,6 +36,6 @@ Unfortunately, despite how well developed characters are, it is very rarely the 
 
 A great example of telling narrative through gameplay can be found in Papo & Yo, a game where you play inside the imagination of a child who is trying to cope with the reality of his alcoholic father. The father is represented as an enormous monster who can be enraged or pacified using certain items such as frogs and fruits. The father’s alcoholism is shown through the monster’s insatiable appetite for frogs which the player must prevent the monster from reaching. This is a great use of metaphor to portray characteristics without a single word of dialogue, instead relying on gameplay to deliver the story. Despite the monster’s apparent aggression and intimidating appearance, there are stages in the game where you must work with him to proceed to the next level, reinforcing how terribly interwoven the lives of the father and son are. The medium of video games has huge potential – allow the player to interact with the narrative instead of just passively receiving it, and your game is guaranteed to leave a lasting impression.
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/qkrjby0lKRE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed/qkrjby0lKRE' frameborder='0' allowfullscreen></iframe></div>
 
-That concludes my post on character development. If you are considering having your characters voiced, don’t forget to check out my post on Voice Acting! [add link]
+That concludes my post on character development. If you are considering having your characters voiced, don’t forget to check out my post on voice acting, [How to extract a stellar voice acting performace from an average joe](/blog/sound/how-to-extract-a-stellar-voice-acting-performance-from-an-average-joe)!
