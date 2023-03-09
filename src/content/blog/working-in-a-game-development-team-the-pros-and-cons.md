@@ -1,7 +1,7 @@
 ---
 date: 2014-11-14
 title: "Working in a Game Development Team: The Pros and Cons"
-description: "This is the first post of my new Astro blog."
+description: "o you have a great idea for a game. But before you tackle a project on your own, have you considered working on your project with a team?"
 exerpt: "So you have a great idea for a game. But before you tackle a project on your own, have you considered working on your project with a team?"
 author: "MaybeLaterx"
 category: ["game-design"]
