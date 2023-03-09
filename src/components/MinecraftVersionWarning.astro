@@ -1,6 +1,5 @@
 ---
 import { Image } from "@astrojs/image/components";
-import WarningIcon from "../assets/icons/warning.png";
 export interface Props {
   version: string;
   snapshot?: boolean;
@@ -36,7 +35,7 @@ const { version, snapshot } = Astro.props;
   <div class="h-full px-8 w-full text-center">
     <p class="text-xl m-0 w-full">
       Play this map using <span class="underline underline-offset-4"
-        >Minecraft v1.8</span
+        >Minecraft v{version}</span
       >
     </p>
   </div>
