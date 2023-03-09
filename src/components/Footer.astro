@@ -4,10 +4,15 @@ import { Image } from "@astrojs/image/components";
 import Container from "./Container.astro";
 import UnderRepair from "./elements/UnderRepair.astro";
 import MaybeLaterGamesLogo from "../assets/images/maybelatergames/mlglogo.png";
+import { getCollection } from "astro:content";
+import { getUnixTimestamp } from "../utils/getUnixTimestamp";
 
-const allPosts = await Astro.glob("../pages/blog/*/*md");
-const latestPosts = allPosts.sort((a, b) => a.date - b.date);
-latestPosts.length = 3;
+// Get blog posts
+const allPosts = await getCollection("blog");
+const latestPosts = allPosts.sort(
+  (a, b) => getUnixTimestamp(a.data.date) - getUnixTimestamp(b.data.date)
+);
+latestPosts.length = 4;
 
 const date = new Date();
 ---
@@ -29,12 +34,15 @@ const date = new Date();
       </div>
       <div>
         <h4>Blog</h4>
-        <ul class="links">
+        <ul class="links blog">
           {
             latestPosts.map((post) => (
               <li>
-                <a class="block text-red-500" href={post.url}>
-                  {post.frontmatter.title}
+                <a
+                  class="block text-red-500"
+                  href={`/blog/${post.data.category[0]}/${post.slug}`}
+                >
+                  {post.data.title}
                 </a>
               </li>
             ))
@@ -125,6 +133,10 @@ const date = new Date();
 
     .links li a {
       @apply block text-red-500  py-1.5;
+    }
+
+    .blog li a {
+      @apply py-2.5 leading-6;
     }
   </style>
 </footer>

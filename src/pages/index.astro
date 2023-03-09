@@ -1,5 +1,6 @@
 ---
 import { Image } from "@astrojs/image/components";
+import { getUnixTimestamp } from "../utils/getUnixTimestamp";
 
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
@@ -28,10 +29,14 @@ import PresentFactory from "../assets/images/presentfactory/splash.jpg";
 
 import TINCL2BG from "../assets/images/thereisnolearningcurve2/index-bg.png";
 import TINLC2Logo from "../assets/images/thereisnolearningcurve2/logo.png";
+import { getCollection } from "astro:content";
 const bgImgTINLC2 = `background-image: url('${TINCL2BG.src}');`;
 
-const allPosts = await Astro.glob("./blog/*/*md");
-const latestPosts = allPosts.sort((a, b) => a.date - b.date);
+// Get blog posts
+const allPosts = await getCollection("blog");
+const latestPosts = allPosts.sort(
+  (a, b) => getUnixTimestamp(a.data.date) - getUnixTimestamp(b.data.date)
+);
 latestPosts.length = 3;
 ---
 
@@ -297,12 +302,15 @@ latestPosts.length = 3;
           {
             latestPosts.map((post) => (
               <article class="hover:scale-105 duration-200 ease-in-out">
-                <a class="block" href={post.url}>
+                <a
+                  class="block"
+                  href={`/blog/${post.data.category[0]}/${post.slug}`}
+                >
                   <h3 class="mb-0 text-xl border-2 border-neutral-200 bg-neutral-100 text-red-600 p-8 font-base">
-                    {post.frontmatter.title}
+                    {post.data.title}
                   </h3>
                   <div class="border-2 border-t-0 border-neutral-200 p-8">
-                    <p class="mb-3 leading-7">{post.frontmatter.exerpt}</p>
+                    <p class="mb-3 leading-7">{post.data.exerpt}</p>
                     <p class="m-0 text-red-500 text-sm">Read article</p>
                   </div>
                 </a>
