@@ -1,15 +1,10 @@
 ---
-layout: "../../../layouts/BlogLayout.astro"
+date: 2014-11-14
 title: "Working in a Game Development Team: The Pros and Cons"
-pubDate: 2014-11-14
 description: "This is the first post of my new Astro blog."
 exerpt: "So you have a great idea for a game. But before you tackle a project on your own, have you considered working on your project with a team?"
 author: "MaybeLaterx"
-image:
-  url: "/blog/posts/playtesting-bible-a-guide-for-game-developers/enlightening-book.jpg"
-  alt: "The Astro logo with the word One."
-category: "game design"
-tags: ["game design"]
+category: ["game-design"]
 ---
 
 So you have a great idea for a game. Although it’ll be a big task, you feel ready to take on the challenge. But before you tackle a project on your own, have you considered working on your project with a team? Of course, this comes with its pros and cons, as all things do. Here I will highlight the advantages of working in a small team and also discuss the best way to mitigate the difficulties associated with group work.
