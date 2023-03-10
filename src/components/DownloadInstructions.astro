@@ -4,14 +4,14 @@ import HelpLink from "./elements/HelpLink.astro";
 ---
 
 <HelpAccordion title="How do I install a map?">
-  <ul class="mx-8 mb-8">
-    <ol class="list-item list-decimal">Unzip map folder</ol>
-    <ol class="list-item list-decimal">
+  <ol>
+    <li>Unzip map folder</li>
+    <li>
       Insert <strong>unzipped</strong> map folder into your “.minecraft/saves/” folder
       or into your server folder
-    </ol>
-    <ol class="list-item list-decimal">This completes map installation</ol>
-  </ul>
+    </li>
+    <li>This completes map installation</li>
+  </ol>
   <!-- <div class="px-2"> -->
   <p class="mb-2 text-xs">Detailed instructions</p>
   <HelpLink
@@ -21,10 +21,32 @@ import HelpLink from "./elements/HelpLink.astro";
   <!-- </div> -->
 </HelpAccordion>
 <HelpAccordion title="How do I install a resource pack?">
-  Content will be added shortly
+  <ol>
+    <li>Download the resource pack (Note: Do NOT unzip)</li>
+    <li>Load Minecraft</li>
+    <li>Once in game, go to “Options”, then “Resource Packs”</li>
+    <li>Click “Open Resource Pack Folder” button</li>
+    <li>Paste the .zip file of the resource pack into this folder</li>
+    <li>Close, and select the resource pack in Minecraft</li>
+  </ol>
+  <p class="mb-2 text-xs">Detailed instructions</p>
+  <HelpLink
+    title="Tutorials: Loading a resource pack"
+    url="https://minecraft.fandom.com/wiki/Tutorials/Loading_a_resource_pack"
+  />
+  <HelpLink
+    title="How To Download & Install Resource Packs in Minecraft (2023)"
+    url="https://www.youtube.com/watch?v=wBoI5UbYxbE"
+  />
 </HelpAccordion>
 <HelpAccordion title="How do I enable 'command blocks'?">
   Content will be added shortly
+  <p class="mb-2 text-xs">Detailed instructions</p>
+
+  <HelpLink
+    title="How To Enable Command Blocks"
+    url="https://apexminecrafthosting.com/how-to-enable-command-blocks/"
+  />
 </HelpAccordion>
 <HelpAccordion title="How do I change my minecraft version?">
   Content will be added shortly
@@ -91,6 +113,9 @@ import HelpLink from "./elements/HelpLink.astro";
 
 <style>
   ol {
-    @apply my-2 text-lg;
+    @apply mx-16 mb-8;
+  }
+  ol li {
+    @apply list-item list-decimal my-2 text-lg;
   }
 </style>

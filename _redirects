@@ -27,8 +27,8 @@
 
 # Roguequest
 
-/roguequest /maps/roguequest
 /roguequest/download-roguequest /maps/roguequest/download
+/roguequest /maps/roguequest
 
 # Workshop wars: Christmas edition
 
