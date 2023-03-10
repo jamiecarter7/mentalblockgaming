@@ -4,7 +4,7 @@ title: "Working in a Game Development Team: The Pros and Cons"
 description: "So you have a great idea for a game. But before you tackle a project on your own, have you considered working on your project with a team?"
 exerpt: "So you have a great idea for a game. But before you tackle a project on your own, have you considered working on your project with a team?"
 author: "MaybeLaterx"
-category: ["game-design"]
+category: ["teamwork"]
 ---
 
 So you have a great idea for a game. Although it’ll be a big task, you feel ready to take on the challenge. But before you tackle a project on your own, have you considered working on your project with a team? Of course, this comes with its pros and cons, as all things do. Here I will highlight the advantages of working in a small team and also discuss the best way to mitigate the difficulties associated with group work.

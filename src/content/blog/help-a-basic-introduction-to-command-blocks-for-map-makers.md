@@ -27,6 +27,8 @@ All commands listed here can be executed by players by using the chat console, b
 
 After you have placed the block, you can right click on it to open the command screen. This allows you to enter the command you wish to activate with the block and when you select ‘Done’ the command is saved inside the block.
 
+![How to use a command block](/blog/posts/helpabasicintrotocommandblocks/howtousecommandblocks.png)
+
 As discussed in previous redstone posts, a command block needs to receive a redstone signal to activate the command it contains. Thanks to this, complex redstone set-ups can be achieved in game: for example, commands can be looped on a clock (mentioned in detail [here](/blog/redstone/thinking-outside-the-blocks-a-guide-to-advanced-redstone-components/#clocks)) or linked to events such as button presses.
 
 ## Teleporting

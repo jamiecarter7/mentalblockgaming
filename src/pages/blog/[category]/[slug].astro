@@ -85,6 +85,16 @@ if (post.data.seoTitle) {
 
 <style lang="scss" is:global>
   .blog {
+    h1::before,
+    h2::before,
+    h3::before,
+    h4::before {
+      content: "";
+      display: block;
+      height: 200px;
+      margin-top: -200px;
+      visibility: hidden;
+    }
     h1,
     h2,
     h3,
@@ -116,7 +126,7 @@ if (post.data.seoTitle) {
       @apply w-full m-0 bg-neutral-50;
     }
     img + em {
-      @apply text-base block py-4 px-6 bg-neutral-200 text-center not-italic;
+      @apply text-base block py-4 px-6 bg-neutral-200 text-center not-italic leading-7;
     }
 
     .meta {
@@ -135,12 +145,17 @@ if (post.data.seoTitle) {
       @apply m-0 bg-red-600 text-white text-base p-2;
     }
 
-    ul {
+    ul,
+    ol {
       @apply mx-12 px-16;
     }
 
-    ul li {
+    ul li,
+    ol li {
       @apply list-item list-disc p-3 pl-2 my-0 text-xl text-gray-600 font-light;
+    }
+    ol li {
+      @apply list-decimal;
     }
 
     pre {
@@ -148,7 +163,7 @@ if (post.data.seoTitle) {
     }
 
     table {
-      @apply w-full;
+      @apply w-full bg-neutral-50 shadow;
       th,
       td {
         @apply p-4 border border-neutral-300;

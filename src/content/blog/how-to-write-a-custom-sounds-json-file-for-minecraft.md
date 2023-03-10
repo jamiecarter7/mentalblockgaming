@@ -9,6 +9,8 @@ category: ["sound", "resource-pack"]
 
 Hello there fellow Minecrafters! This tutorial will teach you how to write your own sounds.json file for use with custom sounds in resource packs. For this tutorial, Notepad, a very simple word processing program, is recommended.
 
+![Importing Custom Sounds into Minecraft](/blog/posts/howtowritecustomsoundsjson/hero.jpg)
+
 ## What is the sounds.json file?
 
 The sounds.json file is what Minecraft uses to link commands in the game to their location in a resource pack. If I tell you to find a black ballpoint pen in my room, it would take you a long time to find it. However, if I tell you that the black ballpoint pen is in a pencil case in a black bag, you would find it much more quickly. This is what the sounds.json file does in Minecraft. It also allows you to choose the sound file’s name in game for use with the /playsound command.

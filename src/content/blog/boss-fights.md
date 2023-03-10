@@ -1,5 +1,4 @@
 ---
-# layout: "../../../layouts/BlogLayout.astro"
 date: 2014-10-25
 title: "7 Essential Ingredients for an Unforgettable Boss Battle"
 description: "Boss battles, a traditional gaming convention. But what do they bring to a game? What separates a good and bad boss fight? And are they even necessary at all?"
