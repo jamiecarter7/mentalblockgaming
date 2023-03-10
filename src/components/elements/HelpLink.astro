@@ -16,11 +16,17 @@ const urlNoHttp = url
   href={url}
   target="_blank"
 >
-  <p class="text-lg text-neutral-600 mb-1">
+  <p class="text-lg text-neutral-600 mt-0 mb-1">
     {title}
   </p>
-  <p class="text-xs text-neutral-500/75 mb-0">
+  <p class="text-xs text-neutral-500/75 mt-1 mb-0">
     {urlNoHttp}
   </p>
   <span class="absolute top-4 right-4">🔗</span>
 </a>
+
+<style>
+  a + a {
+    @apply mt-4;
+  }
+</style>
