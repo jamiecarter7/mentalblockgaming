@@ -1,6 +1,5 @@
 ---
 import { Image } from "@astrojs/image/components";
-
 import Container from "../../../components/Container.astro";
 import ButtonRed from "../../../components/elements/ButtonRed.astro";
 import DownloadCount from "../../../components/elements/DownloadCount.astro";
@@ -17,6 +16,10 @@ const HeroLogoImg = {
   maxWidthLogo: "max-w-xl",
 };
 
+import Harold from "../../../assets/images/thereisnolearningcurve/harold.png";
+import TINLCImage1 from "../../../assets/images/thereisnolearningcurve/waterpuzzle.jpg";
+import TINLCImage2 from "../../../assets/images/thereisnolearningcurve/wallpuzzle.jpg";
+
 import Comment1 from "../../../assets/images/testimonials/tinlc-juliand665.png";
 import Comment3 from "../../../assets/images/testimonials/titakrueger.webp";
 ---
@@ -24,35 +27,169 @@ import Comment3 from "../../../assets/images/testimonials/titakrueger.webp";
 <Layout title="There is no Learning Curve">
   <Hero img={TINLCHero} logoImg={HeroLogoImg} />
   <section>
-    <PartialRestore />
-    <Container>
-      <h1 class="text-4xl mb-8">There is no Learning Curve</h1>
-      <p>
-        This puzzle/adventure map is a three player cooperative experience like
-        no other. Decipher your way through more than 10 unique and stimulating
-        chambers with more than 4 hours of gameplay. Manipulate water, iron and
-        even time in order to progress under the supervision of your friendly
-        host, Harold.<strong
-          >Now available in English, French, Dutch and Spanish!</strong
-        >
+    <div
+      class="max-w-5xl w-full m-auto flex gap-4 justify-between -translate-y-1/2"
+    >
+      <p
+        class="flex items-center bg-red-600 text-white text-2xl px-12 py-8 m-0 shadow-lg"
+      >
+        3 Players
       </p>
-      <p>
-        This puzzle is designed for three players – not one, not two, not four,
-        but THREE players. You will need to rely on each other in order to
-        progress through the puzzles. Some form of communication is highly
-        recommended between the players, such as being in the same room or using
-        Skype.
-      </p>
-      <div class="embed-container my-16">
-        <iframe
-          src="https://www.youtube.com/embed/r-V2ngEWMic"
-          frameborder="0"
-          allowfullscreen></iframe>
+      <div class="flex bg-white text-white gap-4 px-12 py-8 m-0 shadow-lg">
+        <p class="block m-0 text-5xl bg-white round">🇺🇸</p>
+        <p class="block m-0 text-5xl">🇪🇸</p>
+        <p class="block m-0 text-5xl">🇫🇷</p>
+        <p class="block m-0 text-5xl">🇳🇱</p>
       </div>
-    </Container>
+    </div>
+
+    <Image
+      src={TINLCLogo}
+      alt="There is No Learning Curve logo"
+      class="m-auto max-w-xs"
+    />
+    <h2 class="max-w-xl text-center m-aut0 my-12 text-2xl">
+      This adventure-puzzle map is a three player cooperative experience <em
+        class="font-semibold">like no other</em
+      >
+    </h2>
+    <div class="p-32">
+      <div class="content max-w-5xl flex items-center gap-16 mx-auto">
+        <div class="w-1/2">
+          <p class="content">
+            Team up and battle your way through this challenging sequence of
+            puzzles
+          </p>
+          <p class="content mt-12">
+            All under the supervision of your friendly host, Harold.
+          </p>
+        </div>
+        <div class="relative w-1/3 rotate-3">
+          <p
+            class="font-medium text-center font-head bg-neutral-200 p-16 shadow-lg border-r-4 border-b-4 border-neutral-300"
+          >
+            <span class="text-[6em] block leading-[0.7em]">3</span><br /> player
+            map
+          </p>
+          <p
+            class="absolute -top-2 left-0 translate-x-4 -translate-y-full text-lg"
+          >
+            not one, not two.. not even four..
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="my-16 py-16 -rotate-1 bg-white overflow-hidden">
+      <div class="flex items-center">
+        <Image
+          src={TINLCImage1}
+          alt="Wall puzzle"
+          class="w-1/2 shadow-lg -translate-x-24"
+        />
+        <p class="content p-6 m-0 w-1/3">
+          Decipher your way through unique and stimulating chambers by
+          manipulating water, iron and even time in order to progress..
+        </p>
+      </div>
+    </div>
+    <div
+      class="relative m-auto my-48 w-[600px] flex gap-8 items-center -rotate-1 bg-neutral-200/75 p-6 rounded-sm shadow-lg border-l-4 border-b-4 border-neutral-300"
+    >
+      <p
+        class="absolute -top-6 right-0 -translate-y-full translate-x-1/4 uppercase text-6xl text-neutral-300"
+      >
+        starring
+      </p>
+      <Image
+        src={Harold}
+        alt="Harold"
+        class="w-56 border-r-4 border-b-4 border-[#918116] shadow-xl"
+      />
+      <div class="font-head">
+        <p class="block text-6xl mt-0 mb-5 text-center">Harold</p>
+        <p class="text text-3xl text-center">
+          Your &#8220;friendly&#8221; <span class="line-through"
+            >supervisor</span
+          > host
+        </p>
+      </div>
+    </div>
+    <div class="my-16 py-16 rotate-1 bg-white w-full overflow-hidden">
+      <div class="flex items-center gap-16">
+        <div class="w-1/2">
+          <p
+            class="w-1/2 content p-6 py-16 m-0 ml-auto bg-neutral-200 font-head text-center border-r-4 border-b-4 border-neutral-300 shadow-xl"
+          >
+            <span class="text-[6em] block leading-[0.7em] mb-8">10</span> unique
+            chambers
+          </p>
+        </div>
+        <Image
+          src={TINLCImage2}
+          alt="Wall puzzle"
+          class="w-1/2 shadow-lg translate-x-24"
+        />
+      </div>
+    </div>
+    <div class="p-32">
+      <div class="content max-w-5xl flex items-center gap-16 mx-auto">
+        <div class="w-1/2">
+          <p class="content">
+            You must <span class="font-semibold">rely on each other</span> in order
+            to progress through the puzzles.
+          </p>
+        </div>
+        <div
+          class="relative w-1/2 bg-neutral-200 p-12 font-head shadow-lg border-r-4 border-b-4 border-neutral-300"
+        >
+          <p class="text-3xl font-semibold text-center mb-8">Recommended</p>
+          <table class="m-auto text-neutral-600">
+            <tr>
+              <td>Tick</td>
+              <td>Teamwork</td>
+            </tr>
+            <tr>
+              <td>Tick</td>
+              <td>Headset</td>
+            </tr>
+            <tr>
+              <td>Tick</td>
+              <td>Discord chat</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="p-32">
+      <div class="content max-w-5xl flex items-center gap-16 mx-auto">
+        <div class="w-1/2">
+          <p class="content">Over 4 hours of gameplay</p>
+        </div>
+      </div>
+    </div>
   </section>
+  <Container>
+    <p>over 4 hours of gameplay</p>
+    <div class="w-1/2 text-center p-6 bg-neutral-200/50">
+      <h3 class="mt-3 text-3xl">4 languages</h3>
+      <div class="flex justify-center text-7xl gap-5 py-8">
+        <p class="block m-0">🇺🇸</p>
+        <p class="block m-0">🇪🇸</p>
+        <p class="block m-0">🇫🇷</p>
+        <p class="block m-0">🇳🇱</p>
+      </div>
+    </div>
+    Now available in English, French, Dutch and Spanish!
+
+    <div class="embed-container my-16">
+      <iframe
+        src="https://www.youtube.com/embed/r-V2ngEWMic"
+        frameborder="0"
+        allowfullscreen></iframe>
+    </div>
+  </Container>
   <section class="bg-neutral-800">
-    <Container innerClass="pb-16">
+    <Container innerClass="pb-16 content">
       <h2 class="text-center text-neutral-200 mb-14">
         What players are saying
       </h2>
@@ -141,7 +278,11 @@ import Comment3 from "../../../assets/images/testimonials/titakrueger.webp";
             bodyText="Download map"
           />
         </div>
-        <DownloadCount />
+        <!-- <DownloadCount /> -->
+        <p class="w-1/2 font-head text-right text-4xl">
+          <span class="text-8xl">130,000</span>
+          <br />downloads
+        </p>
       </div>
     </Container>
   </section>
@@ -152,7 +293,7 @@ import Comment3 from "../../../assets/images/testimonials/titakrueger.webp";
     h3,
     h4,
     p {
-      @apply max-w-3xl mx-auto;
+      @apply mx-auto;
     }
 
     .embed-container {
@@ -170,6 +311,10 @@ import Comment3 from "../../../assets/images/testimonials/titakrueger.webp";
       left: 0;
       width: 100%;
       height: 100%;
+    }
+
+    .content {
+      @apply text-3xl font-light leading-[1.5em];
     }
   </style>
 </Layout>
