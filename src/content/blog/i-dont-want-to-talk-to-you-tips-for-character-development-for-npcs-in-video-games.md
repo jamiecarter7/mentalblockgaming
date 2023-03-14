@@ -28,7 +28,9 @@ Once you have a broad spectrum of personalities in your game, consider how they 
 
 This can vary from unrequited romances, bitter rivalries, familial ties, and so on and so forth. Star-crossed lovers, backstabbing brothers, and sworn enemies can all form a great backdrop for your narrative. Of course, not every character has to be related, but a passing reference now and then can help to form ties across your narrative, granting the player more insight into the workings of your world.
 
-When designing a character, I keep in mind two things: purpose and personality. NPCs should serve one useful functionality and leave one main impression on the player. The Happy Mask Salesman in Templars of Hyrule, for example, sells masks and is designed to make the player feel uncomfortable. His bipolar mood-swings make talking to him very uncomfortable, as one moment he’ll be quietly creepy and the next he’ll be yelling at the player.
+When designing a character, I keep in mind two things: purpose and personality. NPCs should serve one useful functionality and leave one main impression on the player.
+
+The Happy Mask Salesman in Templars of Hyrule, for example, sells masks and is designed to make the player feel uncomfortable. His bipolar mood-swings make talking to him very uncomfortable, as one moment he’ll be quietly creepy and the next he’ll be yelling at the player.
 
 This ‘purpose and personality’ criterion gives you a direction to work towards and prevents you from making too many superfluous characters that are not integral to quests and the central plotline. One such character that never made it into Templars of Hyrule was a young jaded bad-ass Kokiri girl in the Lost Woods – there are no other similar characters in the game, so this design brief explores unoccupied creative space, but since she served no purpose she ended up being cut from the game.
 
