@@ -3,11 +3,97 @@ import Container from "../../../components/Container.astro";
 import ButtonRed from "../../../components/elements/ButtonRed.astro";
 import UnderRepair from "../../../components/elements/UnderRepair.astro";
 import Layout from "../../../layouts/Layout.astro";
+import PartialRestore from "../../../components/elements/PartialRestore.astro";
+import InstallationHelp from "../../../components/DownloadInstructions.astro";
+import MinecraftVersionWarning from "../../../components/MinecraftVersionWarning.astro";
+
+import DownloadHero from "../../../components/DownloadHero.astro";
+import DownloadList from "../../../components/DownloadList.astro";
+import EnableCommandBlocks from "../../../components/elements/EnableCommandBlocks.astro";
+import PlayersRequired from "../../../components/elements/PlayersRequired.astro";
+import DownloadSidebarHelpLinks from "../../../components/elements/DownloadSidebarHelpLinks.astro";
+
+const maps = {
+  title: "Maps",
+  // alldownloads: "https://www.mediafire.com/folder/4rz9veqpisirb/Version_2.5",
+  file: {
+    name: "There is no Learning Curve 2 - Map",
+    text: "English",
+    url: "http://www.mediafire.com/file/jw9ftmuhak0h9ls/Learning_Curve_2_v1.1.zip/file",
+  },
+};
+
+const resources = {
+  title: "Resource pack",
+  alldownloads: "https://www.mediafire.com/folder/5y2pfho3mm4b3/Resource_packs",
+  file: {
+    name: "There is no Learning Curve 2 - Resource pack",
+    text: "English",
+    url: "http://www.mediafire.com/file/ovodyavcotlfy7p/TinLC2_English_v1.0.1.zip/file",
+  },
+  translations: [
+    {
+      name: "There is no Learning Curve 2 - Resource pack (Francais)",
+      text: "Téléchargez le pack de ressources",
+      url: "http://www.mediafire.com/file/f0m1o8hgcc7i297/TinLC2_Fran%25C3%25A7ais_v1.0.1.zip/file",
+    },
+    {
+      name: "There is no Learning Curve 2 - Resource pack (Suomi)",
+      text: "Lataa Resurssipaketti",
+      url: "http://www.mediafire.com/file/wa55fbe58jq213m/TinLC2_Suomi_v1.0.1.zip/file",
+    },
+    {
+      name: "There is no Learning Curve 2 - Resource pack (Chinese)",
+      text: "下載資源包",
+      url: "https://www.mediafire.com/file/1j7164jgvkbl490/TinLC2__%25E8%25B3%2587%25E6%25BA%2590%25E5%258C%2585_v1.0.zip/file",
+    },
+  ],
+};
 ---
 
-<Layout title="Download There is no learning curve 2">
+<Layout
+  title="Download There is No Learning Curve 2"
+  description="Download the map and resource pack files for 'There is No Learning Curve 2'"
+>
   <section>
+    <DownloadHero map="There is No Learning Curve 2" />
     <Container>
+      <h2 class="mb-8 mt-10">Requirements</h2>
+      <div class="flex gap-10">
+        <div class="w-2/3">
+          <MinecraftVersionWarning version="1.8" />
+          <PlayersRequired />
+
+          <EnableCommandBlocks />
+          <h2 class="mt-16">Files</h2>
+          <DownloadList downloadList={maps} />
+          <DownloadList downloadList={resources} />
+          <h2 class="mt-16" id="setupguide">Setup guidance</h2>
+          <InstallationHelp />
+        </div>
+        <aside class="w-1/3">
+          <div class="bg-neutral-200 aspect-square mb-8">
+            <!-- <ins
+              class="adsbygoogle"
+              style="display:block"
+              data-ad-client="ca-pub-5393590966220416"
+              data-ad-slot="3886960845"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+              <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+              </script> -->
+          </div>
+          <!-- <div class="w-full my-8 p-8 bg-purple-200 rounded-2xl shadow-inner">
+              <p class="m-0 text-clip uppercase text-center text-lg font-bold">
+                <span class="block text-8xl font-semibold">3</span> player map
+              </p>
+            </div> -->
+          <h3 class="mb-2 mt-20 text-xl text-neutral-500">Help</h3>
+          <DownloadSidebarHelpLinks />
+        </aside>
+
+        <!-- <Container>
       <h1 class="text-4xl mb-8">Download There is no learning curve 2</h1>
       <p class="mt-10">Follow the link below to download this map</p>
       <ButtonRed to="/maps" bodyText="Downloads Page" />
@@ -22,6 +108,18 @@ import Layout from "../../../layouts/Layout.astro";
       Resurssipaketti Lataa Install Map Unzip map folder Insert unzipped map
       folder into your “.minecraft/saves/” folder or into your server folder and
       run it Play Map Download Download s Note: Please play on Minecraft v1.8
+    </Container> -->
+      </div>
     </Container>
   </section>
 </Layout>
+
+<style>
+  h2::before {
+    content: "";
+    display: block;
+    height: 200px;
+    margin-top: -200px;
+    visibility: hidden;
+  }
+</style>
