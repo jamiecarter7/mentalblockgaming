@@ -4,27 +4,55 @@ import ButtonRed from "../../../components/elements/ButtonRed.astro";
 import UnderRepair from "../../../components/elements/UnderRepair.astro";
 import Layout from "../../../layouts/Layout.astro";
 import PartialRestore from "../../../components/elements/PartialRestore.astro";
-import DownloadHero from "../../../components/DownloadHero.astro";
-import MinecraftVersionWarning from "../../../components/MinecraftVersionWarning.astro";
 import InstallationHelp from "../../../components/DownloadInstructions.astro";
+import MinecraftVersionWarning from "../../../components/MinecraftVersionWarning.astro";
+
+import DownloadHero from "../../../components/DownloadHero.astro";
+import DownloadList from "../../../components/DownloadList.astro";
+import EnableCommandBlocks from "../../../components/elements/EnableCommandBlocks.astro";
+import PlayersRequired from "../../../components/elements/PlayersRequired.astro";
+import DownloadSidebarHelpLinks from "../../../components/elements/DownloadSidebarHelpLinks.astro";
+
+const maps = {
+  title: "Map",
+  file: {
+    name: "Prismatic III - Map",
+    text: "English",
+    url: "http://www.mediafire.com/file/sh8ziae3zxsqhhc/Prismatic+III+v1.0.1.zip",
+  },
+};
+
+const resources = {
+  title: "Resource pack",
+  file: {
+    name: "Prismatic III - Resource pack",
+    text: "English",
+    url: "http://www.mediafire.com/file/6768k2sr1royo1j/Prismatic+III+RP+v1.0.1.zip",
+  },
+};
 ---
 
-<Layout title="Download Prismatic III">
+<Layout
+  title="Download Prismatic III"
+  description="Download the map and resource pack files for 'Prismatic III'"
+>
   <section>
-    <DownloadHero map="Download Prismatic III" />
-    <PartialRestore />
-
+    <DownloadHero map="Prismatic III" />
     <Container>
-      <h2 class="mb-0 mt-10">Requirements</h2>
+      <h2 class="mb-8 mt-10">Requirements</h2>
       <div class="flex gap-10">
         <div class="w-2/3">
           <MinecraftVersionWarning version="1.10.2" />
+          <PlayersRequired number="1" />
+
+          <EnableCommandBlocks />
           <h2 class="mt-16">Files</h2>
-          <p>coming shortly</p>
-          <h2>Setup guidance</h2>
+          <DownloadList downloadList={maps} />
+          <DownloadList downloadList={resources} />
+          <h2 class="mt-16" id="setupguide">Setup guidance</h2>
           <InstallationHelp />
         </div>
-        <aside class="w-1/3 pt-8">
+        <aside class="w-1/3">
           <div class="bg-neutral-200 aspect-square mb-8">
             <!-- <ins
               class="adsbygoogle"
@@ -42,35 +70,37 @@ import InstallationHelp from "../../../components/DownloadInstructions.astro";
                 <span class="block text-8xl font-semibold">3</span> player map
               </p>
             </div> -->
-          <h3 class="mb-2 text-xl text-neutral-500">Help</h3>
-          <div class="bg-opacity-75">
-            <a class="" href=""
-              ><p class="m-0 text-red-600 py-1">
-                How do I change minecraft version?
-              </p></a
-            >
-            <a href=""
-              ><p class="m-0 text-red-600 py-1">
-                How do I enable 'Command Blocks'?
-              </p></a
-            >
-          </div>
+          <h3 class="mb-2 mt-20 text-xl text-neutral-500">Help</h3>
+          <DownloadSidebarHelpLinks />
         </aside>
 
-        <!-- <h1 class="text-4xl mb-8">Download Prismatic III</h1>
+        <!-- <Container>
+      <h1 class="text-4xl mb-8">Download There is no learning curve 2</h1>
       <p class="mt-10">Follow the link below to download this map</p>
       <ButtonRed to="/maps" bodyText="Downloads Page" />
       <UnderRepair />
-      Download ‘Prismatic III: The Dye Doors’ v1.0.1 s Note: Please play on Minecraft
-      v1.10.2 Resource Pack Download Download Install Resource Pack Download the
-      resource pack (Note: Do NOT unzip) Load Minecraft Once in game, go to “Options”,
-      then “Resource Packs” Click “Open Resource Pack Folder” button Paste the .zip
-      file of the resource pack into this folder Close, and select the resource pack
-      in Minecraft Install Map Unzip map folder Insert unzipped map folder into your
-      “.minecraft/saves/” folder or into your server folder and run it Play Map Download
-      Download
+
+      Note: Please play on Minecraft v1.8 Install Resource Pack Download the
+      resource pack (Note: Do NOT unzip) Load Minecraft Once in game, go to
+      “Options”, then “Resource Packs” Click “Open Resource Pack Folder” button
+      Paste the .zip file of the resource pack into this folder Close, and
+      select the resource pack in Minecraft Resource Pack Download Download
+      Téléchargez le pack de ressources Téléchargez 下載資源包 下載點 Lataa
+      Resurssipaketti Lataa Install Map Unzip map folder Insert unzipped map
+      folder into your “.minecraft/saves/” folder or into your server folder and
+      run it Play Map Download Download s Note: Please play on Minecraft v1.8
     </Container> -->
       </div>
     </Container>
   </section>
 </Layout>
+
+<style>
+  h2::before {
+    content: "";
+    display: block;
+    height: 200px;
+    margin-top: -200px;
+    visibility: hidden;
+  }
+</style>

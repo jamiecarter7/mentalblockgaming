@@ -14,7 +14,7 @@ import PlayersRequired from "../../../components/elements/PlayersRequired.astro"
 import DownloadSidebarHelpLinks from "../../../components/elements/DownloadSidebarHelpLinks.astro";
 
 const maps = {
-  title: "Maps",
+  title: "Map",
   // alldownloads: "https://www.mediafire.com/folder/4rz9veqpisirb/Version_2.5",
   file: {
     name: "There is no Learning Curve 2 - Map",
@@ -62,9 +62,9 @@ const resources = {
       <div class="flex gap-10">
         <div class="w-2/3">
           <MinecraftVersionWarning version="1.8" />
-          <PlayersRequired />
-
+          <PlayersRequired number="3" />
           <EnableCommandBlocks />
+
           <h2 class="mt-16">Files</h2>
           <DownloadList downloadList={maps} />
           <DownloadList downloadList={resources} />

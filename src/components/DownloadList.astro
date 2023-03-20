@@ -7,6 +7,7 @@ export interface Props {
     alldownloads?: string;
     file: File;
     translations?: File[];
+    subtitle?: string;
   };
 }
 
@@ -16,7 +17,8 @@ interface File {
   url: string;
 }
 
-const { title, alldownloads, file, translations } = Astro.props.downloadList;
+const { title, alldownloads, file, translations, subtitle } =
+  Astro.props.downloadList;
 
 function addBorderTop(index: number) {
   if (index > 0) {
@@ -33,8 +35,15 @@ function addBorderTop(index: number) {
     <h3 class="text-3xl text-white p-5 px-10 mb-0 font-light">
       {title}
     </h3>
-    <p class="mb-0 mr-10 text-sm text-red-200/75">
-      {alldownloads && <a href={alldownloads}> View all files</a>}
+    <p class="mb-0 mr-10 text-sm">
+      {
+        alldownloads && (
+          <a class=" text-red-200/75" href={alldownloads}>
+            {" "}
+            View all files
+          </a>
+        )
+      }
     </p>
   </div>
 
@@ -45,9 +54,13 @@ function addBorderTop(index: number) {
   {
     translations && (
       <div class="bg-red-800 shadow-inner pb-4">
-        <h4 class="px-10 py-6 text-white text-xl font-light">
-          Community translations
-        </h4>
+        {subtitle ? (
+          <h4 class="px-10 py-6 text-white text-xl font-light">{subtitle} </h4>
+        ) : (
+          <h4 class="px-10 py-6 text-white text-xl font-light">
+            "Community translations"
+          </h4>
+        )}
         {translations.map((translation, index) => (
           <DownloadListFile
             name={translation.name}
