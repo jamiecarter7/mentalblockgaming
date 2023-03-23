@@ -6,13 +6,16 @@ import PartialRestore from "../../../components/elements/PartialRestore.astro";
 import Layout from "../../../layouts/Layout.astro";
 ---
 
-<Layout title="RogueQuest">
+<Layout
+  title="RogueQuest"
+  description="RogueQuest: Chronos and the latern of souls"
+>
   <section>
     <PartialRestore />
     <Container>
       <h1 class="text-4xl mb-8">RogueQuest: Chronos and the latern of souls</h1>
       <p class="mt-10">Follow the link below to download this map</p>
-      <ButtonRed to="/maps" bodyText="Downloads Page" />
+      <ButtonRed to="/maps/roguequest/download" bodyText="Downloads Page" />
       <UnderRepair />
 
       Unravel the mystery of why darkness is taking over the land. Can you purge

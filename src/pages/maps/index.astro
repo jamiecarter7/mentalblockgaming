@@ -8,11 +8,23 @@ import ButtonRed from "../../components/elements/ButtonRed.astro";
 import UnderRepair from "../../components/elements/UnderRepair.astro";
 
 import HeroImage from "../../assets/images/mapspage/hero.png";
+import Prismatic3Logo from "../../assets/images/home/prismaticIIILogo.png";
+import Prismatic from "../../assets/images/prismatic/splash.png";
+import TINLC2 from "../../assets/images/thereisnolearningcurve2/splash.jpg";
 import TINLC from "../../assets/images/thereisnolearningcurve/splash.jpg";
+import WorkshopWars from "../../assets/images/workshopwars/splash.png";
+
 import PartialRestore from "../../components/elements/PartialRestore.astro";
+
+import RoguequestLogo from "../../assets/images/roguequest/logo.svg";
+import RoguequestBg from "../../assets/images/roguequest/portal.png";
+import RoguequestBgVideo from "../../assets/images/roguequest/portalloop.mp4";
 ---
 
-<Layout title="Maps">
+<Layout
+  title="Maps"
+  description="Top-notch Minecraft maps - created for your enojoyment"
+>
   <section>
     <Hero
       title="Minecraft maps"
@@ -43,6 +55,118 @@ import PartialRestore from "../../components/elements/PartialRestore.astro";
       <div class="grid md:grid-cols-2 gap-16">
         <article>
           <h3>
+            <a href="/maps/roguequest">
+              RogueQuest: Chronos & the Lantern of Souls</a
+            >
+          </h3>
+          <div class="relative">
+            <video
+              class="absolute object-cover"
+              autoplay
+              loop
+              muted
+              playsinline
+              poster={RoguequestBg.src}
+            >
+              <source src={RoguequestBgVideo} type="video/mp4" />
+            </video>
+            <a href="/maps/roguequest">
+              <div
+                class="relative aspect-video z-10 flex flex-col justify-center items-center"
+              >
+                <Image
+                  class="w-3/5"
+                  src={RoguequestLogo}
+                  alt="RogueQuest logo"
+                />
+              </div>
+            </a>
+          </div>
+          <!-- <Image
+            src={RogueQuest}
+            alt="RogueQuest: Chronos & the Lantern of Souls Prismatic"
+          /> -->
+          <p class="mt-8">
+            Chaos is spreading from realm to realm, can you save Yakra from this
+            evil? RogueQuest features rogue-like style game play, randomly
+            generated dungeons, 4 unique characters each with a unique playstyle
+            and storyline and can be played alone or with friends..
+          </p>
+          <ButtonRed to="/maps/roguequest" bodyText="Learn more" />
+        </article>
+
+        <article>
+          <h3>
+            <a href="/maps/workshopwarschristmasedition"
+              >Workshop Wars: Cristmas Edition</a
+            >
+          </h3>
+          <a href="/maps/workshopwarschristmasedition">
+            <Image src={WorkshopWars} alt="Workshop Wars: Cristmas Edition" />
+          </a>
+          <p class="mt-8">
+            Christmas is just around the corner, and Santa still has loads of
+            letters flying in! Split into two teams to see which bunch of elves
+            can craft quickest in this wacky competitive multiplayer Minecraft
+            minigame!
+          </p>
+          <ButtonRed
+            to="/maps/workshopwarschristmasedition"
+            bodyText="Learn more"
+          />
+        </article>
+
+        <article>
+          <h3>
+            <a href="/maps/prismatic3">Prismatic III: The dye doors</a>
+          </h3>
+          <div class="prismatic-animated-bg mb-6 shadow-lg">
+            <a href="/maps/prismatic3">
+              <Image src={Prismatic3Logo} alt="Prismatic III" />
+            </a>
+          </div>
+          <p class="mt-8">
+            COLOUR, SOLVE, COLLECT. In this instalment of Prismatic, you must
+            mix together the three primary colours to shade the complex in your
+            favour; unlocking doors, opening up pathways and creating new
+            unforeseen routes. Collect the nine beacons scattered around the
+            chamber in order to escape.
+          </p>
+          <ButtonRed to="/maps/prismatic3" bodyText="Learn more" />
+        </article>
+        <article>
+          <h3><a href="/maps/prismatic"> Prismatic</a></h3>
+          <a href="/maps/prismatic">
+            <Image src={Prismatic} alt="Prismatic" />
+          </a>
+          <p class="mt-8">
+            Prismatic, a colour based puzzle map. A short single player
+            adventure that will have you seeing rooms through a different light
+            as you colour your way through the complex. There is now a
+            colourblind-friendly resource pack now available for Prismatic!
+          </p>
+          <ButtonRed to="/maps/prismatic" bodyText="Learn more" />
+        </article>
+        <article>
+          <h3>
+            <a href="/maps/thereisnolearningcurve2"
+              >There is no Learning Curve 2</a
+            >
+          </h3>
+          <a href="/maps/thereisnolearningcurve2">
+            <Image src={TINLC2} alt="There is no Learning Curve 2" />
+          </a>
+          <p class="mt-8">
+            Harold is back and better than ever with another 8 puzzles that are
+            guaranteed to push you to your intellectual limits. Before your team
+            can enter the chambers of the original There is no Learning Curve,
+            you must first prove your worth in Harold’s Candidature Aptitude
+            Tests.
+          </p>
+          <ButtonRed to="/maps/thereisnolearningcurve2" bodyText="Learn more" />
+        </article>
+        <article>
+          <h3>
             <a href="/maps/thereisnolearningcurve">
               There is no learning curve
             </a>
@@ -61,7 +185,7 @@ import PartialRestore from "../../components/elements/PartialRestore.astro";
         </article>
       </div>
 
-      <h1 class="text-5xl text-neutral-500 mt-16">Download links</h1>
+      <!-- <h1 class="text-5xl text-neutral-500 mt-16">Download links</h1>
       <p class="text-2xl mt-4">
         You can download the rest of our maps here while we fix things up!
       </p>
@@ -80,14 +204,11 @@ import PartialRestore from "../../components/elements/PartialRestore.astro";
       <p>Note: Please play on Minecraft v1.10.2</p>
       <div class="flex gap-4">
         <ButtonRed
-          bodyText="Download Map"
-          to="http://adf.ly/6322968/roguequest-map-v12"
-        />
-        <ButtonRed
-          bodyText="Download Resource pack"
-          to="http://adf.ly/6322968/roguequest-rp-v10"
+          bodyText="Download RogueQuest"
+          to="/maps/roguequest/download"
         />
       </div>
+
       <hr class="my-8" />
       <h3 class="text-2xl">Prismatic</h3>
       <p>Note: Play on Minecraft version 1.9</p>
@@ -111,16 +232,12 @@ import PartialRestore from "../../components/elements/PartialRestore.astro";
       <div class="flex gap-4">
         <ButtonRed
           bodyText="Download map"
-          to="http://adf.ly/6322968/workshop-wars-v103"
-        />
-        <ButtonRed
-          bodyText="Download resource pack"
-          to="http://adf.ly/6322968/workshop-wars-rp-v10"
+          to="/maps/workshopwarschristmasedition/download"
         />
       </div>
-      <br />
-      <UnderRepair />
-      Prismatic III: The Dye Doors COLOUR, SOLVE, COLLECT. In this instalment of
+      <br /> -->
+      <!-- <UnderRepair /> -->
+      <!-- Prismatic III: The Dye Doors COLOUR, SOLVE, COLLECT. In this instalment of
       Prismatic, you must mix together the three primary colours to shade the complex
       in your favour; unlocking doors, opening up pathways and creating new unforeseen
       routes. Collect the nine beacons scattered around the chamber in order to escape.
@@ -140,16 +257,16 @@ import PartialRestore from "../../components/elements/PartialRestore.astro";
       This puzzle/adventure map is a three player cooperative experience like no
       other. Decipher your way through more than 10 unique and stimulating chambers
       with more than 4 hours of gameplay. Manipulate water, iron and even time in
-      order to progress under the supervision of your friendly host, Harold. Download
-      Map Templars of Hyrule templarsofhyrule A 3 player cooperative adventure/puzzle
-      map based on Nintendo’s The Legend of Zelda: Ocarina of Time. The golden goddesses
-      have called upon three heroes to assist Link in restoring the peace. Embark
-      on a new adventure of your own to stop Ganondorf’s evil forces from seizing
-      Hyrule! Download Map Workshop Wars: Christmas Edition prismatic Christmas is
-      just around the corner, and Santa still has loads of letters flying in! Split
-      into two teams to see which bunch of elves can craft quickest in this wacky
-      competitive multiplayer Minecraft minigame! Download Now Video Player RogueQuest
-      Download Now
+      order to progress under the supervision of your friendly host, Harold. Templars
+      of Hyrule templarsofhyrule A 3 player cooperative adventure/puzzle map based
+      on Nintendo’s The Legend of Zelda: Ocarina of Time. The golden goddesses have
+      called upon three heroes to assist Link in restoring the peace. Embark on a
+      new adventure of your own to stop Ganondorf’s evil forces from seizing Hyrule!
+      Download Map Workshop Wars: Christmas Edition prismatic Christmas is just around
+      the corner, and Santa still has loads of letters flying in! Split into two
+      teams to see which bunch of elves can craft quickest in this wacky competitive
+      multiplayer Minecraft minigame! Download Now Video Player RogueQuest Download
+      Now -->
     </Container>
   </section>
 
@@ -176,3 +293,21 @@ import PartialRestore from "../../components/elements/PartialRestore.astro";
   />
 </div> -->
 </Layout>
+
+<style>
+  .prismatic-animated-bg {
+    background: linear-gradient(
+      269deg,
+      #e10f0f,
+      #e46611,
+      #d0cc11,
+      #4ab717,
+      #14c194,
+      #157add,
+      #b815dd,
+      #e010b0
+    );
+    background-size: 1600% 1600%;
+    animation: prismaticBG 45s ease infinite;
+  }
+</style>

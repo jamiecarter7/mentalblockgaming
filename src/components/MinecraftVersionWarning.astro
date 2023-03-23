@@ -17,26 +17,35 @@ const { version, snapshot } = Astro.props;
 <div class="bg-neutral-200 flex items-center rounded-sm overflow-hidden">
   <p class="bg-neutral-300 text-center w-1/3 m-0 p-6 py-4 pb-5">
     {
-      !snapshot && (
+      !snapshot ? (
         <span class="leading-3 uppercase font-medium text-neutral-500 text-sm">
           version
         </span>
-      )
-    }
-    {
-      snapshot && (
+      ) : (
         <span class="leading-3 uppercase font-medium text-neutral-500 text-sm">
           snapshot
         </span>
       )
-    }<br />
-    <span class="text-neutral-500 text-5xl font-bold">{version}</span>
+    }
+    <br />
+    <span
+      class:list={[
+        "text-neutral-500 font-bold",
+        snapshot && "text-3xl",
+        !snapshot && "text-5xl",
+      ]}>{version}</span
+    >
   </p>
   <div class="h-full px-8 w-full text-center">
     <p class="text-xl m-0 w-full">
-      Play this map using <span class="underline underline-offset-4"
-        >Minecraft v{version}</span
-      >
+      Play this map using
+      {
+        !snapshot ? (
+          <span class="underline underline-offset-4">Minecraft v{version}</span>
+        ) : (
+          <span class="underline underline-offset-4">snapshot {version}</span>
+        )
+      }
     </p>
   </div>
 </div>
