@@ -3,9 +3,13 @@ import Container from "../../../components/Container.astro";
 import ButtonRed from "../../../components/elements/ButtonRed.astro";
 import UnderRepair from "../../../components/elements/UnderRepair.astro";
 import Layout from "../../../layouts/Layout.astro";
+
+const title = "Prismatic III: The Dye Doors";
+const description =
+  "COLOUR, SOLVE, COLLECT. Mix together the 3 primary colours to shade the complex in your favour; unlocking doors, opening up pathways and creating new unforeseen routes.";
 ---
 
-<Layout title="Prismatic III">
+<Layout title={title} description={description}>
   <section>
     <Container>
       <h1 class="text-4xl mb-8">Prismatic III</h1>
