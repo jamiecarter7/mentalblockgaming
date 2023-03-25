@@ -40,7 +40,10 @@ const latestPosts = allPosts.sort(
 latestPosts.length = 3;
 ---
 
-<Layout title="Home">
+<Layout
+  title="Home"
+  description="Top-notch Mincraft maps offering hours of fun, comedy, fighting, team-work and brain-warping challenges with our single and mulptiplayer maps."
+>
   <main>
     <!-- <h1>Welcome to <span class="text-gradient">Astro</span></h1> -->
     <Hero
@@ -334,82 +337,81 @@ latestPosts.length = 3;
       roguequest story
     </section> -->
   </main>
-
-  <style></style>
-
-  <style is:global>
-    .featured a {
-      @apply text-orange-600;
-    }
-    .prismatic-animated-bg {
-      background: linear-gradient(
-        269deg,
-        #e10f0f,
-        #e46611,
-        #d0cc11,
-        #4ab717,
-        #14c194,
-        #157add,
-        #b815dd,
-        #e010b0
-      );
-      background-size: 1600% 1600%;
-      animation: prismaticBG 45s ease infinite;
-    }
-
-    @keyframes prismaticBG {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 51%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
-    }
-
-    .chronos-shadow {
-      text-shadow: #4221ff 0 1px 0, #3a0675 0 3px 0;
-    }
-
-    /* // original styles */
-    /* h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	} */
-  </style>
 </Layout>
+<style></style>
+
+<style is:global>
+  .featured a {
+    @apply text-orange-600;
+  }
+  .prismatic-animated-bg {
+    background: linear-gradient(
+      269deg,
+      #e10f0f,
+      #e46611,
+      #d0cc11,
+      #4ab717,
+      #14c194,
+      #157add,
+      #b815dd,
+      #e010b0
+    );
+    background-size: 1600% 1600%;
+    animation: prismaticBG 45s ease infinite;
+  }
+
+  @keyframes prismaticBG {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 51%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .chronos-shadow {
+    text-shadow: #4221ff 0 1px 0, #3a0675 0 3px 0;
+  }
+
+  /* // original styles */
+  /* h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 0;
+}
+.text-gradient {
+  background-image: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 400%;
+  background-position: 0%;
+}
+.instructions {
+  line-height: 1.6;
+  margin: 1rem 0;
+  border: 1px solid rgba(var(--accent), 25%);
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.4rem;
+}
+.instructions code {
+  font-size: 0.875em;
+  font-weight: bold;
+  background: rgba(var(--accent), 12%);
+  color: rgb(var(--accent));
+  border-radius: 4px;
+  padding: 0.3em 0.45em;
+}
+.instructions strong {
+  color: rgb(var(--accent));
+}
+.link-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+  gap: 1rem;
+  padding: 0;
+} */
+</style>
