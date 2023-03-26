@@ -13,10 +13,11 @@ if (borderTop) {
 }
 ---
 
-<div
-  class={"flex justify-between items-center gap-x-16 py-4 mx-10" +
+<download-list-file
+  class={"download-button flex justify-between items-center gap-x-16 py-4 mx-10" +
     " " +
     className}
+  data-name={name}
 >
   <div>
     <p class="m-0 w-full text-white">
@@ -30,4 +31,34 @@ if (borderTop) {
     class="block bg-gradient-to-b bg-red-600 hover:from-red-500 border-b border-red-900/50 uppercase text-sm tracking-wide text-white font-medium p-8 py-4 shadow-md hover:shadow-lg hover:scale-[1.02] duration-150 ease-in-out rounded-md"
     href={url}>download</a
   >
-</div>
+</download-list-file>
+
+<script>
+  class DownloadListFile extends HTMLElement {
+    constructor() {
+      super();
+      console.log("test");
+      // Read the message from the data attribute.
+      const name = this.dataset.name;
+      const button = this.querySelector("a");
+      if (button) {
+        button.addEventListener("click", () => {
+          console.log("download " + name);
+          sa_event("download", { file: name });
+        });
+      }
+    }
+  }
+
+  customElements.define("download-list-file", DownloadListFile);
+
+  // // Find all buttons with the `alert` class on the page.
+  // const downloadButton = document.querySelectorAll("button.alert");
+
+  // // Handle clicks on each button.
+  // downloadButton.forEach((button) => {
+  //   button.addEventListener("click", () => {
+  //     sa_event("download", { file: filename });
+  //   });
+  // });
+</script>

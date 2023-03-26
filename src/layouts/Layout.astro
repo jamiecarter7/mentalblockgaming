@@ -28,19 +28,17 @@ if (title !== "Home") {
     <title>{title}</title>
     <meta name="description" content={description} />
     <!-- simple analytics -->
-    <script
-      is:inline
-      async
-      defer
-      src="https://simple.mentalblockgaming.com/latest.js"
-    ></script>
-    <noscript
-      ><img
-        src="https://simple.mentalblockgaming.com/noscript.gif"
-        alt=""
-        referrerpolicy="no-referrer-when-downgrade"
-      /></noscript
-    >
+    <!-- event capture -->
+    <script is:inline>
+      window.sa_event =
+        window.sa_event ||
+        function () {
+          var a = [].slice.call(arguments);
+          window.sa_event.q
+            ? window.sa_event.q.push(a)
+            : (window.sa_event.q = [a]);
+        };
+    </script>
     <!-- ads -->
     <!-- <script
     async
@@ -54,8 +52,23 @@ if (title !== "Home") {
     <Navigation />
     <slot />
     <Footer />
+
+    <!-- simple analytics -->
+    <!-- pageviews -->
+    <script
+      is:inline
+      async
+      defer
+      src="https://simple.mentalblockgaming.com/latest.js"
+    ></script>
+    <noscript
+      ><img
+        src="https://simple.mentalblockgaming.com/noscript.gif"
+        alt=""
+        referrerpolicy="no-referrer-when-downgrade"
+      /></noscript
+    >
   </body>
-  <!-- <SimpleAnalytics /> -->
 </html>
 <style is:global>
   :root {
