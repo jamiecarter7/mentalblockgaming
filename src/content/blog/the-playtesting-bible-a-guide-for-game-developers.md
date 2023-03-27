@@ -31,7 +31,7 @@ _The Sims (2000) changed from an architecture simulator to a life simulator duri
 
 It might frighten you as a developer to put your work out there, subject to scrutiny when in such a primitive state, but you needn’t be worried. It might not be finished, but this allows your team to see which areas of the game resonate best with the players. Your design team can then expand on these areas and develop them into core gameplay features. A playtest won’t give you all the answers, but it will certainly point you in the right direction, and it’s much easier to change direction after five paces than after five miles.
 
-![no image](/blog/posts/noimage.png)
+![Fork in the road](/blog/posts/playtesting-bible-a-guide-for-game-developers/forkinroad.png)
 _Playtests allow you to catch problems early, saving time and money in the long-run._
 
 ## How should playtesting be carried out?
@@ -59,7 +59,7 @@ They might be less inclined to react negatively to a part of the game that they 
 
 <!-- https://web.archive.org/web/20210414015611im_/http://i2.wp.com/community.eidosmontreal.com/data/extensions_data/square_articles/3/c/e/6/d/3324//large_image.jpg?resize=800%2C301 -->
 
-![react differently](/blog/posts/noimage.png)
+![react differently](/blog/posts/playtesting-bible-a-guide-for-game-developers/office.png)
 _Players may react differently if they are constantly aware that they are being observed_
 
 Although you might want to explain your game in great detail before the playtester even gets the controller in his hands, resist the urge. See how well your game explains itself. Of course, if you are testing a very early prototype of your game some things will naturally have to be explained, but if they have any questions try to guide them instead of answering them out right.
@@ -80,7 +80,7 @@ The infamous barrel in Carnival Night Zone from Sonic the Hedgehog 3 (1994) was 
 
 It can be eye-opening to have several playtesters seated near one another during the tests. If a player has a question, they might find it more comfortable to simply ask the person right next to them. Just as important as the question is the answer given: has the other player successfully understood the game? “Which car is the best?” “The go-kart goes the fastest.” The go-kart may well have the highest acceleration, but that doesn’t necessarily mean it has the highest max speed. Despite this, it was perceived as the fastest car, which can influence your player’s choices. Pay close attention to players sat next to one another to see what aspects of your game they discuss.
 
-![no image](/blog/posts/noimage.png)
+![TOH](/blog/posts/playtesting-bible-a-guide-for-game-developers/toh.png)
 _Mental Block Gaming’s Templars of Hyrule (2014) is a three-player game. Listening to what the playtesters were saying to one another provided a lot of feedback_
 
 In addition to what they are saying, there are other ways to gauge a playtester’s thoughts. In an ideal world, you should set up a camera to record three things in a playtest: the tester’s face, their hands, and their monitor. The face can reveal a great deal of information about your game. It shows concentration, enjoyment, frustration, boredom, relief, and intensity. Laughing, smiling, frowning, sighing, gasping, even a little “Hmm…” can grant insight into what the player is thinking and feeling.
@@ -110,7 +110,7 @@ Let it be said that some people will make better playtesters for your game than 
 
 That said, having a variety of playtesters for your game is certainly not a drawback, and can often provide useful insights into how you should market your game. Sometimes players that you didn’t expect to enjoy the game are the ones who enjoy it the most. If we look at My Little Pony, for example, the franchise’s target market is girls; however, an unanticipated Brony culture developed from the animated television series since the content unexpectedly appealed to the demographic of adult males.
 
-![no image](/blog/posts/noimage.png)
+![mylittlepony](/blog/posts/playtesting-bible-a-guide-for-game-developers/mylittlepony.png)
 _The animated television series My Little Pony: Friendship is Magic (2010)_
 
 <!-- caption -->
@@ -121,7 +121,7 @@ A playtester doesn’t necessarily have to be someone who is good at games. Ther
 
 Playtesters who are less experienced will have to be able to learn the game without too much frustration in order to enjoy the experience, so if any instructions are not clearly stated they will likely falter when attempting to perform those actions. By carefully observing players who are unfamiliar in a gaming environment, you can ensure that casual players and children will be able to understand and access your game.
 
-![no image](/blog/posts/noimage.png)
+![WASD](/blog/posts/playtesting-bible-a-guide-for-game-developers/wasd.png)
 _The WASD keys are often used to move, although the arrow keys might seem more obvious_
 
 <!-- https://web.archive.org/web/20210414015611im_/http://i0.wp.com/www.qwer.io/wp-content/uploads/2014/03/white-WASD.jpg?resize=260%2C259 -->
