@@ -1,7 +1,7 @@
 ---
 date: 2015-01-05
 title: "How to Write a Custom ‘sounds.json’ File for Minecraft"
-description: "Learnu how to write your own sounds.json file for use with custom sounds in resource packs."
+description: "Learn how to write your own sounds.json file for use with custom sounds in resource packs."
 exerpt: "This tutorial will teach you how to write your own sounds.json file for use with custom sounds in resource packs."
 author: "MaybeLaterx"
 category: ["sound", "resource-pack"]
