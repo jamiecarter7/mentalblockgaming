@@ -17,6 +17,7 @@ const blogCollection = defineCollection({
         "sound",
         "resource-pack",
         "teamwork",
+        "maps",
       ])
       // .transform((str) => str.replaceAll(" ", "-"))
       .array()
