@@ -1,21 +1,10 @@
 ---
 import { getCollection } from "astro:content";
-import BlogPost from "../components/BlogPost.astro";
-import Container from "../components/Container.astro";
 import { formatCategory } from "../utils/formatCategory";
 import Layout from "./Layout.astro";
-export interface Props {
-  title: string;
-  description: string;
-  categories: string[];
-}
 
 const allPosts = await getCollection("blog");
-const allCategoriesArray: string[] = [];
-allPosts.forEach((post) => {
-  allCategoriesArray.push(post.data.category);
-});
-const allCatFlat = allCategoriesArray.flat();
+const categories = [...new Set(allPosts.map((post) => post.data.category).flat())].sort();
 
 const { title, description } = Astro.props;
 ---
@@ -34,9 +23,9 @@ const { title, description } = Astro.props;
     <aside class="md: w-1/3 py-10">
       <p class="font-head text-2xl mt-12">Categories</p>
       {
-        allCatFlat.map((cat) => (
-          <a href="">
-            <p class="text-base">{formatCategory(cat)}</p>
+        categories.map((category) => (
+          <a href={'/blog/category/' + category}>
+            <p class="text-base">{formatCategory(category)}</p>
           </a>
         ))
       }
